@@ -1,0 +1,70 @@
+/*
+ * Design tokens. Every colour in the app comes from these variables so that
+ * light/dark themes are a single swap. Palette: "Black Sea" blue + "stork beak"
+ * orange on warm paper — deliberately not green.
+ *
+ * Contrast targets (WCAG 2.2 AA): --fg on --bg ≥ 7:1, --fg-muted on --bg ≥ 4.5:1,
+ * --on-primary on --primary ≥ 4.5:1.
+ */
+:root {
+  color-scheme: light;
+  --bg: #f7f4ee;
+  --surface: #ffffff;
+  --surface-2: #efe9df;
+  --border: #d9d0c2;
+  --fg: #1b1f24;
+  --fg-muted: #565d66;
+  --primary: #1d4a7a;
+  --primary-hover: #163a61;
+  --on-primary: #ffffff;
+  --accent: #b8471b;
+  --on-accent: #ffffff;
+  --success: #1f6b52;
+  --success-bg: #dff1e9;
+  --danger: #a3262b;
+  --danger-bg: #f8e1e1;
+  --focus: #e07a2f;
+  --radius: 0.875rem;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #11161c;
+  --surface: #1a212a;
+  --surface-2: #232c37;
+  --border: #33404e;
+  --fg: #eef1f4;
+  --fg-muted: #a9b3bf;
+  --primary: #8dbbf0;
+  --primary-hover: #a9cdf5;
+  --on-primary: #0d1a29;
+  --accent: #f0955f;
+  --on-accent: #1d0d04;
+  --success: #6fd3ac;
+  --success-bg: #173329;
+  --danger: #f29a9a;
+  --danger-bg: #3a1c1e;
+  --focus: #f0955f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --bg: #11161c;
+    --surface: #1a212a;
+    --surface-2: #232c37;
+    --border: #33404e;
+    --fg: #eef1f4;
+    --fg-muted: #a9b3bf;
+    --primary: #8dbbf0;
+    --primary-hover: #a9cdf5;
+    --on-primary: #0d1a29;
+    --accent: #f0955f;
+    --on-accent: #1d0d04;
+    --success: #6fd3ac;
+    --success-bg: #173329;
+    --danger: #f29a9a;
+    --danger-bg: #3a1c1e;
+    --focus: #f0955f;
+  }
+}
