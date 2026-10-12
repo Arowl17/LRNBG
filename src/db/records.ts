@@ -69,6 +69,12 @@ export const settingsSchema = z.object({
   /** Beginners only: accept Latin transliteration (Streamlined System) and flag it. */
   acceptTransliteration: z.boolean(),
   onScreenKeyboard: z.boolean(),
+  /**
+   * Desktop: convert Latin key presses to Cyrillic using the phonetic layout (q → я, w → в…).
+   * Added in Phase 1 — `.default()` fills it in for older saved data and backups, so this
+   * additive change needs no DB migration (see CLAUDE.md).
+   */
+  phoneticTyping: z.boolean().default(true),
   /** FSRS desired retention (SPEC §10). */
   desiredRetention: z.number().min(0.7).max(0.99),
 });
@@ -129,6 +135,7 @@ export function defaultUserState(now: number = Date.now()): UserStateRecord {
       heartsEnabled: false,
       acceptTransliteration: false,
       onScreenKeyboard: true,
+      phoneticTyping: true,
       desiredRetention: 0.9,
     },
     createdAt: now,

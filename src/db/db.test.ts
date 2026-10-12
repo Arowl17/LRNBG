@@ -89,6 +89,15 @@ describe('database', () => {
     expect(await db.userState.count()).toBe(1);
   });
 
+  it('fills in settings added after the record was saved', async () => {
+    const old = defaultUserState();
+    const oldSettings: Partial<typeof old.settings> = { ...old.settings };
+    delete oldSettings.phoneticTyping; // as saved by Phase 0
+    await db.userState.put({ ...old, settings: oldSettings } as typeof old);
+    const loaded = await loadOrCreateUser(db);
+    expect(loaded.settings.phoneticTyping).toBe(true);
+  });
+
   it('refuses to save an invalid user state', async () => {
     const user = await loadOrCreateUser(db);
     await expect(saveUser(db, { ...user, xp: -5 })).rejects.toThrow();

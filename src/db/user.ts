@@ -5,7 +5,8 @@ import { defaultUserState, userStateRecordSchema, type UserStateRecord } from '.
 export async function loadOrCreateUser(db: ShtarkelDB): Promise<UserStateRecord> {
   return db.transaction('rw', db.userState, async () => {
     const existing = await db.userState.get('me');
-    if (existing) return existing;
+    // Parse so that settings added in later versions get their defaults.
+    if (existing) return userStateRecordSchema.parse(existing);
     const fresh = defaultUserState();
     await db.userState.put(fresh);
     return fresh;
