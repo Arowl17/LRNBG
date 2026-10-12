@@ -1,0 +1,1035 @@
+{
+ "version": 1,
+ "entries": {
+  "здравей": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "8034411ecd7c7f5d79d620a4.mp3",
+   "slow": "b8a698566b7284f4d03173b8.mp3"
+  },
+  "здравейте": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "09b7814f35e834dca7115668.mp3",
+   "slow": "5c7d531017d5fe7c9786de67.mp3"
+  },
+  "чао": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "d13c982a5581d21592c74dda.mp3",
+   "slow": "9ef930277f94b4e1ef6cef02.mp3"
+  },
+  "довиждане": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "71a30cc70f2c8fddaa3aeb60.mp3",
+   "slow": "d1243718dfdae1c46a3e94ae.mp3"
+  },
+  "добро утро": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "cc655b1f7696012b36133920.mp3",
+   "slow": "0be238bf01f874032bfea252.mp3"
+  },
+  "добър ден": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "dffb21ecc25439eb83200ced.mp3",
+   "slow": "ba1f0488e9d8422b1871211b.mp3"
+  },
+  "добър вечер": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "91ff2b982c9062513c43b8a0.mp3",
+   "slow": "008a4d58772c17fd64c054af.mp3"
+  },
+  "лека нощ": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "db2cb1c3e29e327b35f05db6.mp3",
+   "slow": "cf15e362a296a5325157d2a9.mp3"
+  },
+  "благодаря": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "592399550a5703e862a2d27a.mp3",
+   "slow": "167bffb1984b399a26481917.mp3"
+  },
+  "мерси": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "3e409e522b26f3d50f6b0b59.mp3",
+   "slow": "1d286cd888f5645a9ee77e0b.mp3"
+  },
+  "моля": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "2a293ae709cab47cb5f45d50.mp3",
+   "slow": "e068324607983bafa9a9f30a.mp3"
+  },
+  "извинете": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "7ce5270fc781e235762d797b.mp3",
+   "slow": "9f242eab2b567edf1cabf423.mp3"
+  },
+  "да": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "9635d169b347c38a46e16df4.mp3",
+   "slow": "86c601754a108ecca3b873e8.mp3"
+  },
+  "не": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "e832805a3bf72f6f33a57e32.mp3",
+   "slow": "e708d96d0359f3d87b1bea89.mp3"
+  },
+  "добре": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "53606be6579bb7bd5375b3df.mp3",
+   "slow": "4b5c817675d72a890a2623f8.mp3"
+  },
+  "как си": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "bfc44a833ea6cf4914d18c1b.mp3",
+   "slow": "6dc3f4d6ac5200ea22403fb9.mp3"
+  },
+  "как сте": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "a0a1aa87d751bdabf49569f4.mp3",
+   "slow": "0db5aff031d3fb670358d104.mp3"
+  },
+  "а ти": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "ae74b44e7fb02863c29ee112.mp3",
+   "slow": "151879f1bac6f4f33765d587.mp3"
+  },
+  "а вие": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "ec0f6c990a687e9762f3ba70.mp3",
+   "slow": "c0bd568bd92e43ce0e0dc8c7.mp3"
+  },
+  "аз": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "94d0036ad7c4aeb7fa0af934.mp3",
+   "slow": "e85e4230bf2b534a96a64f50.mp3"
+  },
+  "ти": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "3422fc03c7fa415eba7ceb18.mp3",
+   "slow": "2b860f578622051e05948f89.mp3"
+  },
+  "съм": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "6f7c1e97ed36ca6db8da243d.mp3",
+   "slow": "5260a65d9ce492619b601de6.mp3"
+  },
+  "студент": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "1495d73ecd7ab61c7c117d0b.mp3",
+   "slow": "3e21041b10fec1446fa28e3d.mp3"
+  },
+  "студентка": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "5cb5841659a6ac715493dbc0.mp3",
+   "slow": "9b2cc2e6713aea3e2e707f5d.mp3"
+  },
+  "той": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "eff874c71b1c391032c062e0.mp3",
+   "slow": "79ddf0a0f240829f1d2cd0e0.mp3"
+  },
+  "тя": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "aeaef0e3187129c3c980de03.mp3",
+   "slow": "cd1d4086efe2d289f0b6334c.mp3"
+  },
+  "то": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "4ecfcf483a43a3962250881c.mp3",
+   "slow": "34dbfbd56f51722c6d40a02b.mp3"
+  },
+  "учител": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "f5e7801cefd1a227a645a1f7.mp3",
+   "slow": "6e2e5298c00c850000873e0e.mp3"
+  },
+  "учителка": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "769f7b22c6a91acfb822f6b2.mp3",
+   "slow": "f7bc2e8b617b1e0cc2df05f5.mp3"
+  },
+  "ние": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "43a2f476f3130fc9bc4ff713.mp3",
+   "slow": "f6ec244e0e176112eb8687b0.mp3"
+  },
+  "вие": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "81d94655a88e243460643738.mp3",
+   "slow": "db1c196650fed3c66e4fb02e.mp3"
+  },
+  "те": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "c7c9ccd3e11c98ade755d64c.mp3",
+   "slow": "041b70042d503555dcb6d7d3.mp3"
+  },
+  "и": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "af67e55753b79372f40c09d2.mp3",
+   "slow": "cd03eb94b4a7935d465a7a89.mp3"
+  },
+  "от": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "3b31bceb47139007b7ba34f3.mp3",
+   "slow": "13741b041a8198bd4d44053a.mp3"
+  },
+  "България": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "d78efaefc256f9b8e31cf72c.mp3",
+   "slow": "09950110cd913e4d2c223c36.mp3"
+  },
+  "Турция": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "30f7acebf091cde312f8979e.mp3",
+   "slow": "53438e960cbff6a2b6c7611e.mp3"
+  },
+  "българин": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "a17f69a6038e29030c21a750.mp3",
+   "slow": "c0ea842eed9601e9bd781232.mp3"
+  },
+  "българка": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "17002bae1f5a6d2142b0cb67.mp3",
+   "slow": "cc40829f4538ea2a08f9348b.mp3"
+  },
+  "турчин": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "60a1abd3d7ffbb37a0ea8444.mp3",
+   "slow": "dff8ffb9e3ab176ec18a920c.mp3"
+  },
+  "туркиня": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "c06f2b72444de6d4a31576df.mp3",
+   "slow": "79d16aeb4af68659815d89e9.mp3"
+  },
+  "също": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "9dd9d3b6a0b96151e1bd7a76.mp3",
+   "slow": "2fedcf3397c246ca9415854b.mp3"
+  },
+  "но": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "5e61cfcf3337a7b3121fe0cc.mp3",
+   "slow": "587e59835eef66efd11dfbcd.mp3"
+  },
+  "в": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "7b097f2eba8459655c9fb64a.mp3",
+   "slow": "f4d68c27f29b974017b000d0.mp3"
+  },
+  "това": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "dc43c9939267f17824d98795.mp3",
+   "slow": "20708fe73554bf78c5dccc9e.mp3"
+  },
+  "какво": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "7edd7fdd0ba41d6a5bd6ffe7.mp3",
+   "slow": "7498e741a2113ac75c8972a7.mp3"
+  },
+  "стол": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "9b698de845b3cc652cb299aa.mp3",
+   "slow": "562f5fe882199295e92e84a3.mp3"
+  },
+  "хляб": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "24fb2478ce6071a1a2e306fc.mp3",
+   "slow": "187e406b90feecd5a9a7f797.mp3"
+  },
+  "жена": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "109c9544cea630f534ec5712.mp3",
+   "slow": "c4782a81d711226e803fe28b.mp3"
+  },
+  "книга": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "a88da3c35f1bc69f6063ba0c.mp3",
+   "slow": "044c5fe698c321260b4b948d.mp3"
+  },
+  "стая": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "c841d7e1a42677b0635c48f4.mp3",
+   "slow": "ba86e9ca68608917510d5d75.mp3"
+  },
+  "село": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "dc565a64957e3531e0e7bf3a.mp3",
+   "slow": "c1f3f4372f3540d4fa7050b6.mp3"
+  },
+  "дете": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "6328bd10aa9d10effffbedd0.mp3",
+   "slow": "9145d90731cf3bc3b4723063.mp3"
+  },
+  "един": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "fc1f2d6b87e5ee1e459c236e.mp3",
+   "slow": "4acd77d982c2300fbd5661f9.mp3"
+  },
+  "мъж": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "602d2294c1283bfb6c89a754.mp3",
+   "slow": "fa345022e93db984526dc692.mp3"
+  },
+  "момче": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "e0ba88326f298d964a4bebe5.mp3",
+   "slow": "5743c4b91a6214e8364aee07.mp3"
+  },
+  "момиче": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "6a815185bd3551490ca4ec13.mp3",
+   "slow": "fc33a94615384eb6cb9978ad.mp3"
+  },
+  "много": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "30da59d70e5e7f9060caba8a.mp3",
+   "slow": "d6472513d316d3f16d29c998.mp3"
+  },
+  "там": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "dc16bcc6f429aca10090b749.mp3",
+   "slow": "e5bf305101ea4126b87d8d9f.mp3"
+  },
+  "мама": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "2318cbfcd58eb9791b77ce30.mp3",
+   "slow": "33fefe42adf3db4229bc38e8.mp3"
+  },
+  "мак": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "c87a1c63710dc549cd7529ba.mp3",
+   "slow": "b08a9b97f866ad1aa3dc2171.mp3"
+  },
+  "ток": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "fea15ccd4ade8c3b4b74e8ac.mp3",
+   "slow": "235715a7a74e583e3dc78bd1.mp3"
+  },
+  "тема": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "965e8c48940db7926582dfdb.mp3",
+   "slow": "7236d7674807b45be0ee4ee0.mp3"
+  },
+  "като": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "ff019d74e115458e1b90dc29.mp3",
+   "slow": "41fcedaec137b5f291fdffd7.mp3"
+  },
+  "ето": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "4b9fe17b3e9ff3f589fc0197.mp3",
+   "slow": "4957d7b924a8890ebdcaf725.mp3"
+  },
+  "атом": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "3b2a82fb520c0d987a33379a.mp3",
+   "slow": "c1eea237a3f3af250209dfd1.mp3"
+  },
+  "море": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "f31b228bc387bfc98cb3a412.mp3",
+   "slow": "6a9aed3e338b0a59564794f3.mp3"
+  },
+  "нос": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "a69ebba44d013173428f2493.mp3",
+   "slow": "e10c01d3c023cbd50f54aab9.mp3"
+  },
+  "сок": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "e4bd0539d8c3e7906500d910.mp3",
+   "slow": "ae272b8253794ff535a19a85.mp3"
+  },
+  "мост": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "f706265ddd27e06e2e41baf9.mp3",
+   "slow": "b976ac551758f20b70223fd7.mp3"
+  },
+  "сестра": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "9d16375746848289ecdf705b.mp3",
+   "slow": "a6e016cd3e9e3858b47e1968.mp3"
+  },
+  "тава": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "13c7c3f8c9892421b5a26bda.mp3",
+   "slow": "adb8482e3b36ce0e05a2f477.mp3"
+  },
+  "метро": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "f95a60311d072f904c8a4055.mp3",
+   "slow": "f96b00b33bf76b9385f42a17.mp3"
+  },
+  "тук": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "a9cbf60a98f2cd70af5a589a.mp3",
+   "slow": "3accf1807653c36c2f5b11d3.mp3"
+  },
+  "ухо": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "a1208b6000745360187b9ba9.mp3",
+   "slow": "e67b995bfac8341b79dda9fd.mp3"
+  },
+  "вода": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "13829df877ea3bbc84974ca5.mp3",
+   "slow": "5ff3d074dbe00239faa627a2.mp3"
+  },
+  "банан": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "af2f918dec7d536901bbcf12.mp3",
+   "slow": "3f55e411bd94cddb29b01169.mp3"
+  },
+  "доктор": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "06e90fe635f9cc7aa1cdf784.mp3",
+   "slow": "71595000e1510b216b046672.mp3"
+  },
+  "джоб": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "f49259bd6b3b53c5b707256c.mp3",
+   "slow": "cb90f705c74537b80700417d.mp3"
+  },
+  "град": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "4fb49ab63180923fc17a28b7.mp3",
+   "slow": "a48b0ce4fb957514b8bb305e.mp3"
+  },
+  "звезда": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "1f7ddb73dd946e572218a124.mp3",
+   "slow": "69df486361dcd736469204eb.mp3"
+  },
+  "кафе": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "4dc89b1bcb9d012630b3d022.mp3",
+   "slow": "0b3fac73767f0d4c4bdaf2c9.mp3"
+  },
+  "телефон": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "a42143298f262b407e8ec48e.mp3",
+   "slow": "64cb408baeb017185f85a260.mp3"
+  },
+  "лимон": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "6375db375e1744401348e358.mp3",
+   "slow": "f56ec113afb3f868cd1ccf9d.mp3"
+  },
+  "килим": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "37069d5eb7583a0264e10fdf.mp3",
+   "slow": "c50e6d4c43c4e977239d205e.mp3"
+  },
+  "кибрит": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "0b1d9377d6bf5dd695a22ca9.mp3",
+   "slow": "ee93f8b6b06c8dba404532ed.mp3"
+  },
+  "такси": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "c6e4fa82d0f7b8f5aa84580e.mp3",
+   "slow": "7586eb41e13149cce03b6441.mp3"
+  },
+  "пиле": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "887023297f06c58418beb46b.mp3",
+   "slow": "e90944b77cda0f092c09d626.mp3"
+  },
+  "трамвай": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "057e085f5f8eb6816c872a09.mp3",
+   "slow": "764206599e8d5cc5a99583dc.mp3"
+  },
+  "чанта": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "6ee86587c728ffc6389ef564.mp3",
+   "slow": "8ca01b942aa8c4d47bc08ae1.mp3"
+  },
+  "чорба": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "77a3f2740adf8db699b30256.mp3",
+   "slow": "7d1ef370e9647aebd53a8655.mp3"
+  },
+  "чаршаф": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "ca7a833492442e1113ac3cc8.mp3",
+   "slow": "f71915dad3e8224b2a33b36d.mp3"
+  },
+  "чекмедже": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "d96b0060dc8f1b6be04b5a90.mp3",
+   "slow": "19957dc0c8b34cec3c4ad261.mp3"
+  },
+  "чай": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "f8fc8a986d087114a5dabbbd.mp3",
+   "slow": "5325ea848275165ca39e9ede.mp3"
+  },
+  "пица": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "9a71345f8f75a046f6803420.mp3",
+   "slow": "1e6e783ef2e661b439136601.mp3"
+  },
+  "шоколад": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "00e1c7ef54b7259556c05d6a.mp3",
+   "slow": "0e8cf4215eb012f7a8d3f453.mp3"
+  },
+  "къща": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "e970091b136d5195cdd41b6f.mp3",
+   "slow": "836809c4b845ca8ce360ce0f.mp3"
+  },
+  "ябълка": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "db8e2f1570458f06e3958ddc.mp3",
+   "slow": "67538e883347921e5d619884.mp3"
+  },
+  "юни": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "3be95c1b3f02c1c5b9dd55aa.mp3",
+   "slow": "9413ce78dfdb795ef9b661c6.mp3"
+  },
+  "шофьор": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "1985837521bffed63809b76e.mp3",
+   "slow": "38456522ad92a937b67eca45.mp3"
+  },
+  "щъркел": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "10d201a7e6aaa6cbe25b3852.mp3",
+   "slow": "e4302216a9981629857e0197.mp3"
+  },
+  "бакър": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "9dfe531de77a4897fe5ba5fa.mp3",
+   "slow": "73b23b27530d590ac9dd911e.mp3"
+  },
+  "кюфте": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "1ae7f13adcea2f698695c869.mp3",
+   "slow": "71534fdd1775c61d55e918a1.mp3"
+  },
+  "Здравей!": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "c53702003fe4ead0837b0b7e.mp3",
+   "slow": "ca2bc96333d3db3129cc4b22.mp3"
+  },
+  "Здравейте!": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "b01aef6a85f671f7d7dfebb7.mp3",
+   "slow": "88ca28169935fc1f0e257f95.mp3"
+  },
+  "Чао!": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "09e319043ce95885fdebfc4c.mp3",
+   "slow": "e707cf0950e95fe400b355df.mp3"
+  },
+  "Довиждане!": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "8a07c2e14bda457089a57792.mp3",
+   "slow": "28fd228acd9aeda64ca6f14d.mp3"
+  },
+  "Да.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "4701d73dbf77813429fe6121.mp3",
+   "slow": "ecfb54cc7a82badb04a5f69f.mp3"
+  },
+  "Не.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "58d937c60d5c4e578d55483a.mp3",
+   "slow": "7fe22d3abdaac2bb9adf3185.mp3"
+  },
+  "Да, добре.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "24d246c52b89351eb111b938.mp3",
+   "slow": "0b97195290e9bbce381ea185.mp3"
+  },
+  "Аз съм студент.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "846c80638ce797b27aa7f84b.mp3",
+   "slow": "fb63c3a786b8934b0dc42b26.mp3"
+  },
+  "Ти си студентка.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "9c66a4a2cb17a84f491ea68a.mp3",
+   "slow": "822e8a5f5e3e603a1b90d67a.mp3"
+  },
+  "Тя е тук.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "f8067108a69b331d3ce08f35.mp3",
+   "slow": "621a94ae9c00ae7ed6f3f96e.mp3"
+  },
+  "Ние сме тук.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "ccad06564a75ef025f85b0b7.mp3",
+   "slow": "3ab02c5a96ede52c22ac580e.mp3"
+  },
+  "Той е учител.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "b200c9573a4e933b00cd0e86.mp3",
+   "slow": "e48d0c8d8fe8c1e295ce459c.mp3"
+  },
+  "Тя е учителка.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "0ca34e044d84940df4c15456.mp3",
+   "slow": "6d750dcb29ad0c20760de6f8.mp3"
+  },
+  "Студент съм.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "58e0b1f304f9ca38eba80762.mp3",
+   "slow": "bc2ed839fc1b2ba3f0b35f63.mp3"
+  },
+  "От Турция съм.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "b16ab5d0a2bf4aabb767fa3d.mp3",
+   "slow": "c1a2251ef627a328c16bbeea.mp3"
+  },
+  "Учителка е.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "7e97bf5434f28124f94a8ad2.mp3",
+   "slow": "1f86c2df6eab85c86b9754fc.mp3"
+  },
+  "Това е стол.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "5b026d4e09995a8e7292d7a6.mp3",
+   "slow": "7aae938ed434e6a6084f4c2f.mp3"
+  },
+  "Това е книга.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "4d648a57f7ecb71d4df497df.mp3",
+   "slow": "8467d87aa806ece973a79ca0.mp3"
+  },
+  "Това е кафе.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "aeeda6e453e20ef060cce5bd.mp3",
+   "slow": "44672983822ffa150629f601.mp3"
+  },
+  "един мъж": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "28bde4673e57f2d6c79ede54.mp3",
+   "slow": "248053792381610a60c9f247.mp3"
+  },
+  "една жена": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "06c49c1ccc0394647371a4b2.mp3",
+   "slow": "c4b206ff7b02616a0488bfa2.mp3"
+  },
+  "едно момиче": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "63c14e1ed41be6978c0e7904.mp3",
+   "slow": "94b71d3d6f5b00c8adfb8dfb.mp3"
+  },
+  "Това са книги.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "6d633f3ab82b39ddb463e48b.mp3",
+   "slow": "65e51481df0f89b4e2b2b137.mp3"
+  },
+  "Много деца.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "072d26ec6a7b5dd9f91e8fe1.mp3",
+   "slow": "f2d6869734bd6dc5d56034ff.mp3"
+  },
+  "Добро утро!": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "2f8a0aa9f26121e9e846c769.mp3",
+   "slow": "9aa1cd8cef54ea4b5d043a5d.mp3"
+  },
+  "Лека нощ!": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "d717f7e870cb526bc50e7455.mp3",
+   "slow": "ccdd448ca3452443c4f4f2f7.mp3"
+  },
+  "Добър вечер!": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "1242962e6b2df0901dd6f083.mp3",
+   "slow": "1e74581b62ef2596870bcf16.mp3"
+  },
+  "Добър ден!": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "0b3e9231fecfda77ff5ce224.mp3",
+   "slow": "65847f44f276d548ca636785.mp3"
+  },
+  "Благодаря!": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "da5a2f1810b2c39fb370f710.mp3",
+   "slow": "0996a2f418f95094d88c4a6f.mp3"
+  },
+  "Извинете!": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "038a0902b41a9395d189d2f8.mp3",
+   "slow": "63acf699ca7dda1410f62ab2.mp3"
+  },
+  "Моля!": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "3db17d16df5b08aed93e3b22.mp3",
+   "slow": "474582058c5175410ab0073c.mp3"
+  },
+  "Благодаря, довиждане!": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "7ed1c536b934aa9d4496b233.mp3",
+   "slow": "88a5f0433559194dbf5b9298.mp3"
+  },
+  "Мерси!": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "69f6cae8dfb412b76adfda8d.mp3",
+   "slow": "4243f5bb6750a79c997fc519.mp3"
+  },
+  "Моля.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "0418288097d744bf9185e5e8.mp3",
+   "slow": "577ad13077698747f2eaf683.mp3"
+  },
+  "Мерси, чао!": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "a7e29adf7692c15755ff764e.mp3",
+   "slow": "0469401cd11272925b4805e1.mp3"
+  },
+  "— Благодаря! — Моля!": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "c2104009a0c9c1bedc5fa72f.mp3",
+   "slow": "d5970726a4262577f267b14e.mp3"
+  },
+  "Как си?": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "740c7eb0b47cf5a19176a6a7.mp3",
+   "slow": "78b4ff36e11fa671863928a4.mp3"
+  },
+  "Как сте?": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "2fcd18755b225b5aa2bc1b3c.mp3",
+   "slow": "39975795ebd82457ca9af956.mp3"
+  },
+  "Добре, благодаря. А ти?": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "35e5aee05af9129290d7d822.mp3",
+   "slow": "69e548fab10edb114eb4650c.mp3"
+  },
+  "Здравейте! Как сте? — Добре, благодаря. А вие?": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "6b37f2b95c9ff982838cbfe9.mp3",
+   "slow": "cdbc52a775ebe6542919b4ea.mp3"
+  },
+  "Добре, благодаря.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "868867e1c23ac0b7b831cdf7.mp3",
+   "slow": "57736b47ca2ec5820c5a7c98.mp3"
+  },
+  "А вие?": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "06637f8ce0e09cd69216840a.mp3",
+   "slow": "39f0b88bc4353a2fb9f92d75.mp3"
+  },
+  "Не, благодаря.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "302c03a2ff41b609b3551b79.mp3",
+   "slow": "28ecd035e4a4a4cee4266fdc.mp3"
+  },
+  "А ти?": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "2efa2e446dab2ce05a9cc71a.mp3",
+   "slow": "38f8fc1c1feb340de61e7cc1.mp3"
+  },
+  "Добре. А ти?": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "cf8a9dd51d76af46cb85de40.mp3",
+   "slow": "b7212dc10bfc1121c2826835.mp3"
+  },
+  "Ти си студент.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "d7e0ed85dfd1d5fabec57e87.mp3",
+   "slow": "bf0b51c3e923ae8a40b801a9.mp3"
+  },
+  "Аз съм студентка.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "5b6cc79fef2f50c915f3946d.mp3",
+   "slow": "92eab25a28f10503306fa0ba.mp3"
+  },
+  "Той е тук.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "cd1c9fe9c24996e76b992c11.mp3",
+   "slow": "852d6661d83be2e8cda4b45f.mp3"
+  },
+  "То е тук.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "0486ef650713d6eac3d1f012.mp3",
+   "slow": "ef4cb90a3a73a14bc3e867fe.mp3"
+  },
+  "Аз съм учителка.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "e871aef820c869c8add57f53.mp3",
+   "slow": "4fe13b8adb8d041e6caf2570.mp3"
+  },
+  "Те са тук.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "ad94bd03c09a223897093f06.mp3",
+   "slow": "3d96b3f17115f7b9230a43f8.mp3"
+  },
+  "Вие сте тук.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "369609e9c7757cf8845dd162.mp3",
+   "slow": "05fc284a4dfb30ef8261f899.mp3"
+  },
+  "Той и тя са тук.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "24971d9d06635084634afa2f.mp3",
+   "slow": "0302159aa8123f145d0f3e7b.mp3"
+  },
+  "Ти и аз сме тук.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "7cf9085da5b787027e363ad7.mp3",
+   "slow": "f5ad070a3b2996e343884c9f.mp3"
+  },
+  "Аз съм от Турция.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "2acb28270c0d79e83d2b24f8.mp3",
+   "slow": "4506339879ca65e6193224c4.mp3"
+  },
+  "Аз съм от България.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "9d20b6ca7dfb261d776077b3.mp3",
+   "slow": "da2a7630078772b7b1fa13b6.mp3"
+  },
+  "Тя е българка.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "7e16dd083095a4ed19642d80.mp3",
+   "slow": "91d03ff8427b90727ba090fa.mp3"
+  },
+  "Той е турчин.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "bc8952a2c01539e7d83a9a53.mp3",
+   "slow": "20a87f0a8ec485d326e534b7.mp3"
+  },
+  "Тя е туркиня.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "5260c71029eaeb449b95a96e.mp3",
+   "slow": "2727cba1c405a20f892fa8b5.mp3"
+  },
+  "Той е от Турция.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "1fa43fc6120f7c78b1f692da.mp3",
+   "slow": "dcfbe38fb361a6fc7be193aa.mp3"
+  },
+  "Аз съм българин.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "8637e73e4eea10e2b7c1f40b.mp3",
+   "slow": "21c5bd979e17d2ca3d0e1355.mp3"
+  },
+  "Те са от България.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "28f336518c78fea54104e017.mp3",
+   "slow": "aa39efbde8b93909628da8a6.mp3"
+  },
+  "Той е българин.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "537ce8892cfaadb0c285d443.mp3",
+   "slow": "9d2fcb2d40c54226d81f1a0e.mp3"
+  },
+  "От България съм.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "3c250c70833d19e7f6d37752.mp3",
+   "slow": "d9beb7b94c3618433420bae5.mp3"
+  },
+  "Туркиня съм, но съм в България.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "e7796796a7b6777e2e1b1b81.mp3",
+   "slow": "8493f87e90372c9dd6bf4c16.mp3"
+  },
+  "Учител съм.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "7afbd2825eb294f06a762093.mp3",
+   "slow": "2a3c4bbb4fe5cac2f09e1bd1.mp3"
+  },
+  "Аз също съм студент.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "d6cfa698f3c327184518be73.mp3",
+   "slow": "c74ec9fde3109a644f75ca6b.mp3"
+  },
+  "Тя също е тук.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "e6fa909a6ff233fe05e591a4.mp3",
+   "slow": "1bbb89879f33b652266ba4d2.mp3"
+  },
+  "Ние сме в България.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "a82bc4ea08ae96d156763d07.mp3",
+   "slow": "26dbfb9aafe167752c944d9c.mp3"
+  },
+  "От Турция съм, но съм в България.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "3beb57f29e536380439e8d7a.mp3",
+   "slow": "e346e4376018b836b27112b4.mp3"
+  },
+  "Те също са тук.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "ce20e6e62e05246cc9fed751.mp3",
+   "slow": "1b93ebc35cb6993ab56fdb00.mp3"
+  },
+  "Какво е това?": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "e6c0ffe44a4cf65c16c0af57.mp3",
+   "slow": "83760844908b6f5abc3b6094.mp3"
+  },
+  "Това е хляб.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "10970ea070386eaa6856a93b.mp3",
+   "slow": "b99365c262a5b784f6e67747.mp3"
+  },
+  "Това е телефон.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "33cd316683437baac38d5918.mp3",
+   "slow": "58f78e63afd9beccebaa5b04.mp3"
+  },
+  "Това е град.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "40ae69724dabdea1eaf9fc02.mp3",
+   "slow": "030e98fd90d020c728342eec.mp3"
+  },
+  "Какво е това? Това е хляб.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "dd1e7f0e179a07d529773ed9.mp3",
+   "slow": "69b4ba181d10d6cd732aceac.mp3"
+  },
+  "Това е стая.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "1a43de1e841ca6d21618a3c6.mp3",
+   "slow": "6fbccf05928d776c0debc5b8.mp3"
+  },
+  "Това е чанта.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "4e28dba0cbec874b9afa77a9.mp3",
+   "slow": "8b7b1cb03b683898bfa534bd.mp3"
+  },
+  "Какво е това? Това е книга.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "582e84b18f5a26a4a30c4884.mp3",
+   "slow": "4b268f2a11bb099176d96a2a.mp3"
+  },
+  "Това е жена.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "aa7841dcfc0faabba584881b.mp3",
+   "slow": "fff39fe65e7629807d7a0733.mp3"
+  },
+  "Това е море.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "7a46712ecf0ac5639a896bf8.mp3",
+   "slow": "1ae5bdbd15b014d970730ee4.mp3"
+  },
+  "Това е село.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "b0b886b22dda085bcc6a47ee.mp3",
+   "slow": "3d045c75243c0b82a62b247a.mp3"
+  },
+  "Това е дете.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "7a25eb4e8d5ebe770826700f.mp3",
+   "slow": "7d72415485dbd2688690bfe9.mp3"
+  },
+  "една книга": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "2425b8264641cf6607e431b1.mp3",
+   "slow": "74a008d028d8a158fb1da89f.mp3"
+  },
+  "един стол": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "8bba0e5b46ea1417e9b55bae.mp3",
+   "slow": "cc041ce234ca5825bbabb2ea.mp3"
+  },
+  "Една чанта и един телефон.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "052e88ec6a70dc63d5a8c0b5.mp3",
+   "slow": "0187c0fcbc9adfb8ffe3ef00.mp3"
+  },
+  "една жена и един мъж": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "7e547f5ee07afdfa162dfd13.mp3",
+   "slow": "b48c19517a527d0593eb454b.mp3"
+  },
+  "Едно кафе, моля.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "d910caf71d6b72dd41a54a0e.mp3",
+   "slow": "ebf415add22c0a5e1c13b735.mp3"
+  },
+  "едно момче": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "b14cfaad59dee2f6d596d803.mp3",
+   "slow": "57012f3050fb28005fc59ced.mp3"
+  },
+  "Един мъж и една жена.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "ea5e754c67a04bc58f99b8e2.mp3",
+   "slow": "5b8ddd2643b02bf18087ada7.mp3"
+  },
+  "Едно момиче и едно момче.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "53c47277ffaeb1e1f9d32c4a.mp3",
+   "slow": "17349923d860634455d18d0d.mp3"
+  },
+  "книги": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "7637f9b2fa7b787356f0a5a4.mp3",
+   "slow": "e633da3a8f5b0452b34473df.mp3"
+  },
+  "Това са градове.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "fc92922384a84d7be2379144.mp3",
+   "slow": "46c2bef9b80f3a12eec4ca51.mp3"
+  },
+  "Това са деца.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "d4073656aee55bb7d68ede1a.mp3",
+   "slow": "84baf96202770de1d5dc7234.mp3"
+  },
+  "много книги": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "a0c1b3bbb02846d4cde110b9.mp3",
+   "slow": "aae489b15b19bd624576e91c.mp3"
+  },
+  "Много жени и много мъже.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "738d3d8c9cef4ce0a9ca34cd.mp3",
+   "slow": "394c3011d5c6dab087a8930d.mp3"
+  },
+  "Това са столове.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "e7ec1bbfd5ee536cbfcb35be.mp3",
+   "slow": "950fc1ac5ba1d4b58d9987ee.mp3"
+  },
+  "Много села.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "63ec76f3e045d9f3ede88ab9.mp3",
+   "slow": "301bd661330f55f24b74c4f8.mp3"
+  },
+  "жени": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "c2c0c9cc3f784162a4af6290.mp3",
+   "slow": "2064db877023cf1efaa6d5d0.mp3"
+  },
+  "деца": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "4ea665c798d6c3e0ecd555a3.mp3",
+   "slow": "9eb408ee37c63fec92a29c2c.mp3"
+  },
+  "градове": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "8c8f6661ee4f8472a1e1a5fb.mp3",
+   "slow": "64f9409f7cc6f38e82487ddf.mp3"
+  },
+  "Това са момичета и момчета.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "9b08f2d9c2c7c24f6da93610.mp3",
+   "slow": "3ab33e97aec4760c594c413f.mp3"
+  },
+  "Той е там.": {
+   "voice": "bg-BG-BorislavNeural",
+   "normal": "881555a2c3dfa2abaa8deefb.mp3",
+   "slow": "cf695d4711d34e2e879f3b9b.mp3"
+  },
+  "Те са там.": {
+   "voice": "bg-BG-KalinaNeural",
+   "normal": "0eb831b38b4b0bc51c36225c.mp3",
+   "slow": "20612f2fcf13f529d2fd130b.mp3"
+  }
+ }
+}

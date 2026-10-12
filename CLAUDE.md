@@ -4,9 +4,8 @@
 
 ## Current phase
 
-**Phase 2 — Lesson player, Phase-2 exercises, audio pipeline, A1 units 1–3: built.** Waiting on:
-audio generation (needs the owner's Azure key in the cloud environment, then a new session runs
-`pnpm audio:build`) and native review of units 1–3. Next: Phase 3 (FSRS, practice, stats, XP).
+**Phase 2 — done (audio generated 12.10.2026: 206 strings, 412 MP3s).** Waiting on: native review
+of units 1–3 (see `content/REVIEW_QUEUE.md`). Next: Phase 3 (FSRS, practice, stats, XP).
 Plan: `docs/plans/phase-2.md`.
 Never start a phase without the owner's go-ahead; start each with a plan (SPEC §18).
 
@@ -90,7 +89,7 @@ In the cloud container, Playwright needs `PW_CHROMIUM_PATH=/opt/pw-browsers/chro
 - Inside the exercise, Enter = Check/Continue even on a focused option; inside forms it's ignored.
 - Never give two siblings the same React `key` (a report box once kept stale exercises on screen).
 - Azure Speech resource: `shtarkel-speech`, region **`swedencentral`** (West Europe refused new
-  customers; it's the script's default). In the cloud environment the key is a **network secret** for
-  `swedencentral.tts.speech.microsoft.com` that adds the header `Ocp-Apim-Subscription-Key` (no
-  prefix), so `AZURE_SPEECH_KEY` is unset there and the script sends no key itself. Locally, put the
-  key in `.env`. Environment settings apply to new sessions only.
+  customers; it's the script's default). Run `AZURE_SPEECH_KEY=… pnpm audio:build`: the key goes in
+  `.env` locally or an environment variable in the cloud. A cloud **network secret of type Bearer
+  doesn't work** (Azure wants the plain `Ocp-Apim-Subscription-Key` header → 401). The npm script
+  passes `--use-env-proxy` because Node's fetch ignores HTTPS_PROXY otherwise.

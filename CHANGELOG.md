@@ -6,6 +6,9 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com/); da
 
 ### Phase 2 — Lesson player, exercises, audio, A1 units 1–3 (12.10.2026)
 
+- Audio generated with Azure (bg-BG-KalinaNeural / bg-BG-BorislavNeural, alternating): 206 strings,
+  412 MP3s (normal + slow), ~6 MB, €0 within the free tier. Listening exercises now appear in lessons.
+
 - Course units on the Learn page with lessons, ticks for completed lessons and the next lesson
   highlighted; lessons open in the session player. Content is built per unit and loaded on demand.
 - Seven exercise types: choose the meaning, build a translation from tiles (both directions), type

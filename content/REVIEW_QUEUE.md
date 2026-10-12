@@ -116,3 +116,8 @@ the extra senses of моля, polite вие vs ти for English prompts, Turkish
 stress (столове, хлябове, момчета), and the head-gesture description (rewritten, still unverified).
 Note the gender tip still says "about the ending, not the person" without the баща/чичо exception —
 those words aren't taught yet; add the exception when they are.
+
+## Audio (generated 12.10.2026)
+
+- [ ] Listen to the generated audio (`public/audio/`, played by the app) and note any word the voice
+      stresses or pronounces wrongly. Fix with a `ttsOverride` on the lexeme and re-run `pnpm audio:build`.

@@ -54,9 +54,19 @@ async function answer(page: Page, ex: Exercise, wrong: boolean) {
       const target = ex.direction === 'src_to_bg' ? ex.accepted.bg! : ex.accepted.en!;
       return page.getByLabel('Your answer').fill(wrong ? 'дадада' : canonical(target[0]!));
     }
-    case 'listen_tiles':
+    case 'listen_tiles': {
+      // Generated audio exists, so listening exercises are part of the lesson.
+      const words = answerWords(ex.accepted[0]!);
+      const bank = page.getByRole('group', { name: 'Word bank' });
+      for (const w of wrong ? words.slice(1) : words)
+        await bank
+          .getByRole('button', { name: exact(w) })
+          .first()
+          .click();
+      return;
+    }
     case 'listen_type':
-      throw new Error('listening exercises are skipped without audio');
+      return page.getByLabel('Your answer').fill(wrong ? 'дадада' : canonical(ex.accepted[0]!));
   }
 }
 
@@ -93,6 +103,8 @@ test('complete A1 unit 1, lesson 1 with a deliberate mistake', async ({ page }) 
   await expect(page.getByText(/^\d+%$/)).not.toHaveText('100%');
   await expect(page.getByText(/здравей, здравейте, чао, довиждане/)).toBeVisible();
   expect([...seen].sort()).toEqual([
+    'listen_tiles',
+    'listen_type',
     'match_pairs',
     'select_meaning',
     'tiles_translate',

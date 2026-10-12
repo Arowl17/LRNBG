@@ -23,7 +23,7 @@
     "content:validate": "node scripts/content-validate.ts",
     "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test && pnpm content:validate",
     "size": "node scripts/bundle-size.ts",
-    "audio:build": "node scripts/audio-build.ts"
+    "audio:build": "node --use-env-proxy scripts/audio-build.ts"
   },
   "dependencies": {
     "dexie": "4.4.6",
