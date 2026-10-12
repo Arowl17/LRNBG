@@ -159,7 +159,8 @@ export function azureProvider(
           {
             method: 'POST',
             headers: {
-              'Ocp-Apim-Subscription-Key': key,
+              // With no key here, the cloud environment's network secret adds the header itself.
+              ...(key ? { 'Ocp-Apim-Subscription-Key': key } : {}),
               'Content-Type': 'application/ssml+xml',
               'X-Microsoft-OutputFormat': 'audio-24khz-48kbitrate-mono-mp3',
               'User-Agent': 'shtarkel-audio-build',

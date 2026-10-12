@@ -132,6 +132,15 @@ describe('Azure SSML and provider', () => {
     expect((init.headers as Record<string, string>)['Ocp-Apim-Subscription-Key']).toBe('KEY');
   });
 
+  it('sends no key header when the key is injected by the environment', async () => {
+    const fetchFn = vi.fn().mockResolvedValue(new Response(new Uint8Array([9])));
+    const provider = azureProvider('', 'swedencentral', fetchFn);
+    await provider.synthesize({ text: 'кафе', voice: 'bg-BG-KalinaNeural', rate: 1 });
+    const [url, init] = fetchFn.mock.calls[0] as [string, RequestInit];
+    expect(url).toBe('https://swedencentral.tts.speech.microsoft.com/cognitiveservices/v1');
+    expect(init.headers).not.toHaveProperty('Ocp-Apim-Subscription-Key');
+  });
+
   it('reports other errors', async () => {
     const fetchFn = vi.fn().mockResolvedValue(new Response('bad key', { status: 401 }));
     const provider = azureProvider('KEY', 'westeurope', fetchFn);

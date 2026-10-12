@@ -90,5 +90,7 @@ In the cloud container, Playwright needs `PW_CHROMIUM_PATH=/opt/pw-browsers/chro
 - Inside the exercise, Enter = Check/Continue even on a focused option; inside forms it's ignored.
 - Never give two siblings the same React `key` (a report box once kept stale exercises on screen).
 - Azure Speech resource: `shtarkel-speech`, region **`swedencentral`** (West Europe refused new
-  customers). The cloud container needs `AZURE_SPEECH_KEY`, `AZURE_SPEECH_REGION=swedencentral` and
-  the allowed domain `swedencentral.tts.speech.microsoft.com`; settings apply to new sessions only.
+  customers; it's the script's default). In the cloud environment the key is a **network secret** for
+  `swedencentral.tts.speech.microsoft.com` that adds the header `Ocp-Apim-Subscription-Key` (no
+  prefix), so `AZURE_SPEECH_KEY` is unset there and the script sends no key itself. Locally, put the
+  key in `.env`. Environment settings apply to new sessions only.

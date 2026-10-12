@@ -3,7 +3,8 @@
  *   --dry-run   only print what would be generated and what it costs
  *   --yes       don't ask for confirmation
  *   --prune     delete MP3s no longer referenced (asks first unless --yes)
- * Needs AZURE_SPEECH_KEY and AZURE_SPEECH_REGION (in .env or the environment).
+ * Key: AZURE_SPEECH_KEY in .env / the environment, or a cloud-environment network secret that adds
+ * the Ocp-Apim-Subscription-Key header. Region: AZURE_SPEECH_REGION (default swedencentral).
  */
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { writeFile } from 'node:fs/promises';
@@ -45,8 +46,14 @@ if (errors.length) {
   process.exit(1);
 }
 
+/** The owner's Azure Speech resource region (West Europe refused new customers). */
+const DEFAULT_REGION = 'swedencentral';
+
+// The key comes from .env / an environment variable (local runs), or — in the Claude cloud
+// environment — from a network secret that adds the Ocp-Apim-Subscription-Key header itself,
+// in which case the script never sees the key.
 const key = process.env.AZURE_SPEECH_KEY ?? '';
-const region = process.env.AZURE_SPEECH_REGION ?? '';
+const region = process.env.AZURE_SPEECH_REGION || DEFAULT_REGION;
 const provider = azureProvider(key, region);
 mkdirSync(audioDir, { recursive: true });
 const existing = new Set(readdirSync(audioDir).filter((f) => f.endsWith('.mp3')));
@@ -65,11 +72,10 @@ console.log(
 
 if (args.has('--dry-run')) process.exit(0);
 if (plan.missing.length > 0) {
-  if (!key || !region) {
-    console.error(
-      '\nMissing AZURE_SPEECH_KEY / AZURE_SPEECH_REGION. Copy .env.example to .env and fill them in.',
+  if (!key) {
+    console.log(
+      `No AZURE_SPEECH_KEY set — assuming the environment adds the key for ${region}.tts.speech.microsoft.com.`,
     );
-    process.exit(1);
   }
   if (plan.characters > CONFIRM_ABOVE_CHARS && !(await confirm('Continue?'))) process.exit(1);
   await synthesizeAll(plan, provider, (file, data) => writeFile(join(audioDir, file), data), {
