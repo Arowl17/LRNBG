@@ -4,6 +4,26 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com/); da
 
 ## [Unreleased]
 
+### Phase 2 — Lesson player, exercises, audio, A1 units 1–3 (12.10.2026)
+
+- Course units on the Learn page with lessons, ticks for completed lessons and the next lesson
+  highlighted; lessons open in the session player. Content is built per unit and loaded on demand.
+- Seven exercise types: choose the meaning, build a translation from tiles (both directions), type
+  a translation (both directions), listen and build, listen and type, match pairs, fill in the blank.
+  Plus grammar-tip cards before a lesson and a "new word" card before a word's first exercise.
+- Grammar tips library page.
+- "Report a problem" on every exercise (saved on the device, included in backups).
+- Validators: vocabulary gating (i+1, through all word forms), clitic at sentence start (including
+  through optional parts of accepted answers), 3–7 new words used ≥3× in ≥2 exercise types, valid
+  alternation syntax, short-article / counting-form / Russian-ending heuristics, duplicates; a seeded
+  fixture proves Russianisms fail the build.
+- Audio pipeline: `pnpm audio:build` (Azure REST, no new dependency; hashed file names; normal + slow;
+  cost estimate and confirmation; `ttsOverride`), audio player with device-voice fallback, Space /
+  Ctrl+Space shortcuts, audio cached offline on first play, `content:validate --require-audio`.
+- A1 units 1–3: 58 words and phrases, 10 grammar tips, 14 lessons, 181 exercises (all `ai_draft`).
+- Review tooling: `bg-content-reviewer` subagent and `/new-unit` command.
+- Fix: Enter on a just-clicked option now checks instead of re-clicking it.
+
 ### Phase 1 — Alphabet + answer-check engine (12.10.2026)
 
 - Answer-check engine (SPEC §9): NFC, stress-mark stripping that keeps ѝ, и-for-ѝ accepted with a

@@ -4,8 +4,10 @@
 
 ## Current phase
 
-**Phase 1 — Alphabet + answer-check engine: done (awaiting owner review).** Next: Phase 2
-(lesson player for course units, Phase-2 exercise types, audio pipeline, A1 units 1–3).
+**Phase 2 — Lesson player, Phase-2 exercises, audio pipeline, A1 units 1–3: built.** Waiting on:
+audio generation (needs the owner's Azure key in the cloud environment, then a new session runs
+`pnpm audio:build`) and native review of units 1–3. Next: Phase 3 (FSRS, practice, stats, XP).
+Plan: `docs/plans/phase-2.md`.
 Never start a phase without the owner's go-ahead; start each with a plan (SPEC §18).
 
 ## Owner
@@ -15,15 +17,18 @@ for anything manual. Native Turkish, fluent English, Bulgarian A1.
 
 ## Commands
 
-| Command                                                | What it does                                                      |
-| ------------------------------------------------------ | ----------------------------------------------------------------- |
-| `pnpm dev`                                             | build content, start dev server (http://localhost:5173)           |
-| `pnpm check`                                           | typecheck + lint + format check + unit tests + content validation |
-| `pnpm test` / `pnpm test:watch` / `pnpm test:coverage` | Vitest unit tests                                                 |
-| `pnpm build` then `pnpm size`                          | production build; enforce 200 KB gzip initial JS                  |
-| `pnpm e2e`                                             | Playwright against the build (run `pnpm build` first)             |
-| `pnpm content:validate` / `pnpm content:build`         | check / compile `content/` YAML                                   |
-| `pnpm format`                                          | auto-format with Prettier                                         |
+| Command                                                | What it does                                                               |
+| ------------------------------------------------------ | -------------------------------------------------------------------------- |
+| `pnpm dev`                                             | build content, start dev server (http://localhost:5173)                    |
+| `pnpm check`                                           | typecheck + lint + format check + unit tests + content validation          |
+| `pnpm test` / `pnpm test:watch` / `pnpm test:coverage` | Vitest unit tests                                                          |
+| `pnpm build` then `pnpm size`                          | production build; enforce 200 KB gzip initial JS                           |
+| `pnpm e2e`                                             | Playwright against the build (run `pnpm build` first)                      |
+| `pnpm content:validate` / `pnpm content:build`         | check / compile `content/` YAML                                            |
+| `pnpm content:validate --require-audio`                | also require audio for every Bulgarian string                              |
+| `pnpm audio:build [--dry-run] [--yes] [--prune]`       | generate MP3s with Azure (needs `AZURE_SPEECH_KEY`, `AZURE_SPEECH_REGION`) |
+| `/new-unit <n topic>`                                  | plan → generate → review → validate a unit (`.claude/skills/new-unit/`)    |
+| `pnpm format`                                          | auto-format with Prettier                                                  |
 
 In the cloud container, Playwright needs `PW_CHROMIUM_PATH=/opt/pw-browsers/chromium-1194/chrome-linux/chrome`.
 
@@ -41,6 +46,10 @@ In the cloud container, Playwright needs `PW_CHROMIUM_PATH=/opt/pw-browsers/chro
 - `src/features/lesson/ExerciseSession.tsx` — runs any list of exercises (Check/Continue, recycling)
 - `src/engine/session/alphabet.ts` — generates Section 0 exercises from `content/alphabet/`
 - `src/features/keyboard/layout.ts` — phonetic keyboard map (verified against xkeyboard-config)
+- `src/engine/session/lesson.ts` — turns an authored lesson into tip cards + new-word cards + exercises
+- `scripts/lib/linguistic.ts` — i+1 gating, clitic, word-budget, article/counting heuristics
+- `scripts/lib/audio.ts` + `scripts/audio-build.ts` — TTS pipeline; audio in `public/audio/` (committed)
+- `.claude/agents/bg-content-reviewer.md` — adversarial content reviewer (run after generating content)
 - `src/ui/` — design tokens (`tokens.css`) and shared components
 - `docs/decisions/` — ADRs; `CHANGELOG.md`
 
@@ -64,6 +73,9 @@ In the cloud container, Playwright needs `PW_CHROMIUM_PATH=/opt/pw-browsers/chro
   with the specific doubt. Never mark own output `native_verified`.
 - Watch for Russian leaking in (ы э ё, Russianisms list). Stress = U+0301 after the vowel (ADR 0002).
 - Only strip U+0301 — `ѝ` ≠ `и`.
+- Content units were generated once from data and are now edited as YAML; YAML is the source of truth.
+- Accepted answers: "{x|}" optional parts must not leave a clitic first ("{Аз |}съм" is an error).
+  Extra accepted alternatives may use untaught words; prompts and the first answer may not.
 
 ## Gotchas
 
@@ -75,3 +87,7 @@ In the cloud container, Playwright needs `PW_CHROMIUM_PATH=/opt/pw-browsers/chro
   silent no-op replacement once dropped the alphabet checks and the alphabet routes.
 - Official transliteration of ъ is "a": България → "Balgaria" (not "Bulgaria").
 - The "offline ready" toast sits at the top on phones so it never covers lesson buttons.
+- Inside the exercise, Enter = Check/Continue even on a focused option; inside forms it's ignored.
+- Never give two siblings the same React `key` (a report box once kept stale exercises on screen).
+- The cloud container can't reach Azure TTS until the environment allows
+  `westeurope.tts.speech.microsoft.com` and has the key; settings apply to new sessions only.

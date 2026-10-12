@@ -4,7 +4,7 @@ A free, offline-friendly web app for learning **Bulgarian** — from the Cyrilli
 with English and Turkish as source languages. Short lessons, spaced repetition, and careful,
 reviewed Bulgarian.
 
-Status: **Phase 1** — the Cyrillic alphabet trainer works; course units start in Phase 2.
+Status: **Phase 2** — the alphabet trainer and A1 units 1–3 are playable (draft content, awaiting native review).
 See [SPEC.md](SPEC.md) for the full plan and [CHANGELOG.md](CHANGELOG.md) for progress.
 
 ## Run it on Windows

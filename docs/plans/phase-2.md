@@ -1,6 +1,6 @@
 # Phase 2 plan — lesson player, Phase-2 exercises, audio, A1 units 1–3
 
-Status: **proposed (12.10.2026)** — waiting for the owner's approval.
+Status: **approved (12.10.2026)** and built — audio generation waits for the Azure key.
 Done when (SPEC §18): units 1–3 can be completed with audio; the validator catches seeded
 Russianisms.
 
@@ -25,7 +25,7 @@ Items marked ⚠ are things I'm unsure about; they go to `content/REVIEW_QUEUE.m
    in backups. (Sending them to a server is Phase 7.)
 5. **Validators** (SPEC §12) added to `content:validate`:
    - vocabulary gating (i+1): every Bulgarian word in a lesson must be introduced in that lesson or
-     earlier — words are matched through each lexeme's lemma *and* all its forms;
+     earlier — words are matched through each lexeme's lemma _and_ all its forms;
    - clitic at sentence start → error (ме, го, ни, ви, ги, ми, му, ѝ, им, се, съм, сме, сте, са,
      си). "те" and "ти" are skipped (they are also "they"/"you"), "е" is only a warning ("Е, добре.");
    - lessons: 3–7 new words (warning outside), each new word used ≥3 times (error);
@@ -71,12 +71,12 @@ at least 3 times.
 ви-form), `gram.culture.head-gestures` (many Bulgarians nod for "no" and shake the head for
 "yes" — the words да/не are what count).
 
-| Lesson | New words | Why these |
-|---|---|---|
-| 1.1 Hello & goodbye | здраве́й, здраве́йте, ча́о, дови́ждане | the four everyday hello/bye words |
-| 1.2 Times of day | добро́ у́тро, до́бър де́н, до́бър ве́чер, ле́ка но́щ | fixed greetings, very high frequency |
-| 1.3 Being polite | благодаря́, мерси́, мо́ля, извине́те | politeness core |
-| 1.4 Yes, no, how are you | да, не, добре́, ка́к си, ка́к сте, а ти́ | first mini-dialogue |
+| Lesson                   | New words                                    | Why these                            |
+| ------------------------ | -------------------------------------------- | ------------------------------------ |
+| 1.1 Hello & goodbye      | здраве́й, здраве́йте, ча́о, дови́ждане           | the four everyday hello/bye words    |
+| 1.2 Times of day         | добро́ у́тро, до́бър де́н, до́бър ве́чер, ле́ка но́щ | fixed greetings, very high frequency |
+| 1.3 Being polite         | благодаря́, мерси́, мо́ля, извине́те             | politeness core                      |
+| 1.4 Yes, no, how are you | да, не, добре́, ка́к си, ка́к сте, а ти́         | first mini-dialogue                  |
 
 Sample sentences: «Добро утро!», «Как сте? — Добре, благодаря. А вие?», «Извинете!», «Чао!»
 
@@ -93,13 +93,13 @@ pronoun like Bulgarians do.
 «Студе́нт съм.» ✔ «Съм студент.» ✘. (A Turkish speaker's instinct "Öğrenciyim" → «Студент съм»
 actually matches Bulgarian word order — a useful TR tip.)
 
-| Lesson | New words | Example |
-|---|---|---|
-| 2.1 I am, you are | аз, ти, съм (+ form си), студе́нт, студе́нтка | «Аз съм студент.» «Ти си студентка.» |
-| 2.2 He, she, it | то́й, тя́, то́, учи́тел, учи́телка (+ form е) | «Той е учител.» «Тя е тук.» |
-| 2.3 We, you, they | ни́е, ви́е, те́, и (+ forms сме, сте, са) | «Ние сме тук.» «Ти и аз сме тук.» |
-| 2.4 Where from? | от, Бълга́рия, Ту́рция, бълга́рин, бълга́рка, ту́рчин, турки́ня | «Аз съм от Турция.» |
-| 2.5 Without the pronoun | съ́що, но, в | «Студент съм.» «Туркиня съм, но съм в България.» |
+| Lesson                  | New words                                                 | Example                                          |
+| ----------------------- | --------------------------------------------------------- | ------------------------------------------------ |
+| 2.1 I am, you are       | аз, ти, съм (+ form си), студе́нт, студе́нтка               | «Аз съм студент.» «Ти си студентка.»             |
+| 2.2 He, she, it         | то́й, тя́, то́, учи́тел, учи́телка (+ form е)                  | «Той е учител.» «Тя е тук.»                      |
+| 2.3 We, you, they       | ни́е, ви́е, те́, и (+ forms сме, сте, са)                    | «Ние сме тук.» «Ти и аз сме тук.»                |
+| 2.4 Where from?         | от, Бълга́рия, Ту́рция, бълга́рин, бълга́рка, ту́рчин, турки́ня | «Аз съм от Турция.»                              |
+| 2.5 Without the pronoun | съ́що, но, в                                               | «Студент съм.» «Туркиня съм, но съм в България.» |
 
 ⚠ Doubts: polite «Вие сте учител.» (formal you to one person with a singular noun) — I believe
 this is correct; please confirm. «то́» examples are thin before articles (unit 4); I'll keep
@@ -116,20 +116,20 @@ neuter), `gram.noun.plural` (-и, -ове for one-syllable masculine nouns, -а/
 irregular дете́ → деца́), `gram.number.one` (един/една/едно). TR tip: Turkish has no gender, so
 this unit has extra gender drills.
 
-| Lesson | New words (plural) | Example |
-|---|---|---|
-| 3.1 Masculine | това́, какво́, гра́д (градове́), сто́л (⚠ plural stress), хля́б (⚠ plural stress), телефо́н (телефо́ни) | «Какво е това? — Това е стол.» |
-| 3.2 Feminine | жена́ (жени́), кни́га (кни́ги), ста́я (ста́и), ча́нта (ча́нти) | «Това е книга.» |
-| 3.3 Neuter | село́ (села́), море́ (морета́), кафе́ (кафета́), дете́ (деца́) | «Това е кафе.» |
-| 3.4 One | еди́н / една́ / едно́, мъ́ж (мъже́), момче́ (момчета́), моми́че (моми́чета) | «една жена, едно момиче» |
-| 3.5 Plurals | мно́го, та́м (+ all plural forms above) | «Това са книги.» «Там са децата» ✘ (article — unit 4), so «Там са книги.» |
+| Lesson        | New words (plural)                                                                              | Example                                                                   |
+| ------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| 3.1 Masculine | това́, какво́, гра́д (градове́), сто́л (⚠ plural stress), хля́б (⚠ plural stress), телефо́н (телефо́ни) | «Какво е това? — Това е стол.»                                            |
+| 3.2 Feminine  | жена́ (жени́), кни́га (кни́ги), ста́я (ста́и), ча́нта (ча́нти)                                          | «Това е книга.»                                                           |
+| 3.3 Neuter    | село́ (села́), море́ (морета́), кафе́ (кафета́), дете́ (деца́)                                          | «Това е кафе.»                                                            |
+| 3.4 One       | еди́н / една́ / едно́, мъ́ж (мъже́), момче́ (момчета́), моми́че (моми́чета)                              | «една жена, едно момиче»                                                  |
+| 3.5 Plurals   | мно́го, та́м (+ all plural forms above)                                                           | «Това са книги.» «Там са децата» ✘ (article — unit 4), so «Там са книги.» |
 
 Section 0 reading words (град, телефон, чанта, море, кафе) are introduced again here as real
 vocabulary, so learners who skipped the alphabet aren't lost.
 
 ⚠ Doubts: plural stress of **стол** and **хляб** (сто́лове? столове́?), **мъже́**, **момчета́**;
 whether «Там са книги.» sounds natural (vs «Там има книги.» — има comes in unit 5).
-Lesson 3.5 has only 2 new lexemes (it teaches plural *forms*) — I propose allowing review lessons
+Lesson 3.5 has only 2 new lexemes (it teaches plural _forms_) — I propose allowing review lessons
 below the 3-word minimum (validator warning, not error).
 
 ---
