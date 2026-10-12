@@ -1,0 +1,26 @@
+# Russian words that LLM-written "Bulgarian" commonly leaks (SPEC §12).
+# `pnpm content:validate` FAILS if any of these appears in a Bulgarian field.
+# Matching ignores case and stress marks, and compares whole words (multi-word entries
+# must appear as consecutive words).
+#
+# Add entries freely. Only add words that are NOT valid modern Bulgarian — a false
+# positive blocks correct content. `origin: spec` = listed in SPEC.md; `origin: ai_draft`
+# = added by Claude, pending native-speaker confirmation (see REVIEW_QUEUE.md).
+
+- { ru: здравствуйте, bg: [здравейте], origin: spec }
+- { ru: спасибо, bg: [благодаря, мерси], origin: spec }
+- { ru: хорошо, bg: [добре], origin: spec }
+- { ru: сейчас, bg: [сега], origin: spec }
+- { ru: который, bg: [който], origin: spec }
+- { ru: что, bg: [какво, че], origin: spec }
+- { ru: нет, bg: [не, няма], origin: spec }
+- { ru: пожалуйста, bg: [моля], origin: ai_draft }
+- { ru: до свидания, bg: [довиждане], origin: ai_draft }
+- { ru: извините, bg: [извинете], origin: ai_draft }
+- { ru: очень, bg: [много], origin: ai_draft }
+- { ru: только, bg: [само], origin: ai_draft }
+- { ru: сегодня, bg: [днес], origin: ai_draft }
+- { ru: где, bg: [къде], origin: ai_draft }
+- { ru: почему, bg: [защо], origin: ai_draft }
+- { ru: здесь, bg: [тук], origin: ai_draft }
+- { ru: хочу, bg: [искам], origin: ai_draft }
