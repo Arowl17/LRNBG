@@ -10,14 +10,15 @@
 
 | Key | Value |
 |---|---|
-| `{{APP_NAME}}` | *(working name — must NOT contain "Duolingo", "Duo", or anything confusable)* |
-| `{{MY_CODING_LEVEL}}` | *(none / beginner / can read code / professional)* — controls how much you explain |
+| `{{APP_NAME}}` | Щъркел / Shtarkel (stork mascot) |
+| `{{MY_CODING_LEVEL}}` | beginner |
 | `{{SOURCE_LANGUAGES}}` | English, Turkish |
 | `{{MY_BULGARIAN_LEVEL}}` | A1 |
 | `{{TARGET_CEFR_SCOPE_V1}}` | Cyrillic + A1, then A2 |
-| `{{OS}}` | *(Windows / macOS / Linux)* |
+| `{{OS}}` | Windows |
 | `{{TTS_PROVIDER}}` | Azure AI Speech (default — see §11) |
-| `{{GITHUB_REPO}}` | *(empty for now / owner/name)* |
+| `{{GITHUB_REPO}}` | Arowl17/LRNBG |
+| `{{CONTENT_LICENSE}}` | CC BY-SA 4.0 (code: MIT) |
 
 ---
 
