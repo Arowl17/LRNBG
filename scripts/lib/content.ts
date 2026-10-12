@@ -7,11 +7,16 @@ import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { parse } from 'yaml';
 import { z } from 'zod';
+import { toLatin } from '../../src/engine/answer-check/transliterate.ts';
 import {
+  alphabetFileSchema,
+  BULGARIAN_ALPHABET,
   grammarPointSchema,
   lessonSchema,
   lexemeSchema,
   unitSchema,
+  type AlphabetLesson,
+  type AlphabetLetter,
   type Exercise,
   type GrammarPoint,
   type Lesson,
@@ -31,6 +36,8 @@ export interface Course {
   grammar: GrammarPoint[];
   units: Unit[];
   lessons: Lesson[];
+  /** Section 0 alphabet trainer (content/alphabet/alphabet.yaml), if present. */
+  alphabet?: { letters: AlphabetLetter[]; lessons: AlphabetLesson[] };
   /** Hash of every input file — changes whenever content changes. */
   contentVersion: string;
   /** Which file each id came from, for error messages. */
@@ -129,6 +136,13 @@ export function loadCourse(root: string): { course: Course; issues: Issue[] } {
       for (const ex of lesson.exercises) remember(ex.id, file);
       course.lessons.push(lesson);
     }
+  }
+
+  for (const path of yamlFiles(join(root, 'alphabet'))) {
+    const data = read(path, alphabetFileSchema);
+    if (!data) continue;
+    for (const lesson of data.lessons) remember(lesson.id, relative(root, path));
+    course.alphabet = data;
   }
 
   course.contentVersion = hash.digest('hex').slice(0, 12);
@@ -318,12 +332,100 @@ export function checkReferences(course: Course): Issue[] {
   return issues;
 }
 
+/** Lower-case letters of a Bulgarian word, without stress marks. */
+const lettersOf = (text: string) =>
+  new Set([...text.replaceAll('́', '').toLocaleLowerCase('bg')].filter((c) => /\p{L}/u.test(c)));
+
+/**
+ * Section 0 rules: all 30 letters, each introduced exactly once, consistent case/transliteration,
+ * unique sound labels, and every reading/example word uses only letters already taught (i+1).
+ */
+export function checkAlphabet(course: Course): Issue[] {
+  const alphabet = course.alphabet;
+  if (!alphabet) return [];
+  const issues: Issue[] = [];
+  const file = 'alphabet/alphabet.yaml';
+  const error = (where: string, message: string) =>
+    issues.push({ level: 'error', file, where, message });
+
+  const lowers = alphabet.letters.map((l) => l.lower);
+  const missing = BULGARIAN_ALPHABET.filter((c) => !lowers.includes(c));
+  const unknown = lowers.filter((c) => !BULGARIAN_ALPHABET.includes(c));
+  if (missing.length) error('letters', `missing letters: ${missing.join(' ')}`);
+  if (unknown.length) error('letters', `not Bulgarian letters: ${unknown.join(' ')}`);
+  if (new Set(lowers).size !== lowers.length) error('letters', 'a letter is listed twice');
+
+  const sounds = new Set<string>();
+  for (const l of alphabet.letters) {
+    const upper = l.lower.toLocaleUpperCase('bg');
+    if (l.upper !== upper)
+      error(`letters.${l.lower}.upper`, `upper case of ${l.lower} is ${upper}`);
+    const latin = toLatin(l.lower);
+    if (l.latin !== latin) {
+      error(`letters.${l.lower}.latin`, `Streamlined transliteration of ${l.lower} is "${latin}"`);
+    }
+    if (sounds.has(l.sound))
+      error(`letters.${l.lower}.sound`, `sound label "${l.sound}" is used twice`);
+    sounds.add(l.sound);
+  }
+
+  const lexemes = new Map(course.lexemes.map((l) => [l.id, l]));
+  const taughtIn = new Map<string, number>();
+  const known = new Set<string>();
+  const ordered = [...alphabet.lessons].sort((a, b) => a.order - b.order);
+  for (const [index, lesson] of ordered.entries()) {
+    for (const letter of lesson.newLetters) {
+      if (taughtIn.has(letter)) {
+        error(`${lesson.id}.newLetters`, `"${letter}" is already taught in an earlier lesson`);
+      }
+      if (!lowers.includes(letter)) {
+        error(`${lesson.id}.newLetters`, `"${letter}" is not in the letter list`);
+      }
+      taughtIn.set(letter, index);
+      known.add(letter);
+    }
+    for (const id of lesson.readingWordIds) {
+      const lex = lexemes.get(id);
+      if (!lex) {
+        error(`${lesson.id}.readingWordIds`, `unknown id "${id}"`);
+        continue;
+      }
+      const unseen = [...lettersOf(lex.lemma)].filter((c) => !known.has(c));
+      if (unseen.length) {
+        error(
+          `${lesson.id}.readingWordIds`,
+          `"${lex.lemma}" uses letters not taught yet: ${unseen.join(' ')}`,
+        );
+      }
+    }
+  }
+  for (const letter of lowers) {
+    if (!taughtIn.has(letter)) error('lessons', `letter "${letter}" is never taught`);
+  }
+
+  for (const l of alphabet.letters) {
+    const where = `letters.${l.lower}.exampleLexemeId`;
+    const lex = lexemes.get(l.exampleLexemeId);
+    if (!lex) {
+      error(where, `unknown id "${l.exampleLexemeId}"`);
+      continue;
+    }
+    const letters = lettersOf(lex.lemma);
+    if (!letters.has(l.lower)) error(where, `"${lex.lemma}" does not contain ${l.lower}`);
+    const lessonIndex = taughtIn.get(l.lower) ?? -1;
+    const late = [...letters].filter((c) => (taughtIn.get(c) ?? Infinity) > lessonIndex);
+    if (late.length) error(where, `"${lex.lemma}" uses letters taught later: ${late.join(' ')}`);
+  }
+  return issues;
+}
+
 export function runAllChecks(course: Course, russianisms: Russianism[]): Issue[] {
   const strings = collectBgStrings(course);
   return [
     ...checkLetters(strings),
     ...checkRussianisms(strings, russianisms),
     ...checkReferences(course),
+    ...checkAlphabet(course),
   ];
 }
 

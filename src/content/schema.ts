@@ -296,5 +296,59 @@ export type Unit = z.infer<typeof unitSchema>;
 export const courseManifestSchema = z.object({
   contentVersion: nonEmpty,
   units: z.array(unitSchema),
+  /** Section 0 lesson ids, so the course page can show alphabet progress without loading it. */
+  alphabetLessonIds: z.array(lessonId).default([]),
 });
 export type CourseManifest = z.infer<typeof courseManifestSchema>;
+
+// ---------------------------------------------------------------------------
+// Section 0 — the Cyrillic alphabet trainer (SPEC §7.2)
+
+/** The 30 letters of the modern Bulgarian alphabet, in alphabetical order. */
+export const BULGARIAN_ALPHABET = [...'абвгдежзийклмнопрстуфхцчшщъьюя'];
+
+export const alphabetLetterSchema = z.object({
+  lower: z.string().length(1),
+  upper: z.string().length(1),
+  /** Official Streamlined System transliteration (ъ → "a", щ → "sht"). */
+  latin: nonEmpty,
+  /** Short, unique sound label used in letter↔sound drills ("ă" for ъ, so it differs from а). */
+  sound: nonEmpty,
+  /** How it sounds, for the learner. */
+  hint: localizedSchema,
+  /** A Latin letter it looks like but must not be read as (в looks like B). */
+  lookalike: nonEmpty.optional(),
+  /** A word containing the letter, readable at the lesson that introduces it. */
+  exampleLexemeId: lexemeId,
+  reviewStatus: reviewStatusSchema,
+});
+export type AlphabetLetter = z.infer<typeof alphabetLetterSchema>;
+
+export const alphabetLessonSchema = z.object({
+  id: lessonId,
+  order: z.number().int().min(0),
+  /** Difficulty group from SPEC §7.2: 1 same as Latin, 2 false friends, 3 new shapes, 4 specials. */
+  group: z.number().int().min(1).max(4),
+  title: localizedSchema,
+  /** Letters introduced in this lesson (lower case). */
+  newLetters: z.array(z.string().length(1)).min(1),
+  /** Real words to read, using only letters known by the end of this lesson. */
+  readingWordIds: z.array(lexemeId).min(3),
+});
+export type AlphabetLesson = z.infer<typeof alphabetLessonSchema>;
+
+/** content/alphabet/alphabet.yaml */
+export const alphabetFileSchema = z.object({
+  letters: z.array(alphabetLetterSchema),
+  lessons: z.array(alphabetLessonSchema),
+});
+
+/** public/content/alphabet.json — what the alphabet trainer loads. */
+export const alphabetBundleSchema = z.object({
+  contentVersion: nonEmpty,
+  letters: z.array(alphabetLetterSchema),
+  lessons: z.array(alphabetLessonSchema),
+  /** Every lexeme the alphabet lessons refer to. */
+  words: z.array(lexemeSchema),
+});
+export type AlphabetBundle = z.infer<typeof alphabetBundleSchema>;

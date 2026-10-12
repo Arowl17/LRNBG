@@ -1,0 +1,549 @@
+# Section 0 reading words (SPEC §7.2, §13). Each is readable at the alphabet lesson that uses it.
+# Stress: U+0301 after the stressed vowel; one-syllable words are left unmarked.
+# All ai_draft — see content/REVIEW_QUEUE.md for open doubts.
+
+- id: lex.mama
+  lemma: ма́ма
+  pos: noun
+  gender: f
+  translations:
+    en: ['mum', 'mom']
+    tr: ['anne']
+  cefr: A1
+  tags: ['section-0', 'family']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.mak
+  lemma: мак
+  pos: noun
+  gender: m
+  translations:
+    en: ['poppy']
+    tr: ['gelincik', 'haşhaş']
+  cefr: A1
+  tags: ['section-0', 'nature']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.tok
+  lemma: ток
+  pos: noun
+  gender: m
+  translations:
+    en: ['electric current', 'electricity']
+    tr: ['elektrik akımı', 'elektrik']
+  cefr: A1
+  tags: ['section-0', 'home']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.tema
+  lemma: те́ма
+  pos: noun
+  gender: f
+  translations:
+    en: ['topic', 'subject']
+    tr: ['konu']
+  cefr: A1
+  tags: ['section-0', 'school']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.kato
+  lemma: ка́то
+  pos: conj
+  translations:
+    en: ['like', 'as']
+    tr: ['gibi']
+  cefr: A1
+  tags: ['section-0', 'function-word']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.eto
+  lemma: е́то
+  pos: part
+  translations:
+    en: ['here is', 'here are']
+    tr: ['işte']
+  cefr: A1
+  tags: ['section-0', 'function-word']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.atom
+  lemma: а́том
+  pos: noun
+  gender: m
+  translations:
+    en: ['atom']
+    tr: ['atom']
+  cefr: A1
+  tags: ['section-0', 'science']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.more
+  lemma: море́
+  pos: noun
+  gender: n
+  translations:
+    en: ['sea']
+    tr: ['deniz']
+  cefr: A1
+  tags: ['section-0', 'nature', 'travel']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.nos
+  lemma: нос
+  pos: noun
+  gender: m
+  translations:
+    en: ['nose']
+    tr: ['burun']
+  cefr: A1
+  tags: ['section-0', 'body']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.sok
+  lemma: сок
+  pos: noun
+  gender: m
+  translations:
+    en: ['juice']
+    tr: ['meyve suyu']
+  cefr: A1
+  tags: ['section-0', 'food']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.most
+  lemma: мост
+  pos: noun
+  gender: m
+  translations:
+    en: ['bridge']
+    tr: ['köprü']
+  cefr: A1
+  tags: ['section-0', 'city']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.sestra
+  lemma: сестра́
+  pos: noun
+  gender: f
+  translations:
+    en: ['sister']
+    tr: ['kız kardeş', 'abla']
+  cefr: A1
+  tags: ['section-0', 'family']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.tava
+  lemma: тава́
+  pos: noun
+  gender: f
+  translations:
+    en: ['baking tray', 'roasting pan']
+    tr: ['fırın tepsisi', 'tepsi']
+  turcism:
+    trSource: tava
+    note: 'Bulgarian тава is a baking tray / oven dish; Turkish tava is usually a frying pan.'
+  cefr: A1
+  tags: ['section-0', 'food', 'home']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.metro
+  lemma: метро́
+  pos: noun
+  gender: n
+  translations:
+    en: ['metro', 'underground']
+    tr: ['metro']
+  cefr: A1
+  tags: ['section-0', 'transport']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.tuk
+  lemma: тук
+  pos: adv
+  translations:
+    en: ['here']
+    tr: ['burada']
+  cefr: A1
+  tags: ['section-0', 'function-word']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.uho
+  lemma: ухо́
+  pos: noun
+  gender: n
+  translations:
+    en: ['ear']
+    tr: ['kulak']
+  cefr: A1
+  tags: ['section-0', 'body']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.voda
+  lemma: вода́
+  pos: noun
+  gender: f
+  translations:
+    en: ['water']
+    tr: ['su']
+  cefr: A1
+  tags: ['section-0', 'food']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.banan
+  lemma: бана́н
+  pos: noun
+  gender: m
+  translations:
+    en: ['banana']
+    tr: ['muz']
+  cefr: A1
+  tags: ['section-0', 'food']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.doktor
+  lemma: до́ктор
+  pos: noun
+  gender: m
+  translations:
+    en: ['doctor']
+    tr: ['doktor']
+  cefr: A1
+  tags: ['section-0', 'health']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.dzhob
+  lemma: джоб
+  pos: noun
+  gender: m
+  translations:
+    en: ['pocket']
+    tr: ['cep']
+  turcism:
+    trSource: cep
+  cefr: A1
+  tags: ['section-0', 'clothes']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.grad
+  lemma: град
+  pos: noun
+  gender: m
+  translations:
+    en: ['city', 'town']
+    tr: ['şehir']
+  cefr: A1
+  tags: ['section-0', 'city']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.zvezda
+  lemma: звезда́
+  pos: noun
+  gender: f
+  translations:
+    en: ['star']
+    tr: ['yıldız']
+  cefr: A1
+  tags: ['section-0', 'nature']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.kafe
+  lemma: кафе́
+  pos: noun
+  gender: n
+  translations:
+    en: ['coffee', 'café']
+    tr: ['kahve', 'kafe']
+  cefr: A1
+  tags: ['section-0', 'food']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.telefon
+  lemma: телефо́н
+  pos: noun
+  gender: m
+  translations:
+    en: ['telephone', 'phone']
+    tr: ['telefon']
+  cefr: A1
+  tags: ['section-0', 'home']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.limon
+  lemma: лимо́н
+  pos: noun
+  gender: m
+  translations:
+    en: ['lemon']
+    tr: ['limon']
+  cefr: A1
+  tags: ['section-0', 'food']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.kilim
+  lemma: кили́м
+  pos: noun
+  gender: m
+  translations:
+    en: ['rug', 'carpet']
+    tr: ['kilim', 'halı']
+  turcism:
+    trSource: kilim
+  cefr: A1
+  tags: ['section-0', 'home']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.kibrit
+  lemma: кибри́т
+  pos: noun
+  gender: m
+  translations:
+    en: ['matches', 'box of matches']
+    tr: ['kibrit']
+  turcism:
+    trSource: kibrit
+  cefr: A1
+  tags: ['section-0', 'home']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.taksi
+  lemma: такси́
+  pos: noun
+  gender: n
+  translations:
+    en: ['taxi']
+    tr: ['taksi']
+  cefr: A1
+  tags: ['section-0', 'transport']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.pile
+  lemma: пи́ле
+  pos: noun
+  gender: n
+  translations:
+    en: ['chicken', 'chick']
+    tr: ['tavuk', 'civciv']
+  cefr: A1
+  tags: ['section-0', 'food', 'animals']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.tramvay
+  lemma: трамва́й
+  pos: noun
+  gender: m
+  translations:
+    en: ['tram']
+    tr: ['tramvay']
+  cefr: A1
+  tags: ['section-0', 'transport']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.chanta
+  lemma: ча́нта
+  pos: noun
+  gender: f
+  translations:
+    en: ['bag', 'handbag']
+    tr: ['çanta']
+  turcism:
+    trSource: çanta
+  cefr: A1
+  tags: ['section-0', 'clothes']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.chorba
+  lemma: чо́рба
+  pos: noun
+  gender: f
+  translations:
+    en: ['soup']
+    tr: ['çorba']
+  turcism:
+    trSource: çorba
+  cefr: A1
+  tags: ['section-0', 'food']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.charshaf
+  lemma: чарша́ф
+  pos: noun
+  gender: m
+  translations:
+    en: ['bedsheet', 'sheet']
+    tr: ['çarşaf']
+  turcism:
+    trSource: çarşaf
+  cefr: A1
+  tags: ['section-0', 'home']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.chekmedzhe
+  lemma: чекмедже́
+  pos: noun
+  gender: n
+  translations:
+    en: ['drawer']
+    tr: ['çekmece']
+  turcism:
+    trSource: çekmece
+  cefr: A1
+  tags: ['section-0', 'home']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.chay
+  lemma: чай
+  pos: noun
+  gender: m
+  translations:
+    en: ['tea']
+    tr: ['çay']
+  cefr: A1
+  tags: ['section-0', 'food']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.pitsa
+  lemma: пи́ца
+  pos: noun
+  gender: f
+  translations:
+    en: ['pizza']
+    tr: ['pizza']
+  cefr: A1
+  tags: ['section-0', 'food']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.shokolad
+  lemma: шокола́д
+  pos: noun
+  gender: m
+  translations:
+    en: ['chocolate']
+    tr: ['çikolata']
+  cefr: A1
+  tags: ['section-0', 'food']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.kashta
+  lemma: къ́ща
+  pos: noun
+  gender: f
+  translations:
+    en: ['house']
+    tr: ['ev']
+  cefr: A1
+  tags: ['section-0', 'home']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.yabalka
+  lemma: я́бълка
+  pos: noun
+  gender: f
+  translations:
+    en: ['apple']
+    tr: ['elma']
+  cefr: A1
+  tags: ['section-0', 'food']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.yuni
+  lemma: ю́ни
+  pos: noun
+  gender: m
+  translations:
+    en: ['June']
+    tr: ['haziran']
+  cefr: A1
+  tags: ['section-0', 'time']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.shofyor
+  lemma: шофьо́р
+  pos: noun
+  gender: m
+  translations:
+    en: ['driver']
+    tr: ['şoför']
+  cefr: A1
+  tags: ['section-0', 'transport', 'jobs']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.shtarkel
+  lemma: щъ́ркел
+  pos: noun
+  gender: m
+  translations:
+    en: ['stork']
+    tr: ['leylek']
+  cefr: A1
+  tags: ['section-0', 'animals']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.bakar
+  lemma: ба́кър
+  pos: noun
+  gender: m
+  translations:
+    en: ['copper']
+    tr: ['bakır']
+  turcism:
+    trSource: bakır
+  cefr: A1
+  tags: ['section-0', 'materials']
+  reviewStatus: ai_draft
+  sources: [own]
+
+- id: lex.kyufte
+  lemma: кюфте́
+  pos: noun
+  gender: n
+  translations:
+    en: ['meatball', 'köfte']
+    tr: ['köfte']
+  turcism:
+    trSource: köfte
+  cefr: A1
+  tags: ['section-0', 'food']
+  reviewStatus: ai_draft
+  sources: [own]

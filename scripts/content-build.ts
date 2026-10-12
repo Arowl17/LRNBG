@@ -4,7 +4,7 @@
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import type { CourseManifest } from '../src/content/schema.ts';
+import type { AlphabetBundle, CourseManifest } from '../src/content/schema.ts';
 import { formatIssue, loadCourse } from './lib/content.ts';
 
 const repo = join(import.meta.dirname, '..');
@@ -20,12 +20,32 @@ if (errors.length > 0) {
 const manifest: CourseManifest = {
   contentVersion: course.contentVersion,
   units: [...course.units].sort((a, b) => a.order - b.order),
+  alphabetLessonIds: [...(course.alphabet?.lessons ?? [])]
+    .sort((a, b) => a.order - b.order)
+    .map((l) => l.id),
 };
 
 const outDir = join(repo, 'public', 'content');
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, 'course.json'), JSON.stringify(manifest));
 // Per-unit bundles (lessons, lexemes, grammar) are written here from Phase 2 on.
+
+if (course.alphabet) {
+  const wordIds = new Set([
+    ...course.alphabet.lessons.flatMap((l) => l.readingWordIds),
+    ...course.alphabet.letters.map((l) => l.exampleLexemeId),
+  ]);
+  const bundle: AlphabetBundle = {
+    contentVersion: course.contentVersion,
+    letters: course.alphabet.letters,
+    lessons: [...course.alphabet.lessons].sort((a, b) => a.order - b.order),
+    words: course.lexemes.filter((l) => wordIds.has(l.id)),
+  };
+  writeFileSync(join(outDir, 'alphabet.json'), JSON.stringify(bundle));
+  console.log(
+    `content:build — alphabet: ${bundle.letters.length} letters, ${bundle.lessons.length} lessons, ${bundle.words.length} words`,
+  );
+}
 
 console.log(
   `content:build — ${manifest.units.length} units → public/content/course.json (version ${manifest.contentVersion})`,

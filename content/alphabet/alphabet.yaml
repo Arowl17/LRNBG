@@ -1,0 +1,324 @@
+# Section 0 — the Bulgarian alphabet (SPEC §7.2). 30 letters in 6 lessons / 4 groups.
+# Sound hints are ai_draft: see content/REVIEW_QUEUE.md.
+# `sound` is a short unique label for letter↔sound drills; `latin` is the official
+# Streamlined transliteration (where ъ is also "a", hence the separate label).
+
+letters:
+  - lower: а
+    upper: А
+    latin: 'a'
+    sound: 'a'
+    hint:
+      en: 'Like the a in “father”.'
+      tr: 'Türkçedeki a gibi.'
+    exampleLexemeId: lex.mama
+    reviewStatus: ai_draft
+  - lower: е
+    upper: Е
+    latin: 'e'
+    sound: 'e'
+    hint:
+      en: 'Like the e in “bet”.'
+      tr: 'Türkçedeki e gibi.'
+    exampleLexemeId: lex.eto
+    reviewStatus: ai_draft
+  - lower: к
+    upper: К
+    latin: 'k'
+    sound: 'k'
+    hint:
+      en: 'Like the k in “kit”.'
+      tr: 'Türkçedeki k gibi.'
+    exampleLexemeId: lex.mak
+    reviewStatus: ai_draft
+  - lower: м
+    upper: М
+    latin: 'm'
+    sound: 'm'
+    hint:
+      en: 'Like the m in “map”.'
+      tr: 'Türkçedeki m gibi.'
+    exampleLexemeId: lex.mama
+    reviewStatus: ai_draft
+  - lower: о
+    upper: О
+    latin: 'o'
+    sound: 'o'
+    hint:
+      en: 'Like the o in “or”, but short.'
+      tr: 'Türkçedeki o gibi.'
+    exampleLexemeId: lex.tok
+    reviewStatus: ai_draft
+  - lower: т
+    upper: Т
+    latin: 't'
+    sound: 't'
+    hint:
+      en: 'Like the t in “top”.'
+      tr: 'Türkçedeki t gibi.'
+    exampleLexemeId: lex.tema
+    reviewStatus: ai_draft
+  - lower: в
+    upper: В
+    latin: 'v'
+    sound: 'v'
+    hint:
+      en: 'A v sound, as in “van”. It looks like Latin B, but it is never “b”.'
+      tr: "v sesi. Latin B'ye benzer ama asla “b” okunmaz."
+    lookalike: 'B'
+    exampleLexemeId: lex.tava
+    reviewStatus: ai_draft
+  - lower: н
+    upper: Н
+    latin: 'n'
+    sound: 'n'
+    hint:
+      en: 'An n sound. It looks like Latin H, but it is never “h”.'
+      tr: "n sesi. Latin H'ye benzer ama asla “h” okunmaz."
+    lookalike: 'H'
+    exampleLexemeId: lex.nos
+    reviewStatus: ai_draft
+  - lower: р
+    upper: Р
+    latin: 'r'
+    sound: 'r'
+    hint:
+      en: 'A rolled or tapped r. It looks like Latin P, but it is never “p”.'
+      tr: "Türkçedeki r gibi. Latin P'ye benzer ama asla “p” okunmaz."
+    lookalike: 'P'
+    exampleLexemeId: lex.more
+    reviewStatus: ai_draft
+  - lower: с
+    upper: С
+    latin: 's'
+    sound: 's'
+    hint:
+      en: 'Always s, as in “sun”. It looks like Latin C.'
+      tr: "Her zaman s okunur. Latin C'ye benzer."
+    lookalike: 'C'
+    exampleLexemeId: lex.sok
+    reviewStatus: ai_draft
+  - lower: у
+    upper: У
+    latin: 'u'
+    sound: 'u'
+    hint:
+      en: 'Like the oo in “book”. It looks like Latin y.'
+      tr: "Türkçedeki u gibi. Latin y'ye benzer."
+    lookalike: 'y'
+    exampleLexemeId: lex.tuk
+    reviewStatus: ai_draft
+  - lower: х
+    upper: Х
+    latin: 'h'
+    sound: 'h'
+    hint:
+      en: 'A breathy h, like the ch in Scottish “loch” but softer. It looks like Latin X.'
+      tr: "Gırtlaktan, hafif hırıltılı bir h. Latin X'e benzer."
+    lookalike: 'X'
+    exampleLexemeId: lex.uho
+    reviewStatus: ai_draft
+  - lower: б
+    upper: Б
+    latin: 'b'
+    sound: 'b'
+    hint:
+      en: 'Like the b in “bed”.'
+      tr: 'Türkçedeki b gibi.'
+    exampleLexemeId: lex.banan
+    reviewStatus: ai_draft
+  - lower: г
+    upper: Г
+    latin: 'g'
+    sound: 'g'
+    hint:
+      en: 'Always a hard g, as in “go”.'
+      tr: 'Her zaman “gel”deki g gibi.'
+    exampleLexemeId: lex.grad
+    reviewStatus: ai_draft
+  - lower: д
+    upper: Д
+    latin: 'd'
+    sound: 'd'
+    hint:
+      en: 'Like the d in “dog”.'
+      tr: 'Türkçedeki d gibi.'
+    exampleLexemeId: lex.voda
+    reviewStatus: ai_draft
+  - lower: ж
+    upper: Ж
+    latin: 'zh'
+    sound: 'zh'
+    hint:
+      en: 'Like the s in “pleasure”.'
+      tr: 'Türkçedeki j gibi (“jüri”).'
+    exampleLexemeId: lex.dzhob
+    reviewStatus: ai_draft
+  - lower: з
+    upper: З
+    latin: 'z'
+    sound: 'z'
+    hint:
+      en: 'Like the z in “zoo”. It looks like the number 3.'
+      tr: 'Türkçedeki z gibi. 3 rakamına benzer.'
+    exampleLexemeId: lex.zvezda
+    reviewStatus: ai_draft
+  - lower: и
+    upper: И
+    latin: 'i'
+    sound: 'i'
+    hint:
+      en: 'Like the ee in “see”, but short.'
+      tr: 'Türkçedeki i gibi.'
+    exampleLexemeId: lex.kilim
+    reviewStatus: ai_draft
+  - lower: й
+    upper: Й
+    latin: 'y'
+    sound: 'y'
+    hint:
+      en: 'Like the y in “yes” or “boy”.'
+      tr: 'Türkçedeki y gibi.'
+    exampleLexemeId: lex.tramvay
+    reviewStatus: ai_draft
+  - lower: л
+    upper: Л
+    latin: 'l'
+    sound: 'l'
+    hint:
+      en: 'Like the l in “lamp”.'
+      tr: 'Türkçedeki l gibi.'
+    exampleLexemeId: lex.limon
+    reviewStatus: ai_draft
+  - lower: п
+    upper: П
+    latin: 'p'
+    sound: 'p'
+    hint:
+      en: 'Like the p in “pen”.'
+      tr: 'Türkçedeki p gibi.'
+    exampleLexemeId: lex.pile
+    reviewStatus: ai_draft
+  - lower: ф
+    upper: Ф
+    latin: 'f'
+    sound: 'f'
+    hint:
+      en: 'Like the f in “fish”.'
+      tr: 'Türkçedeki f gibi.'
+    exampleLexemeId: lex.kafe
+    reviewStatus: ai_draft
+  - lower: ц
+    upper: Ц
+    latin: 'ts'
+    sound: 'ts'
+    hint:
+      en: 'Like the ts in “cats”, as one sound.'
+      tr: '“ts” sesi, tek ses gibi okunur.'
+    exampleLexemeId: lex.pitsa
+    reviewStatus: ai_draft
+  - lower: ч
+    upper: Ч
+    latin: 'ch'
+    sound: 'ch'
+    hint:
+      en: 'Like the ch in “church”.'
+      tr: 'Türkçedeki ç gibi.'
+    exampleLexemeId: lex.chanta
+    reviewStatus: ai_draft
+  - lower: ш
+    upper: Ш
+    latin: 'sh'
+    sound: 'sh'
+    hint:
+      en: 'Like the sh in “ship”.'
+      tr: 'Türkçedeki ş gibi.'
+    exampleLexemeId: lex.shokolad
+    reviewStatus: ai_draft
+  - lower: щ
+    upper: Щ
+    latin: 'sht'
+    sound: 'sht'
+    hint:
+      en: '“sht”, as in “ashtray”.'
+      tr: '“şt” sesi, birlikte okunur.'
+    exampleLexemeId: lex.kashta
+    reviewStatus: ai_draft
+  - lower: ъ
+    upper: Ъ
+    latin: 'a'
+    sound: 'ă'
+    hint:
+      en: 'A short, neutral vowel, like the a in “about”. Written “a” in Latin, but not the same as а.'
+      tr: "Kısa, belirsiz bir sesli; Türkçedeki ı'ya yakın. Latin harflerle “a” yazılır ama а ile aynı değildir."
+    exampleLexemeId: lex.bakar
+    reviewStatus: ai_draft
+  - lower: ь
+    upper: Ь
+    latin: 'y'
+    sound: 'yo'
+    hint:
+      en: 'Never used alone: only in “ьо”, which sounds like “yo”.'
+      tr: 'Tek başına kullanılmaz: sadece “ьо” içinde geçer ve “yo” okunur.'
+    exampleLexemeId: lex.shofyor
+    reviewStatus: ai_draft
+  - lower: ю
+    upper: Ю
+    latin: 'yu'
+    sound: 'yu'
+    hint:
+      en: 'Like “you”.'
+      tr: '“yu” okunur.'
+    exampleLexemeId: lex.yuni
+    reviewStatus: ai_draft
+  - lower: я
+    upper: Я
+    latin: 'ya'
+    sound: 'ya'
+    hint:
+      en: 'Like the ya in “yard”.'
+      tr: '“ya” okunur.'
+    exampleLexemeId: lex.yabalka
+    reviewStatus: ai_draft
+
+lessons:
+  - id: lesson.alphabet-1
+    order: 0
+    group: 1
+    title: { en: 'Familiar letters', tr: 'Tanıdık harfler' }
+    newLetters: [а, е, к, т, м, о]
+    readingWordIds: [lex.mama, lex.mak, lex.tok, lex.tema, lex.kato, lex.eto, lex.atom]
+  - id: lesson.alphabet-2
+    order: 1
+    group: 2
+    title: { en: 'False friends', tr: 'Yanıltıcı harfler' }
+    newLetters: [в, н, р, с, у, х]
+    readingWordIds:
+      [lex.more, lex.nos, lex.sok, lex.most, lex.sestra, lex.tava, lex.metro, lex.tuk, lex.uho]
+  - id: lesson.alphabet-3
+    order: 2
+    group: 3
+    title: { en: 'New shapes 1', tr: 'Yeni harfler 1' }
+    newLetters: [б, г, д, ж, з]
+    readingWordIds: [lex.voda, lex.banan, lex.doktor, lex.dzhob, lex.grad, lex.zvezda]
+  - id: lesson.alphabet-4
+    order: 3
+    group: 3
+    title: { en: 'New shapes 2', tr: 'Yeni harfler 2' }
+    newLetters: [и, й, л, п, ф]
+    readingWordIds:
+      [lex.kafe, lex.telefon, lex.limon, lex.kilim, lex.kibrit, lex.taksi, lex.pile, lex.tramvay]
+  - id: lesson.alphabet-5
+    order: 4
+    group: 3
+    title: { en: 'New shapes 3', tr: 'Yeni harfler 3' }
+    newLetters: [ц, ч, ш]
+    readingWordIds:
+      [lex.chanta, lex.chorba, lex.charshaf, lex.chekmedzhe, lex.chay, lex.pitsa, lex.shokolad]
+  - id: lesson.alphabet-6
+    order: 5
+    group: 4
+    title: { en: 'Bulgarian specials', tr: 'Bulgarcaya özgü harfler' }
+    newLetters: [щ, ъ, ь, ю, я]
+    readingWordIds:
+      [lex.kashta, lex.yabalka, lex.yuni, lex.shofyor, lex.shtarkel, lex.bakar, lex.kyufte]
