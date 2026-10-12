@@ -44,8 +44,10 @@ export default defineConfig({
       provider: 'v8',
       include: ['src/**/*.{ts,tsx}', 'scripts/**/*.ts'],
       exclude: ['src/**/*.test.{ts,tsx}', 'src/test/**', 'src/main.tsx'],
-      // Per-module thresholds from SPEC §17 are added as those modules land
-      // (answer-check ≥95% branches in Phase 1, srs/session ≥90% in Phase 3).
+      // SPEC §17 per-module thresholds (srs/session ≥90% are added in Phase 3).
+      thresholds: {
+        'src/engine/answer-check/**': { branches: 95, statements: 95, functions: 95, lines: 95 },
+      },
     },
   },
 });
