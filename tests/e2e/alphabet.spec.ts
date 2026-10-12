@@ -5,8 +5,9 @@ import type { AlphabetBundle } from '../../src/content/schema.ts';
 import { toLatin } from '../../src/engine/answer-check/transliterate.ts';
 import { KEY_FOR } from '../../src/features/keyboard/layout.ts';
 
+// Read the bundle from the build being tested (CI's e2e job only has dist/, not public/content/).
 const bundle = JSON.parse(
-  await readFile(join(import.meta.dirname, '../../public/content/alphabet.json'), 'utf8'),
+  await readFile(join(import.meta.dirname, '../../dist/content/alphabet.json'), 'utf8'),
 ) as AlphabetBundle;
 const plain = (s: string) => s.replaceAll('́', '');
 const letter = (lower: string) => bundle.letters.find((l) => l.lower === lower)!;
