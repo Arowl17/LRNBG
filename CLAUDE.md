@@ -89,5 +89,6 @@ In the cloud container, Playwright needs `PW_CHROMIUM_PATH=/opt/pw-browsers/chro
 - The "offline ready" toast sits at the top on phones so it never covers lesson buttons.
 - Inside the exercise, Enter = Check/Continue even on a focused option; inside forms it's ignored.
 - Never give two siblings the same React `key` (a report box once kept stale exercises on screen).
-- The cloud container can't reach Azure TTS until the environment allows
-  `westeurope.tts.speech.microsoft.com` and has the key; settings apply to new sessions only.
+- Azure Speech resource: `shtarkel-speech`, region **`swedencentral`** (West Europe refused new
+  customers). The cloud container needs `AZURE_SPEECH_KEY`, `AZURE_SPEECH_REGION=swedencentral` and
+  the allowed domain `swedencentral.tts.speech.microsoft.com`; settings apply to new sessions only.
