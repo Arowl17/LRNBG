@@ -35,11 +35,38 @@ describe('app shell', () => {
   it('renders the empty course path', async () => {
     await renderAt('/');
     expect(screen.getByRole('heading', { level: 1, name: 'Your course' })).toBeInTheDocument();
-    expect(await screen.findByText(/No units yet/)).toBeInTheDocument();
+    expect(await screen.findByText(/Course units start in the next phase/)).toBeInTheDocument();
     const nav = screen.getByRole('navigation', { name: 'Main navigation' });
     for (const label of ['Learn', 'Practice', 'Words', 'Grammar', 'Profile']) {
       expect(within(nav).getByRole('link', { name: label })).toBeInTheDocument();
     }
+  });
+
+  it('shows the alphabet section with lesson progress', async () => {
+    await db.lessonState.put({
+      lessonId: 'lesson.alphabet-1',
+      completed: true,
+      bestAccuracy: 1,
+      timesCompleted: 1,
+    });
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() =>
+        Promise.resolve(
+          new Response(
+            JSON.stringify({
+              contentVersion: 'test',
+              units: [],
+              alphabetLessonIds: ['lesson.alphabet-1', 'lesson.alphabet-2'],
+            }),
+          ),
+        ),
+      ),
+    );
+    await renderAt('/');
+    const card = await screen.findByRole('link', { name: /Section 0/ });
+    expect(card).toHaveAttribute('href', '/alphabet');
+    expect(await within(card).findByText('1 of 2 lessons done')).toBeInTheDocument();
   });
 
   it('lists units from the manifest', async () => {

@@ -220,6 +220,17 @@ export function SettingsPage() {
           checked={user.settings.haptics}
           onChange={set('haptics')}
         />
+        <Toggle
+          label={t('settings.keyboard')}
+          checked={user.settings.onScreenKeyboard}
+          onChange={set('onScreenKeyboard')}
+        />
+        <Toggle
+          label={t('settings.phoneticTyping')}
+          help={t('settings.phoneticTyping.help')}
+          checked={user.settings.phoneticTyping}
+          onChange={set('phoneticTyping')}
+        />
       </Section>
 
       <Section title={t('settings.data')}>
