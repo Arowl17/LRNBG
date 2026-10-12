@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { useUserStore } from '../../app/user-store';
 import type { AlphabetLetter, Lexeme } from '../../content/schema';
+import { db } from '../../db/db';
 import { defaultUserState } from '../../db/records';
 import type { AlphabetExercise } from '../../engine/session/alphabet';
 import type { ExerciseContext } from '../exercises/types';
@@ -170,6 +171,28 @@ describe('ExerciseSession', () => {
     await user.click(screen.getByRole('button', { name: 'Check' }));
     expect(screen.getByText('Correct answer:')).toBeInTheDocument();
     expect(screen.getAllByText('къща').length).toBeGreaterThan(0);
+  });
+
+  it("saves a problem report with the learner's answer", async () => {
+    const { user } = setup([typing], ctx({ phoneticTyping: false }));
+    await user.type(screen.getByLabelText('Your answer'), 'къщъ');
+    await user.click(screen.getByRole('button', { name: 'Check' }));
+    await user.click(screen.getByRole('button', { name: 'Report a problem' }));
+    expect(screen.getByRole('radio', { name: 'My answer should be accepted' })).toBeChecked();
+    await user.type(screen.getByLabelText('Details (optional)'), 'typo?{Enter}more');
+    expect(screen.getByRole('button', { name: 'Continue' })).toBeInTheDocument(); // Enter didn't continue
+    await user.click(screen.getByRole('button', { name: 'Send report' }));
+    expect(await screen.findByText(/Your report is saved/)).toBeInTheDocument();
+    const reports = await db.reports.toArray();
+    expect(reports).toEqual([
+      expect.objectContaining({
+        exerciseId: 't',
+        category: 'answer_should_be_accepted',
+        userAnswer: 'къщъ',
+        text: 'typo?\nmore',
+        contentVersion: 'unknown',
+      }),
+    ]);
   });
 
   it('quits', async () => {

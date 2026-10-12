@@ -2,6 +2,7 @@ import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createMemoryRouter, RouterProvider } from 'react-router';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { resetContentCache } from '../content/loader';
 import { resetAll } from '../db/backup';
 import { db } from '../db/db';
 import { routes } from './routes';
@@ -22,6 +23,7 @@ async function renderAt(path: string) {
 }
 
 beforeEach(async () => {
+  resetContentCache();
   await resetAll(db);
   vi.stubGlobal(
     'fetch',

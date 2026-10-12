@@ -3,7 +3,7 @@ import { readingOf } from '../../../engine/session/alphabet';
 import { useT } from '../../../i18n';
 import { showStress } from '../display';
 import { LetterGlyph } from '../LetterGlyph';
-import { ListenButton } from '../ListenButton';
+import { AudioButton } from '../AudioButton';
 import type { ExerciseDefinition, ExerciseViewProps } from '../types';
 
 /** A "new letter" card. Not graded: the learner reads it and continues. */
@@ -36,7 +36,7 @@ export function LetterCard({
           {readingOf(example)} · {example.translations[ctx.lang][0]}
         </p>
         <div className="mt-2">
-          <ListenButton text={example.lemma} />
+          <AudioButton text={example.lemma} />
         </div>
       </div>
     </div>

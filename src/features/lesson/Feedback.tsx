@@ -69,7 +69,7 @@ export function Feedback({ result }: { result: CheckResult }) {
       className={`rounded-card border-2 p-4 ${correct ? 'border-success bg-success-bg' : 'border-danger bg-danger-bg'}`}
     >
       <p className={`text-xl font-bold ${correct ? 'text-success' : 'text-danger'}`}>{title}</p>
-      {!correct && (
+      {!correct && result.closest && (
         <p className="mt-1">
           {t('feedback.answer')}{' '}
           <strong lang="bg" className="text-lg">

@@ -17,6 +17,7 @@ export const alphabetTypeWord: ExerciseDefinition<AlphabetTypeWord, TextAnswerSt
       language: 'bg',
       acceptTransliteration: false,
     }),
+  describeAnswer: (_e, a) => a.text,
   inputMode: (answer) => (answer.usedOnScreenKeyboard ? 'onscreen_keyboard' : 'typed'),
   View: function TypeWordView({ exercise, answer, setAnswer, locked, ctx }) {
     const t = useT();

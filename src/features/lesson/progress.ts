@@ -1,7 +1,7 @@
 import { db } from '../../db/db';
 import type { LessonStateRecord } from '../../db/records';
 import { ratingFor } from '../../engine/srs/rating';
-import type { AnswerRecord } from '../lesson/ExerciseSession';
+import type { AnswerRecord } from './ExerciseSession';
 
 /** Save one graded answer to the review log (feeds spaced repetition from Phase 3). */
 export async function logAnswer(record: AnswerRecord, now = Date.now()): Promise<void> {

@@ -24,3 +24,12 @@ describe('random helpers', () => {
     expect(new Set(sample([1, 2, 3, 4], 4, seededRng(3))).size).toBe(4);
   });
 });
+
+describe('hashString', () => {
+  it('is stable and spreads values', async () => {
+    const { hashString } = await import('./random');
+    expect(hashString('ex.a')).toBe(hashString('ex.a'));
+    expect(hashString('ex.a')).not.toBe(hashString('ex.b'));
+    expect(hashString('')).toBe(0x811c9dc5);
+  });
+});

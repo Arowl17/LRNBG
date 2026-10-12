@@ -2,9 +2,10 @@ import type { ComponentType } from 'react';
 import type { Settings, SourceLanguage } from '../../db/records';
 import type { CheckResult } from '../../engine/answer-check';
 import type { AlphabetExercise } from '../../engine/session/alphabet';
+import type { LessonItem } from '../../engine/session/lesson';
 
-/** Every exercise the session player can run. Course exercise types join this in Phase 2. */
-export type SessionExercise = AlphabetExercise;
+/** Every exercise (or card) the session player can run. */
+export type SessionExercise = AlphabetExercise | LessonItem;
 export type ExerciseType = SessionExercise['type'];
 
 export type InputMode = 'tiles' | 'typed' | 'onscreen_keyboard' | 'choice' | 'speech';
@@ -33,9 +34,12 @@ export interface ExerciseDefinition<E extends SessionExercise, A> {
   /** Ungraded exercises (intro cards) only need "Continue". */
   graded: boolean;
   initialAnswer: () => A;
-  isReady: (answer: A) => boolean;
+  /** Can the learner press Check yet? */
+  isReady: (answer: A, exercise: E) => boolean;
   check: (exercise: E, answer: A, ctx: ExerciseContext) => CheckResult;
   inputMode: (answer: A) => InputMode;
+  /** The learner's answer as text, for "my answer should be accepted" reports. */
+  describeAnswer?: (exercise: E, answer: A, ctx: ExerciseContext) => string;
   View: ComponentType<ExerciseViewProps<E, A>>;
 }
 

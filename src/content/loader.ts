@@ -3,6 +3,8 @@ import {
   courseManifestSchema,
   type AlphabetBundle,
   type CourseManifest,
+  type UnitBundle,
+  unitBundleSchema,
 } from './schema';
 
 /** Load and validate the course manifest produced by `pnpm content:build`. */
@@ -27,4 +29,43 @@ export function loadAlphabet(fetchFn: typeof fetch = fetch): Promise<AlphabetBun
       throw error;
     });
   return alphabetPromise;
+}
+
+const unitPromises = new Map<string, Promise<UnitBundle>>();
+
+/** Load one unit's bundle (cached; the service worker keeps it for offline use). */
+export function loadUnit(unitId: string, fetchFn: typeof fetch = fetch): Promise<UnitBundle> {
+  let promise = unitPromises.get(unitId);
+  if (!promise) {
+    promise = fetchFn(`/content/units/${unitId}.json`)
+      .then((response) => {
+        if (!response.ok) throw new Error(`${unitId}.json: HTTP ${response.status}`);
+        return response.json();
+      })
+      .then((data) => unitBundleSchema.parse(data))
+      .catch((error: unknown) => {
+        unitPromises.delete(unitId);
+        throw error;
+      });
+    unitPromises.set(unitId, promise);
+  }
+  return promise;
+}
+
+let manifestPromise: Promise<CourseManifest> | undefined;
+
+/** The course manifest, cached for the session. */
+export function courseManifest(): Promise<CourseManifest> {
+  manifestPromise ??= loadCourseManifest().catch((error: unknown) => {
+    manifestPromise = undefined;
+    throw error;
+  });
+  return manifestPromise;
+}
+
+/** Test helper: forget all cached content. */
+export function resetContentCache() {
+  manifestPromise = undefined;
+  alphabetPromise = undefined;
+  unitPromises.clear();
 }

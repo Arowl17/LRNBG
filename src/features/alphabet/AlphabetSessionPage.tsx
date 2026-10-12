@@ -8,56 +8,9 @@ import { useT } from '../../i18n';
 import { EmptyState, Page } from '../../ui/Page';
 import type { ExerciseContext } from '../exercises/types';
 import { ExerciseSession, type SessionSummary } from '../lesson/ExerciseSession';
-import { completeLesson, lessonStates, logAnswer } from './progress';
+import { LessonComplete } from '../lesson/LessonComplete';
+import { completeLesson, lessonStates, logAnswer } from '../lesson/progress';
 import { useAlphabet } from './useAlphabet';
-
-const linkButton =
-  'inline-flex min-h-11 w-full items-center justify-center rounded-card px-4 font-semibold';
-
-function Complete({
-  summary,
-  newLetters,
-  onAgain,
-}: {
-  summary: SessionSummary;
-  newLetters: string[];
-  onAgain: () => void;
-}) {
-  const t = useT();
-  return (
-    <Page title={t('complete.title')}>
-      <dl className="mb-6 grid grid-cols-2 gap-3">
-        <div className="rounded-card border border-border bg-surface p-4">
-          <dt className="text-sm text-fg-muted">{t('complete.accuracy')}</dt>
-          <dd className="text-3xl font-bold">{Math.round(summary.accuracy * 100)}%</dd>
-        </div>
-        {newLetters.length > 0 && (
-          <div className="rounded-card border border-border bg-surface p-4">
-            <dt className="text-sm text-fg-muted">{t('complete.letters')}</dt>
-            <dd lang="bg" className="text-3xl font-bold tracking-wider">
-              {newLetters.join(' ')}
-            </dd>
-          </div>
-        )}
-      </dl>
-      <div className="flex flex-col gap-3">
-        <Link
-          to="/alphabet"
-          className={`${linkButton} bg-primary text-on-primary hover:bg-primary-hover`}
-        >
-          {t('complete.back')}
-        </Link>
-        <button
-          type="button"
-          onClick={onAgain}
-          className={`${linkButton} border border-border bg-surface hover:bg-surface-2`}
-        >
-          {t('complete.again')}
-        </button>
-      </div>
-    </Page>
-  );
-}
 
 function Session({
   bundle,
@@ -68,6 +21,7 @@ function Session({
   lessonId: string;
   ctx: ExerciseContext;
 }) {
+  const t = useT();
   const navigate = useNavigate();
   const [round, setRound] = useState(0);
   const [seed] = useState(() => Date.now()); // new exercise order each visit
@@ -98,9 +52,12 @@ function Session({
 
   if (summary) {
     return (
-      <Complete
+      <LessonComplete
         summary={summary}
-        newLetters={lesson?.newLetters ?? []}
+        learned={lesson?.newLetters ?? []}
+        learnedLabel={t('complete.letters')}
+        backTo="/alphabet"
+        backLabel={t('complete.back')}
         onAgain={() => {
           setSummary(null);
           setRound((r) => r + 1);
@@ -115,6 +72,7 @@ function Session({
       key={round}
       exercises={exercises}
       ctx={ctx}
+      contentVersion={bundle.contentVersion}
       onAnswer={(record) => void logAnswer(record)}
       onFinish={(s) => {
         if (lesson) void completeLesson(lesson.id, s.accuracy);

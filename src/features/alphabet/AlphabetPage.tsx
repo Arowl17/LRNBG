@@ -7,7 +7,7 @@ import { letterTarget } from '../../engine/session/alphabet';
 import { useT } from '../../i18n';
 import { EmptyState, Page } from '../../ui/Page';
 import { LetterCard } from '../exercises/alphabet_intro';
-import { lessonStates } from './progress';
+import { lessonStates } from '../lesson/progress';
 import { useAlphabet } from './useAlphabet';
 
 const linkButton =

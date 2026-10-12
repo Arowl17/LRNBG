@@ -12,6 +12,7 @@ import { Button } from '../../ui/Button';
 import { definitionFor } from '../exercises/registry';
 import type { ExerciseContext, InputMode, SessionExercise } from '../exercises/types';
 import { Feedback, NoteText } from './Feedback';
+import { ReportProblem } from './ReportProblem';
 
 export interface AnswerRecord {
   exercise: SessionExercise;
@@ -29,6 +30,8 @@ export interface SessionSummary {
 interface Props {
   exercises: SessionExercise[];
   ctx: ExerciseContext;
+  /** Content version, stored with problem reports. */
+  contentVersion?: string;
   /** Called after every graded answer (for the review log). */
   onAnswer?: (record: AnswerRecord) => void;
   onFinish: (summary: SessionSummary) => void;
@@ -39,7 +42,14 @@ interface Props {
  * Runs a list of exercises: Check → feedback → Continue. Wrong answers come back at the end until
  * answered correctly (hearts are off by default — SPEC §14). Enter = Check / Continue.
  */
-export function ExerciseSession({ exercises, ctx, onAnswer, onFinish, onQuit }: Props) {
+export function ExerciseSession({
+  exercises,
+  ctx,
+  contentVersion = 'unknown',
+  onAnswer,
+  onFinish,
+  onQuit,
+}: Props) {
   const t = useT();
   const byId = useMemo(() => new Map(exercises.map((e) => [e.id, e])), [exercises]);
   const gradedIds = useMemo(
@@ -62,7 +72,7 @@ export function ExerciseSession({ exercises, ctx, onAnswer, onFinish, onQuit }: 
   }, [step]);
 
   const check = useCallback(() => {
-    if (!exercise || !def || result || !def.isReady(answer)) return;
+    if (!exercise || !def || result || !def.isReady(answer, exercise)) return;
     const r = def.check(exercise, answer, ctx);
     if (!r.graded && def.graded) {
       setRetryNote(r.notes[0]); // e.g. typed in Latin letters: ask again, no penalty
@@ -105,7 +115,10 @@ export function ExerciseSession({ exercises, ctx, onAnswer, onFinish, onQuit }: 
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== 'Enter' || e.isComposing || e.repeat) return;
       const target = e.target as HTMLElement | null;
-      if (target?.tagName === 'BUTTON') return; // let buttons handle their own Enter
+      // Buttons outside the exercise (Check/Continue itself, Quit, Report…) handle their own Enter.
+      // Inside the exercise, Enter on a just-clicked option or tile means "Check", not "click again".
+      if (target?.tagName === 'BUTTON' && !target.closest('[data-exercise-id]')) return;
+      if (target?.closest('form')) return; // e.g. typing in the problem-report form
       e.preventDefault();
       primary();
     };
@@ -116,7 +129,7 @@ export function ExerciseSession({ exercises, ctx, onAnswer, onFinish, onQuit }: 
   if (!exercise || !def) return null;
   const View = def.View;
   const progress = queue.total === 0 ? 1 : queue.done.length / queue.total;
-  const ready = def.isReady(answer);
+  const ready = def.isReady(answer, exercise);
 
   return (
     <div className="mx-auto flex min-h-[calc(100dvh-8rem)] w-full max-w-2xl flex-col gap-4 px-4 py-4">
@@ -169,6 +182,14 @@ export function ExerciseSession({ exercises, ctx, onAnswer, onFinish, onQuit }: 
       >
         {!def.graded || result ? t('session.continue') : t('session.check')}
       </Button>
+      {def.graded && (
+        <ReportProblem
+          key={`report-${step}`}
+          exerciseId={exercise.id}
+          userAnswer={def.describeAnswer?.(exercise, answer, ctx) || undefined}
+          contentVersion={contentVersion}
+        />
+      )}
     </div>
   );
 }

@@ -27,3 +27,13 @@ export function shuffle<T>(items: readonly T[], rng: Rng): T[] {
 export function sample<T>(items: readonly T[], n: number, rng: Rng): T[] {
   return shuffle(items, rng).slice(0, n);
 }
+
+/** Stable 32-bit hash of a string (FNV-1a), e.g. to seed a shuffle from an exercise id. */
+export function hashString(text: string): number {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < text.length; i++) {
+    h ^= text.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return h >>> 0;
+}

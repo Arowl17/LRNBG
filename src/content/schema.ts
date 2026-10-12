@@ -271,6 +271,8 @@ export const lessonSchema = z.object({
   id: lessonId,
   unitId,
   order: z.number().int().min(0),
+  /** Short lesson name shown on the course path, e.g. "Hello & goodbye". */
+  title: localizedSchema.optional(),
   newLexemeIds: z.array(lexemeId),
   grammarIds: z.array(grammarId),
   exercises: z.array(exerciseSchema).min(1),
@@ -289,6 +291,18 @@ export const unitSchema = z.object({
 });
 export type Unit = z.infer<typeof unitSchema>;
 
+/** public/content/units/<unit id>.json — everything one unit needs, loaded when it is opened. */
+export const unitBundleSchema = z.object({
+  contentVersion: nonEmpty,
+  unit: unitSchema,
+  lessons: z.array(lessonSchema),
+  /** Lexemes introduced or trained in this unit. */
+  lexemes: z.array(lexemeSchema),
+  /** Grammar points introduced in this unit. */
+  grammar: z.array(grammarPointSchema),
+});
+export type UnitBundle = z.infer<typeof unitBundleSchema>;
+
 /**
  * The small file the app loads first (public/content/course.json): the list of units.
  * Lessons, lexemes and grammar are loaded per unit later, so the first load stays small.
@@ -296,6 +310,10 @@ export type Unit = z.infer<typeof unitSchema>;
 export const courseManifestSchema = z.object({
   contentVersion: nonEmpty,
   units: z.array(unitSchema),
+  /** Lesson titles for the course page, so it needn't download every unit. */
+  lessons: z
+    .array(z.object({ id: lessonId, unitId, title: localizedSchema.optional() }))
+    .default([]),
   /** Section 0 lesson ids, so the course page can show alphabet progress without loading it. */
   alphabetLessonIds: z.array(lessonId).default([]),
 });
