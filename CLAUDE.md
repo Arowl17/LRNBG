@@ -4,8 +4,9 @@
 
 ## Current phase
 
-**Phase 0 — Foundations: done (awaiting owner review).** Next: Phase 1 (alphabet + answer-check
-engine). Never start a phase without the owner's go-ahead; start each in plan mode (SPEC §18).
+**Phase 1 — Alphabet + answer-check engine: done (awaiting owner review).** Next: Phase 2
+(lesson player for course units, Phase-2 exercise types, audio pipeline, A1 units 1–3).
+Never start a phase without the owner's go-ahead; start each with a plan (SPEC §18).
 
 ## Owner
 
@@ -35,6 +36,11 @@ In the cloud container, Playwright needs `PW_CHROMIUM_PATH=/opt/pw-browsers/chro
 - `src/i18n/` — `en.ts`, `tr.ts` (same keys, enforced by test); `useT()` hook
 - `src/app/` — router (`routes.tsx`), layout, Zustand user store
 - `src/features/<feature>/` — pages; `src/engine/` — pure logic (answer-check, srs, session, gamification)
+- `src/engine/answer-check/` — the answer checker (SPEC §9); `checkAnswer()` is the entry point
+- `src/features/exercises/<type>/` — one folder per exercise type; register it in `registry.ts`
+- `src/features/lesson/ExerciseSession.tsx` — runs any list of exercises (Check/Continue, recycling)
+- `src/engine/session/alphabet.ts` — generates Section 0 exercises from `content/alphabet/`
+- `src/features/keyboard/layout.ts` — phonetic keyboard map (verified against xkeyboard-config)
 - `src/ui/` — design tokens (`tokens.css`) and shared components
 - `docs/decisions/` — ADRs; `CHANGELOG.md`
 
@@ -45,6 +51,8 @@ In the cloud container, Playwright needs `PW_CHROMIUM_PATH=/opt/pw-browsers/chro
 - Colours only via tokens (`bg-surface`, `text-fg-muted`…); never raw hex in components.
 - New pages are lazy routes (bundle budget, ADR 0003).
 - DB schema change → new `version(N)` block in `db.ts`, never edit old ones; add a test.
+- New _setting_ or other additive field → add it to the Zod record schema with `.default(...)`;
+  `loadOrCreateUser` and backup import parse records, so old data gets the default. No migration.
 - Scripts: erasable TS only, import local files with the `.ts` extension.
 - Dates `DD.MM.YYYY`, 24h time (`src/lib/format.ts`); metric; euro.
 - Ask before: new dependencies, breaking schema changes, anything that costs money, deleting content.
@@ -63,3 +71,7 @@ In the cloud container, Playwright needs `PW_CHROMIUM_PATH=/opt/pw-browsers/chro
 - `eslint-plugin-jsx-a11y` peer warning for ESLint 10 is expected and silenced.
 - React Router 8 needs Node ≥ 22.22 (CI uses Node 24).
 - `public/content/` is generated — don't edit or commit it.
+- When editing files with scripts, **assert the old text matched**: Prettier reflows code, and a
+  silent no-op replacement once dropped the alphabet checks and the alphabet routes.
+- Official transliteration of ъ is "a": България → "Balgaria" (not "Bulgaria").
+- The "offline ready" toast sits at the top on phones so it never covers lesson buttons.
