@@ -8,6 +8,8 @@ import { join, relative } from 'node:path';
 import { parse } from 'yaml';
 import { z } from 'zod';
 import { toLatin } from '../../src/engine/answer-check/transliterate.ts';
+import { exerciseTexts } from './exercise-text.ts';
+import { checkCourseLanguage } from './linguistic.ts';
 import {
   alphabetFileSchema,
   BULGARIAN_ALPHABET,
@@ -17,7 +19,6 @@ import {
   unitSchema,
   type AlphabetLesson,
   type AlphabetLetter,
-  type Exercise,
   type GrammarPoint,
   type Lesson,
   type Lexeme,
@@ -158,36 +159,6 @@ export interface BgString {
   where: string;
 }
 
-function exerciseBgStrings(ex: Exercise): [string, string][] {
-  switch (ex.type) {
-    case 'select_meaning':
-      return [['bg', ex.bg]];
-    case 'tiles_translate':
-      return [
-        ['bg', ex.bg],
-        ...(ex.accepted.bg ?? []).map((s, i): [string, string] => [`accepted.bg.${i}`, s]),
-        ...(ex.distractors?.bg ?? []).map((s, i): [string, string] => [`distractors.bg.${i}`, s]),
-      ];
-    case 'type_translate':
-      return [
-        ['bg', ex.bg],
-        ...(ex.accepted.bg ?? []).map((s, i): [string, string] => [`accepted.bg.${i}`, s]),
-      ];
-    case 'listen_tiles':
-      return [
-        ['bg', ex.bg],
-        ...ex.accepted.map((s, i): [string, string] => [`accepted.${i}`, s]),
-        ...(ex.distractors ?? []).map((s, i): [string, string] => [`distractors.${i}`, s]),
-      ];
-    case 'listen_type':
-      return [['bg', ex.bg], ...ex.accepted.map((s, i): [string, string] => [`accepted.${i}`, s])];
-    case 'match_pairs':
-      return ex.pairs.map((p, i): [string, string] => [`pairs.${i}.bg`, p.bg]);
-    case 'fill_blank':
-      return [['bg', ex.bg], ...ex.options.map((s, i): [string, string] => [`options.${i}`, s])];
-  }
-}
-
 /** Every Bulgarian string in the course, with where it lives. */
 export function collectBgStrings(course: Course): BgString[] {
   const out: BgString[] = [];
@@ -205,7 +176,7 @@ export function collectBgStrings(course: Course): BgString[] {
   }
   for (const lesson of course.lessons) {
     for (const ex of lesson.exercises) {
-      for (const [path, text] of exerciseBgStrings(ex)) {
+      for (const { path, text } of exerciseTexts(ex)) {
         out.push({ text, file: file(ex.id), where: `${ex.id}.${path}` });
       }
     }
@@ -426,6 +397,7 @@ export function runAllChecks(course: Course, russianisms: Russianism[]): Issue[]
     ...checkRussianisms(strings, russianisms),
     ...checkReferences(course),
     ...checkAlphabet(course),
+    ...checkCourseLanguage(course),
   ];
 }
 

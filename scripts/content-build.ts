@@ -4,7 +4,7 @@
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import type { AlphabetBundle, CourseManifest } from '../src/content/schema.ts';
+import type { AlphabetBundle, CourseManifest, UnitBundle } from '../src/content/schema.ts';
 import { formatIssue, loadCourse } from './lib/content.ts';
 
 const repo = join(import.meta.dirname, '..');
@@ -20,6 +20,11 @@ if (errors.length > 0) {
 const manifest: CourseManifest = {
   contentVersion: course.contentVersion,
   units: [...course.units].sort((a, b) => a.order - b.order),
+  lessons: course.lessons.map((l) => ({
+    id: l.id,
+    unitId: l.unitId,
+    ...(l.title ? { title: l.title } : {}),
+  })),
   alphabetLessonIds: [...(course.alphabet?.lessons ?? [])]
     .sort((a, b) => a.order - b.order)
     .map((l) => l.id),
@@ -28,7 +33,29 @@ const manifest: CourseManifest = {
 const outDir = join(repo, 'public', 'content');
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, 'course.json'), JSON.stringify(manifest));
-// Per-unit bundles (lessons, lexemes, grammar) are written here from Phase 2 on.
+
+// One bundle per unit, so the app only downloads the unit being opened.
+const unitsDir = join(outDir, 'units');
+mkdirSync(unitsDir, { recursive: true });
+const lexemeById = new Map(course.lexemes.map((l) => [l.id, l]));
+const grammarById = new Map(course.grammar.map((g) => [g.id, g]));
+for (const unit of manifest.units) {
+  const lessons = course.lessons
+    .filter((l) => l.unitId === unit.id)
+    .sort((a, b) => a.order - b.order);
+  const lexemeIds = new Set(
+    lessons.flatMap((l) => [...l.newLexemeIds, ...l.exercises.flatMap((e) => e.targets)]),
+  );
+  const grammarIds = new Set([...unit.grammarIds, ...lessons.flatMap((l) => l.grammarIds)]);
+  const bundle: UnitBundle = {
+    contentVersion: course.contentVersion,
+    unit,
+    lessons,
+    lexemes: [...lexemeIds].flatMap((id) => lexemeById.get(id) ?? []),
+    grammar: [...grammarIds].flatMap((id) => grammarById.get(id) ?? []),
+  };
+  writeFileSync(join(unitsDir, `${unit.id}.json`), JSON.stringify(bundle));
+}
 
 if (course.alphabet) {
   const wordIds = new Set([

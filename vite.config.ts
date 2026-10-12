@@ -29,10 +29,23 @@ export default defineConfig({
         ],
       },
       workbox: {
-        // App shell is precached. Course content (public/content/*.json) is precached too
-        // while it is small; per-unit runtime caching arrives with real content in Phase 2.
+        // App shell and course content JSON are precached (small). Audio is cached on first play,
+        // so a lesson played once also works offline; the cache is capped to keep storage modest.
         globPatterns: ['**/*.{js,css,html,svg,png,woff2,json}'],
+        globIgnores: ['audio/**'],
         navigateFallback: '/index.html',
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) =>
+              url.pathname.startsWith('/audio/') && url.pathname.endsWith('.mp3'),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'audio',
+              expiration: { maxEntries: 3000 },
+              rangeRequests: true,
+            },
+          },
+        ],
       },
     }),
   ],

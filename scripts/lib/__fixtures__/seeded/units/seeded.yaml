@@ -1,0 +1,25 @@
+# Deliberately WRONG content — see lexicon/seeded.yaml.
+unit:
+  {
+    id: unit.seeded,
+    order: 0,
+    title: { en: S, tr: S },
+    cefr: A1,
+    goals: [],
+    grammarIds: [],
+    lessonIds: [lesson.seeded],
+  }
+lessons:
+  - id: lesson.seeded
+    unitId: unit.seeded
+    order: 0
+    newLexemeIds: [lex.spasibo, lex.ty]
+    grammarIds: []
+    exercises:
+      - id: ex.seeded.1
+        type: listen_type
+        targets: [lex.spasibo]
+        reviewStatus: ai_draft
+        bg: 'Спасибо, хорошо. Что?'
+        meaning: { en: 'Thanks, fine. What?', tr: 'Teşekkürler, iyi. Ne?' }
+        accepted: ['Спасибо, хорошо. Что?']

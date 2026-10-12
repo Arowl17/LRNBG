@@ -90,7 +90,13 @@ describe('loadCourse', () => {
     expect(issues).toEqual([]);
     expect(course.units).toHaveLength(1);
     expect(course.lessons[0]?.exercises).toHaveLength(1);
-    expect(runAllChecks(course, russianisms)).toEqual([]);
+    // The tiny fixture breaks the lesson rules on purpose: one new word, used once, and "моля" untaught.
+    expect(runAllChecks(course, russianisms).map((i) => i.message)).toEqual([
+      '1 new words (aim for 3–7)',
+      'new word lex.kafe is practised 1× in 1 exercise type(s) (need ≥3× in ≥2 types)',
+      'not taught yet: моля',
+      'not taught yet: моля',
+    ]);
     expect(loadCourse(root).course.contentVersion).toBe(course.contentVersion);
     write('lexicon/food.yaml', LEXICON.replace('coffee', 'a coffee'));
     expect(loadCourse(root).course.contentVersion).not.toBe(course.contentVersion);

@@ -1,0 +1,17 @@
+# Deliberately WRONG "Bulgarian" (Russian leaking in) — used only to prove the validator fails.
+- id: lex.spasibo
+  lemma: спаси́бо
+  pos: interj
+  translations: { en: [thanks], tr: [teşekkürler] }
+  cefr: A1
+  tags: []
+  reviewStatus: ai_draft
+  sources: [own]
+- id: lex.ty
+  lemma: ты
+  pos: pron
+  translations: { en: [you], tr: [sen] }
+  cefr: A1
+  tags: []
+  reviewStatus: ai_draft
+  sources: [own]
