@@ -1,0 +1,878 @@
+# A1 Unit 1 — Поздрави / Greetings. All ai_draft; doubts are in content/REVIEW_QUEUE.md.
+
+unit:
+  id: 'unit.a1-01'
+  order: 1
+  title:
+    en: Greetings
+    tr: Selamlaşma
+  cefr: A1
+  goals:
+    - en: Greet people at any time of day
+      tr: Günün her saatinde selamlaşmak
+    - en: 'Say thank you, please and sorry'
+      tr: 'Teşekkür etmek, rica etmek, özür dilemek'
+    - en: 'Ask "How are you?" and answer'
+      tr: '"Nasılsın?" diye sormak ve cevap vermek'
+  grammarIds:
+    - 'gram.greetings.formal-informal'
+    - 'gram.culture.head-gestures'
+  lessonIds:
+    - 'lesson.a1-01-01'
+    - 'lesson.a1-01-02'
+    - 'lesson.a1-01-03'
+    - 'lesson.a1-01-04'
+lessons:
+  - id: 'lesson.a1-01-01'
+    unitId: 'unit.a1-01'
+    order: 1
+    title:
+      en: 'Hello & goodbye'
+      tr: Merhaba ve hoşça kal
+    newLexemeIds:
+      - lex.zdravey
+      - lex.zdraveyte
+      - lex.chao
+      - lex.dovizhdane
+    grammarIds:
+      - 'gram.greetings.formal-informal'
+    exercises:
+      - id: 'ex.a1-01-01.01'
+        type: select_meaning
+        bg: 'Здравей!'
+        options:
+          - en: 'Hi!'
+            tr: 'Selam!'
+          - en: 'Goodbye!'
+            tr: 'Hoşça kalın!'
+          - en: 'Thank you!'
+            tr: 'Teşekkür ederim!'
+        answerIndex: 0
+        targets:
+          - lex.zdravey
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-01.02'
+        type: select_meaning
+        bg: 'Довиждане!'
+        options:
+          - en: 'Hello!'
+            tr: 'Merhaba!'
+          - en: 'Goodbye!'
+            tr: 'Hoşça kalın!'
+          - en: 'Please!'
+            tr: 'Lütfen!'
+        answerIndex: 1
+        targets:
+          - lex.dovizhdane
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-01.03'
+        type: listen_tiles
+        bg: 'Здравейте!'
+        meaning:
+          en: 'Hello! (formal)'
+          tr: 'Merhaba! (resmi)'
+        accepted:
+          - 'Здравейте!'
+        distractors:
+          - Здравей
+          - Чао
+        targets:
+          - lex.zdraveyte
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-01.04'
+        type: match_pairs
+        pairs:
+          - bg: здравей
+            meaning:
+              en: hi
+              tr: selam
+          - bg: здравейте
+            meaning:
+              en: hello (formal)
+              tr: merhaba (resmi)
+          - bg: чао
+            meaning:
+              en: bye
+              tr: görüşürüz
+          - bg: довиждане
+            meaning:
+              en: goodbye
+              tr: hoşça kalın
+        targets:
+          - lex.zdravey
+          - lex.zdraveyte
+          - lex.chao
+          - lex.dovizhdane
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-01.05'
+        type: select_meaning
+        bg: 'Чао!'
+        options:
+          - en: 'Bye!'
+            tr: 'Görüşürüz!'
+          - en: 'Hello! (formal)'
+            tr: 'Merhaba! (resmi)'
+          - en: 'Sorry!'
+            tr: 'Özür dilerim!'
+        answerIndex: 0
+        targets:
+          - lex.chao
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-01.06'
+        type: tiles_translate
+        bg: 'Довиждане!'
+        meaning:
+          en: 'Goodbye!'
+          tr: 'Hoşça kalın!'
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'Довиждане!'
+            - 'Чао!'
+        distractors:
+          bg:
+            - Здравейте
+            - Здравей
+        targets:
+          - lex.dovizhdane
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-01.07'
+        type: type_translate
+        bg: 'Здравейте!'
+        meaning:
+          en: 'Hello!'
+          tr: 'Merhaba!'
+        direction: bg_to_src
+        accepted:
+          en:
+            - '{Hello|Hi|Good day}!'
+          tr:
+            - '{Merhaba|Merhabalar|Selam|İyi günler}!'
+        targets:
+          - lex.zdraveyte
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-01.08'
+        type: listen_type
+        bg: 'Чао!'
+        meaning:
+          en: 'Bye!'
+          tr: 'Görüşürüz!'
+        accepted:
+          - 'Чао!'
+        targets:
+          - lex.chao
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-01.09'
+        type: type_translate
+        bg: 'Здравей!'
+        meaning:
+          en: 'Hi!'
+          tr: 'Selam!'
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'Здравей!'
+            - 'Здравейте!'
+            - 'Здрасти!'
+            - 'Чао!'
+        targets:
+          - lex.zdravey
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-01.10'
+        type: listen_tiles
+        bg: 'Довиждане!'
+        meaning:
+          en: 'Goodbye!'
+          tr: 'Hoşça kalın!'
+        accepted:
+          - 'Довиждане!'
+        distractors:
+          - Здравейте
+        targets:
+          - lex.dovizhdane
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-01.11'
+        type: select_meaning
+        bg: 'Здравейте!'
+        options:
+          - en: 'Hi!'
+            tr: 'Selam!'
+          - en: 'Bye!'
+            tr: 'Görüşürüz!'
+          - en: 'Hello! (formal)'
+            tr: 'Merhaba! (resmi)'
+        answerIndex: 2
+        targets:
+          - lex.zdraveyte
+        reviewStatus: ai_draft
+  - id: 'lesson.a1-01-02'
+    unitId: 'unit.a1-01'
+    order: 2
+    title:
+      en: Times of day
+      tr: Günün saatleri
+    newLexemeIds:
+      - 'lex.dobro-utro'
+      - 'lex.dobar-den'
+      - 'lex.dobar-vecher'
+      - 'lex.leka-nosht'
+    grammarIds: []
+    exercises:
+      - id: 'ex.a1-01-02.01'
+        type: select_meaning
+        bg: 'Добро утро!'
+        options:
+          - en: 'Good morning!'
+            tr: 'Günaydın!'
+          - en: 'Good evening!'
+            tr: 'İyi akşamlar!'
+          - en: 'Good night!'
+            tr: 'İyi geceler!'
+        answerIndex: 0
+        targets:
+          - 'lex.dobro-utro'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-02.02'
+        type: select_meaning
+        bg: 'Лека нощ!'
+        options:
+          - en: 'Good day!'
+            tr: 'İyi günler!'
+          - en: 'Good night!'
+            tr: 'İyi geceler!'
+          - en: 'Good morning!'
+            tr: 'Günaydın!'
+        answerIndex: 1
+        targets:
+          - 'lex.leka-nosht'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-02.03'
+        type: match_pairs
+        pairs:
+          - bg: добро утро
+            meaning:
+              en: good morning
+              tr: günaydın
+          - bg: добър ден
+            meaning:
+              en: good day
+              tr: iyi günler
+          - bg: добър вечер
+            meaning:
+              en: good evening
+              tr: iyi akşamlar
+          - bg: лека нощ
+            meaning:
+              en: good night
+              tr: iyi geceler
+        targets:
+          - 'lex.dobro-utro'
+          - 'lex.dobar-den'
+          - 'lex.dobar-vecher'
+          - 'lex.leka-nosht'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-02.04'
+        type: listen_tiles
+        bg: 'Добър вечер!'
+        meaning:
+          en: 'Good evening!'
+          tr: 'İyi akşamlar!'
+        accepted:
+          - 'Добър вечер!'
+        distractors:
+          - ден
+          - Добро
+        targets:
+          - 'lex.dobar-vecher'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-02.05'
+        type: tiles_translate
+        bg: 'Добро утро!'
+        meaning:
+          en: 'Good morning!'
+          tr: 'Günaydın!'
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'Добро утро!'
+        distractors:
+          bg:
+            - Добър
+            - нощ
+        targets:
+          - 'lex.dobro-utro'
+        strictTokens:
+          - Добро
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-02.06'
+        type: fill_blank
+        bg: '___ утро!'
+        meaning:
+          en: 'Good morning!'
+          tr: 'Günaydın!'
+        options:
+          - Добро
+          - Добър
+        answerIndex: 0
+        explanation:
+          en: 'Утро (morning) goes with добро: добро утро. Добър ден and добър вечер are fixed greetings.'
+          tr: 'Утро (sabah) kelimesiyle добро kullanılır: добро утро. Добър ден ve добър вечер kalıplaşmış selamlardır.'
+        targets:
+          - 'lex.dobro-utro'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-02.07'
+        type: type_translate
+        bg: 'Добър ден!'
+        meaning:
+          en: 'Good day!'
+          tr: 'İyi günler!'
+        direction: bg_to_src
+        accepted:
+          en:
+            - '{Good day|Hello|Good afternoon|Hi}!'
+          tr:
+            - '{İyi günler|Merhaba|Tünaydın}!'
+        targets:
+          - 'lex.dobar-den'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-02.08'
+        type: listen_type
+        bg: 'Лека нощ!'
+        meaning:
+          en: 'Good night!'
+          tr: 'İyi geceler!'
+        accepted:
+          - 'Лека нощ!'
+        targets:
+          - 'lex.leka-nosht'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-02.09'
+        type: select_meaning
+        bg: 'Добър вечер!'
+        options:
+          - en: 'Good morning!'
+            tr: 'Günaydın!'
+          - en: 'Good evening!'
+            tr: 'İyi akşamlar!'
+          - en: 'Goodbye!'
+            tr: 'Hoşça kalın!'
+        answerIndex: 1
+        targets:
+          - 'lex.dobar-vecher'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-02.10'
+        type: tiles_translate
+        bg: 'Лека нощ!'
+        meaning:
+          en: 'Good night!'
+          tr: 'İyi geceler!'
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'Лека нощ!'
+        distractors:
+          bg:
+            - Добър
+            - вечер
+        targets:
+          - 'lex.leka-nosht'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-02.11'
+        type: type_translate
+        bg: 'Добро утро!'
+        meaning:
+          en: 'Good morning!'
+          tr: 'Günaydın!'
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'Добро утро!'
+        targets:
+          - 'lex.dobro-utro'
+        strictTokens:
+          - Добро
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-02.12'
+        type: listen_tiles
+        bg: 'Добър ден!'
+        meaning:
+          en: 'Good day!'
+          tr: 'İyi günler!'
+        accepted:
+          - 'Добър ден!'
+        distractors:
+          - вечер
+          - утро
+        targets:
+          - 'lex.dobar-den'
+        reviewStatus: ai_draft
+  - id: 'lesson.a1-01-03'
+    unitId: 'unit.a1-01'
+    order: 3
+    title:
+      en: Being polite
+      tr: Kibar olmak
+    newLexemeIds:
+      - lex.blagodarya
+      - lex.mersi
+      - lex.molya
+      - lex.izvinete
+    grammarIds: []
+    exercises:
+      - id: 'ex.a1-01-03.01'
+        type: select_meaning
+        bg: 'Благодаря!'
+        options:
+          - en: 'Please!'
+            tr: 'Lütfen!'
+          - en: 'Thank you!'
+            tr: 'Teşekkür ederim!'
+          - en: 'Hello!'
+            tr: 'Merhaba!'
+        answerIndex: 1
+        targets:
+          - lex.blagodarya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-03.02'
+        type: select_meaning
+        bg: 'Извинете!'
+        options:
+          - en: 'Excuse me!'
+            tr: 'Affedersiniz!'
+          - en: 'Good night!'
+            tr: 'İyi geceler!'
+          - en: 'Thanks!'
+            tr: 'Sağ ol!'
+        answerIndex: 0
+        targets:
+          - lex.izvinete
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-03.03'
+        type: match_pairs
+        pairs:
+          - bg: благодаря
+            meaning:
+              en: thank you
+              tr: teşekkür ederim
+          - bg: мерси
+            meaning:
+              en: thanks
+              tr: sağ ol
+          - bg: моля
+            meaning:
+              en: please
+              tr: lütfen
+          - bg: извинете
+            meaning:
+              en: excuse me
+              tr: affedersiniz
+        targets:
+          - lex.blagodarya
+          - lex.mersi
+          - lex.molya
+          - lex.izvinete
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-03.04'
+        type: listen_tiles
+        bg: 'Моля!'
+        meaning:
+          en: 'Please!'
+          tr: 'Lütfen!'
+        accepted:
+          - 'Моля!'
+        distractors:
+          - Мерси
+          - Благодаря
+        targets:
+          - lex.molya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-03.05'
+        type: tiles_translate
+        bg: 'Благодаря, довиждане!'
+        meaning:
+          en: 'Thank you, goodbye!'
+          tr: 'Teşekkür ederim, hoşça kalın!'
+        direction: bg_to_src
+        accepted:
+          en:
+            - '{Thank you|Thanks}, goodbye!'
+            - '{Thank you|Thanks}, bye!'
+          tr:
+            - '{Teşekkür ederim|Teşekkürler}, hoşça kalın!'
+            - 'Teşekkürler, görüşürüz!'
+        distractors:
+          en:
+            - please
+            - hello
+          tr:
+            - lütfen
+            - merhaba
+        targets:
+          - lex.blagodarya
+          - lex.dovizhdane
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-03.06'
+        type: type_translate
+        bg: 'Моля!'
+        meaning:
+          en: 'Please!'
+          tr: 'Lütfen!'
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'Моля!'
+        targets:
+          - lex.molya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-03.07'
+        type: listen_type
+        bg: 'Мерси!'
+        meaning:
+          en: 'Thanks!'
+          tr: 'Sağ ol!'
+        accepted:
+          - 'Мерси!'
+        targets:
+          - lex.mersi
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-03.08'
+        type: select_meaning
+        bg: Моля.
+        options:
+          - en: Please.
+            tr: Lütfen.
+          - en: Thank you.
+            tr: Teşekkür ederim.
+          - en: Sorry.
+            tr: Özür dilerim.
+        answerIndex: 0
+        targets:
+          - lex.molya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-03.09'
+        type: type_translate
+        bg: 'Извинете!'
+        meaning:
+          en: 'Excuse me!'
+          tr: 'Affedersiniz!'
+        direction: bg_to_src
+        accepted:
+          en:
+            - '{Excuse me|Sorry|Pardon|Pardon me}!'
+          tr:
+            - '{Affedersiniz|Özür dilerim|Pardon|Kusura bakmayın}!'
+        targets:
+          - lex.izvinete
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-03.10'
+        type: tiles_translate
+        bg: 'Мерси, чао!'
+        meaning:
+          en: 'Thanks, bye!'
+          tr: 'Sağ ol, görüşürüz!'
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'Мерси, чао!'
+            - 'Благодаря, чао!'
+        distractors:
+          bg:
+            - моля
+            - довиждане
+        targets:
+          - lex.mersi
+          - lex.chao
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-03.11'
+        type: listen_tiles
+        bg: 'Благодаря, довиждане!'
+        meaning:
+          en: 'Thank you, goodbye!'
+          tr: 'Teşekkür ederim, hoşça kalın!'
+        accepted:
+          - 'Благодаря, довиждане!'
+        distractors:
+          - моля
+        targets:
+          - lex.blagodarya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-03.12'
+        type: select_meaning
+        bg: 'Мерси!'
+        options:
+          - en: 'Thanks!'
+            tr: 'Sağ ol!'
+          - en: 'Excuse me!'
+            tr: 'Affedersiniz!'
+          - en: 'Good morning!'
+            tr: 'Günaydın!'
+        answerIndex: 0
+        targets:
+          - lex.mersi
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-03.13'
+        type: fill_blank
+        bg: '— Благодаря! — ___!'
+        meaning:
+          en: "— Thank you! — You're welcome!"
+          tr: '— Teşekkür ederim! — Rica ederim!'
+        options:
+          - Моля
+          - Мерси
+          - Извинете
+        answerIndex: 0
+        explanation:
+          en: 'Моля means both "please" and "you''re welcome".'
+          tr: 'Моля hem "lütfen" hem de "rica ederim" demektir.'
+        targets:
+          - lex.molya
+          - lex.blagodarya
+        reviewStatus: ai_draft
+  - id: 'lesson.a1-01-04'
+    unitId: 'unit.a1-01'
+    order: 4
+    title:
+      en: 'Yes, no, how are you?'
+      tr: 'Evet, hayır, nasılsın?'
+    newLexemeIds:
+      - lex.da
+      - lex.ne
+      - lex.dobre
+      - 'lex.kak-si'
+      - 'lex.kak-ste'
+      - 'lex.a-ti'
+      - 'lex.a-vie'
+    grammarIds:
+      - 'gram.culture.head-gestures'
+    exercises:
+      - id: 'ex.a1-01-04.01'
+        type: select_meaning
+        bg: Да.
+        options:
+          - en: Yes.
+            tr: Evet.
+          - en: No.
+            tr: Hayır.
+          - en: Fine.
+            tr: İyi.
+        answerIndex: 0
+        targets:
+          - lex.da
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.02'
+        type: select_meaning
+        bg: Не.
+        options:
+          - en: Yes.
+            tr: Evet.
+          - en: No.
+            tr: Hayır.
+          - en: Please.
+            tr: Lütfen.
+        answerIndex: 1
+        targets:
+          - lex.ne
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.03'
+        type: match_pairs
+        pairs:
+          - bg: да
+            meaning:
+              en: 'yes'
+              tr: evet
+          - bg: не
+            meaning:
+              en: 'no'
+              tr: hayır
+          - bg: добре
+            meaning:
+              en: fine
+              tr: iyi
+          - bg: как си
+            meaning:
+              en: 'how are you?'
+              tr: 'nasılsın?'
+        targets:
+          - lex.da
+          - lex.ne
+          - lex.dobre
+          - 'lex.kak-si'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.04'
+        type: listen_tiles
+        bg: 'Как си?'
+        meaning:
+          en: 'How are you?'
+          tr: 'Nasılsın?'
+        accepted:
+          - 'Как си?'
+        distractors:
+          - сте
+        targets:
+          - 'lex.kak-si'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.05'
+        type: select_meaning
+        bg: 'Как сте?'
+        options:
+          - en: 'How are you? (formal)'
+            tr: 'Nasılsınız?'
+          - en: 'And you?'
+            tr: 'Ya sen?'
+          - en: 'Good evening!'
+            tr: 'İyi akşamlar!'
+        answerIndex: 0
+        targets:
+          - 'lex.kak-ste'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.06'
+        type: tiles_translate
+        bg: 'Добре, благодаря. А ти?'
+        meaning:
+          en: 'Fine, thank you. And you?'
+          tr: 'İyiyim, teşekkür ederim. Ya sen?'
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'Добре, благодаря. А ти?'
+            - 'Добре, мерси. А ти?'
+        distractors:
+          bg:
+            - вие
+            - не
+        targets:
+          - lex.dobre
+          - 'lex.a-ti'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.07'
+        type: fill_blank
+        bg: 'Как ___? — Добре, благодаря. А вие?'
+        meaning:
+          en: 'How are you? — Fine, thank you. And you?'
+          tr: 'Nasılsınız? — İyiyim, teşekkür ederim. Ya siz?'
+        options:
+          - си
+          - сте
+        answerIndex: 1
+        explanation:
+          en: 'The answer uses вие (formal), so the question is formal too: Как сте?'
+          tr: 'Cevapta вие (resmi) var, demek ki soru da resmi: Как сте?'
+        targets:
+          - 'lex.kak-ste'
+          - 'lex.a-vie'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.08'
+        type: type_translate
+        bg: 'Добре, благодаря.'
+        meaning:
+          en: 'Fine, thank you.'
+          tr: 'İyiyim, teşekkür ederim.'
+        direction: bg_to_src
+        accepted:
+          en:
+            - '{Fine|Good|Well|OK|Okay}, thank{ you|s}.'
+          tr:
+            - '{İyiyim|İyi}, {teşekkür ederim|teşekkürler|sağ ol}.'
+        targets:
+          - lex.dobre
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.09'
+        type: listen_type
+        bg: 'Да, добре.'
+        meaning:
+          en: 'Yes, fine.'
+          tr: 'Evet, tamam.'
+        accepted:
+          - 'Да, добре.'
+        targets:
+          - lex.da
+          - lex.dobre
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.10'
+        type: select_meaning
+        bg: 'А вие?'
+        options:
+          - en: 'And you? (formal)'
+            tr: 'Ya siz?'
+          - en: Yes.
+            tr: Evet.
+          - en: 'How are you?'
+            tr: 'Nasılsın?'
+        answerIndex: 0
+        targets:
+          - 'lex.a-vie'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.11'
+        type: type_translate
+        bg: 'Как си?'
+        meaning:
+          en: 'How are you?'
+          tr: 'Nasılsın?'
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'Как си?'
+            - 'Как сте?'
+        targets:
+          - 'lex.kak-si'
+          - 'lex.kak-ste'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.12'
+        type: tiles_translate
+        bg: 'Не, благодаря.'
+        meaning:
+          en: 'No, thank you.'
+          tr: 'Hayır, teşekkür ederim.'
+        direction: bg_to_src
+        accepted:
+          en:
+            - 'No, thank{ you|s}.'
+          tr:
+            - 'Hayır, {teşekkür ederim|teşekkürler|sağ ol}.'
+        distractors:
+          en:
+            - 'yes'
+          tr:
+            - evet
+        targets:
+          - lex.ne
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.13'
+        type: listen_tiles
+        bg: 'А вие?'
+        meaning:
+          en: 'And you? (formal)'
+          tr: 'Ya siz?'
+        accepted:
+          - 'А вие?'
+        distractors:
+          - ти
+        targets:
+          - 'lex.a-vie'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.14'
+        type: select_meaning
+        bg: 'А ти?'
+        options:
+          - en: 'And you?'
+            tr: 'Ya sen?'
+          - en: 'No, thank you.'
+            tr: 'Hayır, teşekkür ederim.'
+          - en: 'Good morning!'
+            tr: 'Günaydın!'
+        answerIndex: 0
+        targets:
+          - 'lex.a-ti'
+        reviewStatus: ai_draft
+      - id: 'ex.a1-01-04.15'
+        type: listen_type
+        bg: 'Добре. А ти?'
+        meaning:
+          en: 'Fine. And you?'
+          tr: 'İyiyim. Ya sen?'
+        accepted:
+          - 'Добре. А ти?'
+        targets:
+          - 'lex.a-ti'
+          - lex.dobre
+        reviewStatus: ai_draft

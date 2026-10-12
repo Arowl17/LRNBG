@@ -1,0 +1,94 @@
+# A1 Unit 2 — Аз съм… / I am… All ai_draft; doubts are in content/REVIEW_QUEUE.md.
+
+- id: gram.pronouns.personal
+  title:
+    en: 'I, you, we… — personal pronouns'
+    tr: 'Ben, sen, biz… — şahıs zamirleri'
+  cefr: A1
+  explanation:
+    en: "**аз** I · **ти** you (one friend) · **той** he · **тя** she · **то** it\n\n**ние** we · **вие** you (several people, or polite to one person) · **те** they"
+    tr: "**аз** ben · **ти** sen · **той** o (erkek) · **тя** o (kadın) · **то** o (nötr)\n\n**ние** biz · **вие** siz (birden fazla kişi veya kibar hitap) · **те** onlar"
+  examples:
+    - bg: Аз съм студент.
+      en: I am a student.
+      tr: Ben öğrenciyim.
+    - bg: Ти си студентка.
+      en: You are a student.
+      tr: Sen öğrencisin.
+  prerequisites: []
+  reviewStatus: ai_draft
+- id: gram.sam.present
+  title:
+    en: съм — to be
+    tr: съм — olmak
+  cefr: A1
+  explanation:
+    en: "Bulgarian has no infinitive: verbs are listed in the \"I\" form. **съм** = I am.\n\n- аз **съм** · ти **си** · той/тя/то **е**\n- ние **сме** · вие **сте** · те **са**"
+    tr: "Bulgarcada mastar yoktur: fiiller \"ben\" biçimiyle verilir. **съм** = ben …-im.\n\n- аз **съм** · ти **си** · той/тя/то **е**\n- ние **сме** · вие **сте** · те **са**\n\nTürkçedeki *-im, -sin, -dir* ekleri gibi düşünebilirsin: Студент **съм** = Öğrenci**yim**."
+  examples:
+    - bg: Аз съм студент.
+      en: I am a student.
+      tr: Ben öğrenciyim.
+    - bg: Тя е тук.
+      en: She is here.
+      tr: O burada.
+    - bg: Ние сме тук.
+      en: We are here.
+      tr: Biz buradayız.
+  prerequisites:
+    - gram.pronouns.personal
+  reviewStatus: ai_draft
+- id: 'gram.pronouns.he-she-it'
+  title:
+    en: 'he, she, it'
+    tr: 'o, o, o'
+  cefr: A1
+  explanation:
+    en: "English has *he*, *she* and *it*; Bulgarian has **той**, **тя** and **то** — the choice follows the noun's gender (more in unit 3)."
+    tr: 'Türkçede tek bir *o* var; Bulgarcada üç tane: **той** (erkek), **тя** (kadın), **то** (nötr). Hangisinin kullanılacağı ismin cinsiyetine bağlıdır (3. ünitede daha fazlası).'
+  examples:
+    - bg: Той е учител.
+      en: He is a teacher.
+      tr: O öğretmen.
+    - bg: Тя е учителка.
+      en: She is a teacher.
+      tr: O öğretmen.
+  prerequisites:
+    - gram.pronouns.personal
+  reviewStatus: ai_draft
+- id: 'gram.pro-drop'
+  title:
+    en: You can leave out the pronoun
+    tr: Zamiri söylemeyebilirsin
+  cefr: A1
+  explanation:
+    en: "The form of **съм** already shows who it is, so Bulgarians often drop **аз, ти, той…**:\n\n**Аз съм студент.** = **Студент съм.** (I am a student.)"
+    tr: "**съм** fiilinin biçimi kimden bahsedildiğini zaten gösterir, bu yüzden **аз, ти, той…** sık sık söylenmez — tıpkı Türkçede *Ben öğrenciyim* yerine *Öğrenciyim* demek gibi.\n\n**Аз съм студент.** = **Студент съм.**"
+  examples:
+    - bg: Студент съм.
+      en: I am a student.
+      tr: Öğrenciyim.
+    - bg: От Турция съм.
+      en: I am from Turkey.
+      tr: "Türkiye'denim."
+  prerequisites:
+    - gram.sam.present
+  reviewStatus: ai_draft
+- id: 'gram.clitic.sam-position'
+  title:
+    en: съм never comes first
+    tr: съм asla başta olmaz
+  cefr: A1
+  explanation:
+    en: "The short forms **съм, си, е, сме, сте, са** can't start a sentence. When you drop the pronoun, put something else first:\n\n- ✔ **Студент съм.**\n- ✘ *Съм студент.*"
+    tr: "**съм, си, е, сме, сте, са** kısa biçimleri cümleye başlayamaz. Zamiri düşürdüğünde başa başka bir kelime koy:\n\n- ✔ **Студент съм.** (Öğrenci**yim** — Türkçeyle aynı sıra!)\n- ✘ *Съм студент.*"
+  examples:
+    - bg: Студент съм.
+      en: I am a student.
+      tr: Öğrenciyim.
+    - bg: Учителка е.
+      en: She is a teacher.
+      tr: O öğretmen.
+  prerequisites:
+    - 'gram.pro-drop'
+  reviewStatus: ai_draft

@@ -1,0 +1,45 @@
+# A1 Unit 1 — Поздрави / Greetings. All ai_draft; doubts are in content/REVIEW_QUEUE.md.
+
+- id: 'gram.greetings.formal-informal'
+  title:
+    en: Informal and formal greetings
+    tr: Samimi ve resmi selamlaşma
+  cefr: A1
+  explanation:
+    en: "**Здраве́й** (hi) is for one person you know well. **Здраве́йте** is for several people, or to be polite to one person.\n\nIt works like *ти* and *ви́е* (you): **Как си?** to a friend, **Как сте?** to a stranger, a teacher or a group."
+    tr: "**Здраве́й** samimidir ve tek kişiye söylenir. **Здраве́йте** birden fazla kişiye ya da kibar konuşurken tek kişiye söylenir.\n\nTürkçedeki *sen* / *siz* farkı gibidir: arkadaşa **Как си?**, tanımadığın birine, öğretmene ya da bir gruba **Как сте?**"
+  examples:
+    - bg: 'Здравей!'
+      en: 'Hi!'
+      tr: 'Selam!'
+    - bg: 'Здравейте!'
+      en: 'Hello! (formal)'
+      tr: 'Merhaba! (resmi)'
+    - bg: 'Чао!'
+      en: 'Bye!'
+      tr: 'Görüşürüz!'
+    - bg: 'Довиждане!'
+      en: 'Goodbye!'
+      tr: 'Hoşça kalın!'
+  prerequisites: []
+  reviewStatus: ai_draft
+- id: 'gram.culture.head-gestures'
+  title:
+    en: 'Yes, no — and your head'
+    tr: 'Evet, hayır — ve başın'
+  cefr: A1
+  explanation:
+    en: "Careful: many Bulgarians move their head the \"other way\". A side-to-side shake often means **да** (yes), and a nod often means **не** (no).\n\nWhen in doubt, listen to the words, not the head."
+    tr: "Dikkat: birçok Bulgar başını \"ters\" sallar. Başı sağa sola sallamak çoğu zaman **да** (evet), başı aşağı yukarı sallamak çoğu zaman **не** (hayır) demektir.\n\nEmin değilsen başa değil, kelimelere bak."
+  examples:
+    - bg: Да.
+      en: Yes.
+      tr: Evet.
+    - bg: Не.
+      en: No.
+      tr: Hayır.
+    - bg: 'Да, добре.'
+      en: 'Yes, fine.'
+      tr: 'Evet, tamam.'
+  prerequisites: []
+  reviewStatus: ai_draft

@@ -1,0 +1,262 @@
+# A1 Unit 3 — Род и множествено число / Gender and plural. All ai_draft; doubts in content/REVIEW_QUEUE.md.
+# Plural forms whose stress I'm unsure of are left without a stress mark (see REVIEW_QUEUE.md).
+# град, телефон, чанта, море and кафе live in section-0-words.yaml (their plurals were added there).
+
+- id: lex.tova
+  lemma: това́
+  pos: pron
+  translations:
+    en:
+      - this
+      - that
+    tr:
+      - bu
+      - şu
+  cefr: A1
+  tags:
+    - pronoun
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.kakvo
+  lemma: какво́
+  pos: pron
+  translations:
+    en:
+      - what
+    tr:
+      - ne
+  cefr: A1
+  tags:
+    - question
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.stol
+  lemma: стол
+  pos: noun
+  gender: m
+  forms:
+    pl: столове
+  translations:
+    en:
+      - chair
+    tr:
+      - sandalye
+  cefr: A1
+  tags:
+    - home
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.hlyab
+  lemma: хляб
+  pos: noun
+  gender: m
+  forms:
+    pl: хлябове
+  translations:
+    en:
+      - bread
+    tr:
+      - ekmek
+  cefr: A1
+  tags:
+    - food
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.zhena
+  lemma: жена́
+  pos: noun
+  gender: f
+  forms:
+    pl: жени́
+  translations:
+    en:
+      - woman
+      - wife
+    tr:
+      - kadın
+      - eş
+  cefr: A1
+  tags:
+    - person
+    - family
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.kniga
+  lemma: кни́га
+  pos: noun
+  gender: f
+  forms:
+    pl: кни́ги
+  translations:
+    en:
+      - book
+    tr:
+      - kitap
+  cefr: A1
+  tags:
+    - school
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.staya
+  lemma: ста́я
+  pos: noun
+  gender: f
+  forms:
+    pl: ста́и
+  translations:
+    en:
+      - room
+    tr:
+      - oda
+  cefr: A1
+  tags:
+    - home
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.selo
+  lemma: село́
+  pos: noun
+  gender: n
+  forms:
+    pl: села́
+  translations:
+    en:
+      - village
+    tr:
+      - köy
+  cefr: A1
+  tags:
+    - places
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.dete
+  lemma: дете́
+  pos: noun
+  gender: n
+  forms:
+    pl: деца́
+  translations:
+    en:
+      - child
+    tr:
+      - çocuk
+  cefr: A1
+  tags:
+    - person
+    - family
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.edin
+  lemma: еди́н
+  pos: num
+  forms:
+    f: една́
+    n: едно́
+  translations:
+    en:
+      - one
+      - 'a, an'
+    tr:
+      - bir
+  cefr: A1
+  tags:
+    - number
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.mazh
+  lemma: мъж
+  pos: noun
+  gender: m
+  forms:
+    pl: мъже́
+  translations:
+    en:
+      - man
+      - husband
+    tr:
+      - adam
+      - erkek
+      - koca
+  cefr: A1
+  tags:
+    - person
+    - family
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.momche
+  lemma: момче́
+  pos: noun
+  gender: n
+  forms:
+    pl: момчета
+  translations:
+    en:
+      - boy
+    tr:
+      - erkek çocuk
+      - oğlan
+  cefr: A1
+  tags:
+    - person
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.momiche
+  lemma: моми́че
+  pos: noun
+  gender: n
+  forms:
+    pl: моми́чета
+  translations:
+    en:
+      - girl
+    tr:
+      - kız
+      - kız çocuk
+  cefr: A1
+  tags:
+    - person
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.mnogo
+  lemma: мно́го
+  pos: adv
+  translations:
+    en:
+      - many
+      - a lot
+      - very
+    tr:
+      - çok
+  cefr: A1
+  tags:
+    - quantity
+  reviewStatus: ai_draft
+  sources:
+    - own
+- id: lex.tam
+  lemma: там
+  pos: adv
+  translations:
+    en:
+      - there
+    tr:
+      - orada
+  cefr: A1
+  tags:
+    - place
+  reviewStatus: ai_draft
+  sources:
+    - own

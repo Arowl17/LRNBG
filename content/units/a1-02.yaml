@@ -1,0 +1,1224 @@
+# A1 Unit 2 — Аз съм… / I am… All ai_draft; doubts are in content/REVIEW_QUEUE.md.
+
+unit:
+  id: 'unit.a1-02'
+  order: 2
+  title:
+    en: I am…
+    tr: Ben…
+  cefr: A1
+  goals:
+    - en: "Say who you are and where you're from"
+      tr: Kim olduğunu ve nereli olduğunu söylemek
+    - en: Use every form of съм (to be)
+      tr: съм (olmak) fiilinin bütün biçimlerini kullanmak
+    - en: Drop the pronoun like a Bulgarian
+      tr: Zamiri bir Bulgar gibi düşürmek
+  grammarIds:
+    - gram.pronouns.personal
+    - gram.sam.present
+    - 'gram.pronouns.he-she-it'
+    - 'gram.pro-drop'
+    - 'gram.clitic.sam-position'
+  lessonIds:
+    - 'lesson.a1-02-01'
+    - 'lesson.a1-02-02'
+    - 'lesson.a1-02-03'
+    - 'lesson.a1-02-04'
+    - 'lesson.a1-02-05'
+lessons:
+  - id: 'lesson.a1-02-01'
+    unitId: 'unit.a1-02'
+    order: 1
+    title:
+      en: 'I am, you are'
+      tr: 'Ben, sen'
+    newLexemeIds:
+      - lex.az
+      - lex.ti
+      - lex.sam
+      - lex.student
+      - lex.studentka
+    grammarIds:
+      - gram.pronouns.personal
+      - gram.sam.present
+    exercises:
+      - id: 'ex.a1-02-01.01'
+        type: select_meaning
+        bg: аз
+        options:
+          - en: I
+            tr: ben
+          - en: you
+            tr: sen
+          - en: and
+            tr: ve
+        answerIndex: 0
+        targets:
+          - lex.az
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-01.02'
+        type: select_meaning
+        bg: студентка
+        options:
+          - en: teacher
+            tr: öğretmen
+          - en: student (female)
+            tr: öğrenci (kadın)
+          - en: goodbye
+            tr: hoşça kal
+        answerIndex: 1
+        targets:
+          - lex.studentka
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-01.03'
+        type: match_pairs
+        pairs:
+          - bg: аз
+            meaning:
+              en: I
+              tr: ben
+          - bg: ти
+            meaning:
+              en: you
+              tr: sen
+          - bg: студент
+            meaning:
+              en: student (male)
+              tr: öğrenci (erkek)
+          - bg: студентка
+            meaning:
+              en: student (female)
+              tr: öğrenci (kadın)
+        targets:
+          - lex.az
+          - lex.ti
+          - lex.student
+          - lex.studentka
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-01.04'
+        type: listen_tiles
+        bg: Аз съм студент.
+        meaning:
+          en: I am a student.
+          tr: Ben öğrenciyim.
+        accepted:
+          - Аз съм студент.
+        distractors:
+          - си
+          - студентка
+        targets:
+          - lex.az
+          - lex.sam
+          - lex.student
+        strictTokens:
+          - съм
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-01.05'
+        type: fill_blank
+        bg: Аз ___ студент.
+        meaning:
+          en: I am a student.
+          tr: Ben öğrenciyim.
+        options:
+          - съм
+          - си
+        answerIndex: 0
+        explanation:
+          en: With аз (I) use съм.
+          tr: аз (ben) ile съм kullanılır.
+        targets:
+          - lex.sam
+          - lex.az
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-01.06'
+        type: fill_blank
+        bg: Ти ___ студентка.
+        meaning:
+          en: You are a student.
+          tr: Sen öğrencisin.
+        options:
+          - съм
+          - си
+        answerIndex: 1
+        explanation:
+          en: With ти (you) use си.
+          tr: ти (sen) ile си kullanılır.
+        targets:
+          - lex.sam
+          - lex.ti
+          - lex.studentka
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-01.07'
+        type: tiles_translate
+        bg: Аз съм студент.
+        meaning:
+          en: I am a student.
+          tr: Ben öğrenciyim.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'Аз съм {студент|студентка}.'
+            - '{Студент|Студентка} съм.'
+        distractors:
+          bg:
+            - си
+            - ти
+        targets:
+          - lex.az
+          - lex.sam
+          - lex.student
+        strictTokens:
+          - съм
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-01.08'
+        type: type_translate
+        bg: Ти си студентка.
+        meaning:
+          en: You are a student.
+          tr: Sen öğrencisin.
+        direction: bg_to_src
+        accepted:
+          en:
+            - "{You are|You're} a student."
+          tr:
+            - '{Sen |}öğrencisin.'
+        targets:
+          - lex.ti
+          - lex.sam
+          - lex.studentka
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-01.09'
+        type: listen_type
+        bg: Ти си студент.
+        meaning:
+          en: You are a student.
+          tr: Sen öğrencisin.
+        accepted:
+          - Ти си студент.
+        targets:
+          - lex.ti
+          - lex.sam
+          - lex.student
+        strictTokens:
+          - си
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-01.10'
+        type: select_meaning
+        bg: Аз съм студентка.
+        options:
+          - en: I am a student.
+            tr: Ben öğrenciyim.
+          - en: You are a student.
+            tr: Sen öğrencisin.
+          - en: 'Hi, how are you?'
+            tr: 'Selam, nasılsın?'
+        answerIndex: 0
+        targets:
+          - lex.studentka
+          - lex.az
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-01.11'
+        type: type_translate
+        bg: Ти си студент.
+        meaning:
+          en: You are a student.
+          tr: Sen öğrencisin.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'Ти си {студент|студентка}.'
+            - '{Студент|Студентка} си.'
+        targets:
+          - lex.ti
+          - lex.sam
+          - lex.student
+        strictTokens:
+          - си
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-01.12'
+        type: tiles_translate
+        bg: Аз съм студентка.
+        meaning:
+          en: I am a student.
+          tr: Ben öğrenciyim.
+        direction: bg_to_src
+        accepted:
+          en:
+            - "{I am|I'm} a student."
+          tr:
+            - '{Ben |}öğrenciyim.'
+        distractors:
+          en:
+            - you
+            - are
+          tr:
+            - Sen
+            - öğrencisin
+        targets:
+          - lex.az
+          - lex.studentka
+        reviewStatus: ai_draft
+  - id: 'lesson.a1-02-02'
+    unitId: 'unit.a1-02'
+    order: 2
+    title:
+      en: 'He, she, it'
+      tr: 'O (erkek, kadın, nötr)'
+    newLexemeIds:
+      - lex.toy
+      - lex.tya
+      - lex.to
+      - lex.uchitel
+      - lex.uchitelka
+      - lex.tuk
+    grammarIds:
+      - 'gram.pronouns.he-she-it'
+    exercises:
+      - id: 'ex.a1-02-02.01'
+        type: select_meaning
+        bg: тя
+        options:
+          - en: she
+            tr: o (kadın)
+          - en: he
+            tr: o (erkek)
+          - en: you
+            tr: sen
+        answerIndex: 0
+        targets:
+          - lex.tya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-02.02'
+        type: match_pairs
+        pairs:
+          - bg: той
+            meaning:
+              en: he
+              tr: o (erkek)
+          - bg: тя
+            meaning:
+              en: she
+              tr: o (kadın)
+          - bg: то
+            meaning:
+              en: it
+              tr: o (nötr)
+          - bg: учител
+            meaning:
+              en: teacher (male)
+              tr: öğretmen (erkek)
+        targets:
+          - lex.toy
+          - lex.tya
+          - lex.to
+          - lex.uchitel
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-02.03'
+        type: listen_tiles
+        bg: Той е учител.
+        meaning:
+          en: He is a teacher.
+          tr: O öğretmen.
+        accepted:
+          - Той е учител.
+        distractors:
+          - тя
+          - си
+        targets:
+          - lex.toy
+          - lex.uchitel
+          - lex.sam
+        strictTokens:
+          - е
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-02.04'
+        type: fill_blank
+        bg: Тя ___ учителка.
+        meaning:
+          en: She is a teacher.
+          tr: O öğretmen.
+        options:
+          - е
+          - си
+          - съм
+        answerIndex: 0
+        explanation:
+          en: 'With той, тя and то use е.'
+          tr: 'той, тя ve то ile е kullanılır.'
+        targets:
+          - lex.sam
+          - lex.tya
+          - lex.uchitelka
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-02.05'
+        type: tiles_translate
+        bg: Тя е учителка.
+        meaning:
+          en: She is a teacher.
+          tr: O (kadın) öğretmen.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Тя е учителка.
+            - Учителка е.
+        distractors:
+          bg:
+            - той
+            - учител
+        targets:
+          - lex.tya
+          - lex.uchitelka
+        strictTokens:
+          - учителка
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-02.06'
+        type: select_meaning
+        bg: учителка
+        options:
+          - en: teacher (female)
+            tr: öğretmen (kadın)
+          - en: student (male)
+            tr: öğrenci (erkek)
+          - en: here
+            tr: burada
+        answerIndex: 0
+        targets:
+          - lex.uchitelka
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-02.07'
+        type: type_translate
+        bg: Той е тук.
+        meaning:
+          en: He is here.
+          tr: O burada.
+        direction: bg_to_src
+        accepted:
+          en:
+            - "{He is|He's} here."
+          tr:
+            - O burada.
+        targets:
+          - lex.toy
+          - lex.tuk
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-02.08'
+        type: listen_type
+        bg: Тя е тук.
+        meaning:
+          en: She is here.
+          tr: O burada.
+        accepted:
+          - Тя е тук.
+        targets:
+          - lex.tya
+          - lex.tuk
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-02.09'
+        type: fill_blank
+        bg: ___ е тук.
+        meaning:
+          en: It is here.
+          tr: O (nötr) burada.
+        options:
+          - То
+          - Той
+          - Тя
+        answerIndex: 0
+        explanation:
+          en: 'то = it (neuter).'
+          tr: 'то = nötr "o".'
+        targets:
+          - lex.to
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-02.10'
+        type: type_translate
+        bg: Той е учител.
+        meaning:
+          en: He is a teacher.
+          tr: O (erkek) öğretmen.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Той е учител.
+            - Учител е.
+        targets:
+          - lex.toy
+          - lex.uchitel
+        strictTokens:
+          - е
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-02.11'
+        type: select_meaning
+        bg: Аз съм учителка.
+        options:
+          - en: I am a teacher.
+            tr: Ben öğretmenim.
+          - en: She is here.
+            tr: O burada.
+          - en: He is a student.
+            tr: O öğrenci.
+        answerIndex: 0
+        targets:
+          - lex.uchitelka
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-02.12'
+        type: match_pairs
+        pairs:
+          - bg: учител
+            meaning:
+              en: teacher (male)
+              tr: öğretmen (erkek)
+          - bg: учителка
+            meaning:
+              en: teacher (female)
+              tr: öğretmen (kadın)
+          - bg: студент
+            meaning:
+              en: student (male)
+              tr: öğrenci (erkek)
+          - bg: тук
+            meaning:
+              en: here
+              tr: burada
+        targets:
+          - lex.uchitel
+          - lex.uchitelka
+          - lex.tuk
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-02.13'
+        type: listen_tiles
+        bg: То е тук.
+        meaning:
+          en: It is here.
+          tr: O burada.
+        accepted:
+          - То е тук.
+        distractors:
+          - Той
+          - Тя
+        targets:
+          - lex.to
+          - lex.tuk
+        reviewStatus: ai_draft
+  - id: 'lesson.a1-02-03'
+    unitId: 'unit.a1-02'
+    order: 3
+    title:
+      en: 'We, you, they'
+      tr: 'Biz, siz, onlar'
+    newLexemeIds:
+      - lex.nie
+      - lex.vie
+      - lex.te
+      - lex.i
+    grammarIds: []
+    exercises:
+      - id: 'ex.a1-02-03.01'
+        type: match_pairs
+        pairs:
+          - bg: ние
+            meaning:
+              en: we
+              tr: biz
+          - bg: вие
+            meaning:
+              en: you (plural/formal)
+              tr: siz
+          - bg: те
+            meaning:
+              en: they
+              tr: onlar
+          - bg: и
+            meaning:
+              en: and
+              tr: ve
+        targets:
+          - lex.nie
+          - lex.vie
+          - lex.te
+          - lex.i
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-03.02'
+        type: fill_blank
+        bg: Ние ___ тук.
+        meaning:
+          en: We are here.
+          tr: Biz buradayız.
+        options:
+          - сме
+          - сте
+          - са
+        answerIndex: 0
+        explanation:
+          en: ние → сме
+          tr: ние → сме
+        targets:
+          - lex.nie
+          - lex.sam
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-03.03'
+        type: fill_blank
+        bg: Те ___ тук.
+        meaning:
+          en: They are here.
+          tr: Onlar burada.
+        options:
+          - сме
+          - сте
+          - са
+        answerIndex: 2
+        explanation:
+          en: те → са
+          tr: те → са
+        targets:
+          - lex.te
+          - lex.sam
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-03.04'
+        type: fill_blank
+        bg: Вие ___ тук.
+        meaning:
+          en: You are here.
+          tr: Siz buradasınız.
+        options:
+          - сме
+          - сте
+          - са
+        answerIndex: 1
+        explanation:
+          en: вие → сте
+          tr: вие → сте
+        targets:
+          - lex.vie
+          - lex.sam
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-03.05'
+        type: listen_tiles
+        bg: Той и тя са тук.
+        meaning:
+          en: He and she are here.
+          tr: O ve o burada.
+        accepted:
+          - Той и тя са тук.
+        distractors:
+          - сме
+        targets:
+          - lex.i
+          - lex.sam
+        strictTokens:
+          - са
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-03.06'
+        type: tiles_translate
+        bg: Ние сме тук.
+        meaning:
+          en: We are here.
+          tr: Biz buradayız.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Ние сме тук.
+            - Тук сме.
+        distractors:
+          bg:
+            - са
+            - сте
+        targets:
+          - lex.nie
+          - lex.sam
+        strictTokens:
+          - сме
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-03.07'
+        type: type_translate
+        bg: Те са тук.
+        meaning:
+          en: They are here.
+          tr: Onlar burada.
+        direction: bg_to_src
+        accepted:
+          en:
+            - "{They are|They're} here."
+          tr:
+            - '{Onlar |}burada{lar|}.'
+        targets:
+          - lex.te
+          - lex.sam
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-03.08'
+        type: select_meaning
+        bg: вие
+        options:
+          - en: you (plural/formal)
+            tr: siz
+          - en: we
+            tr: biz
+          - en: they
+            tr: onlar
+        answerIndex: 0
+        targets:
+          - lex.vie
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-03.09'
+        type: listen_type
+        bg: Вие сте тук.
+        meaning:
+          en: You are here.
+          tr: Siz buradasınız.
+        accepted:
+          - Вие сте тук.
+        targets:
+          - lex.vie
+          - lex.sam
+        strictTokens:
+          - сте
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-03.10'
+        type: type_translate
+        bg: Те са тук.
+        meaning:
+          en: They are here.
+          tr: Onlar burada.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Те са тук.
+            - Тук са.
+        targets:
+          - lex.te
+          - lex.sam
+        strictTokens:
+          - са
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-03.11'
+        type: select_meaning
+        bg: и
+        options:
+          - en: and
+            tr: ve
+          - en: but
+            tr: ama
+          - en: 'yes'
+            tr: evet
+        answerIndex: 0
+        targets:
+          - lex.i
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-03.12'
+        type: tiles_translate
+        bg: Ти и аз сме тук.
+        meaning:
+          en: You and I are here.
+          tr: Sen ve ben buradayız.
+        direction: bg_to_src
+        accepted:
+          en:
+            - '{You and I|I and you} are here.'
+          tr:
+            - '{Sen ve ben|Ben ve sen} buradayız.'
+        distractors:
+          en:
+            - they
+            - is
+          tr:
+            - onlar
+            - burada
+        targets:
+          - lex.i
+          - lex.nie
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-03.13'
+        type: select_meaning
+        bg: Ние сме тук.
+        options:
+          - en: We are here.
+            tr: Biz buradayız.
+          - en: They are here.
+            tr: Onlar burada.
+          - en: You are here.
+            tr: Siz buradasınız.
+        answerIndex: 0
+        targets:
+          - lex.nie
+        reviewStatus: ai_draft
+  - id: 'lesson.a1-02-04'
+    unitId: 'unit.a1-02'
+    order: 4
+    title:
+      en: 'Where are you from?'
+      tr: 'Nerelisin?'
+    newLexemeIds:
+      - lex.ot
+      - lex.balgariya
+      - lex.turtsiya
+      - lex.balgarin
+      - lex.balgarka
+      - lex.turchin
+      - lex.turkinya
+    grammarIds: []
+    exercises:
+      - id: 'ex.a1-02-04.01'
+        type: select_meaning
+        bg: България
+        options:
+          - en: Bulgaria
+            tr: Bulgaristan
+          - en: Turkey
+            tr: Türkiye
+          - en: Bulgarian (woman)
+            tr: Bulgar (kadın)
+        answerIndex: 0
+        targets:
+          - lex.balgariya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-04.02'
+        type: select_meaning
+        bg: туркиня
+        options:
+          - en: Turkish woman
+            tr: Türk (kadın)
+          - en: Turkish man
+            tr: Türk (erkek)
+          - en: Turkey
+            tr: Türkiye
+        answerIndex: 0
+        targets:
+          - lex.turkinya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-04.03'
+        type: match_pairs
+        pairs:
+          - bg: българин
+            meaning:
+              en: Bulgarian (man)
+              tr: Bulgar (erkek)
+          - bg: българка
+            meaning:
+              en: Bulgarian (woman)
+              tr: Bulgar (kadın)
+          - bg: турчин
+            meaning:
+              en: Turkish man
+              tr: Türk (erkek)
+          - bg: туркиня
+            meaning:
+              en: Turkish woman
+              tr: Türk (kadın)
+        targets:
+          - lex.balgarin
+          - lex.balgarka
+          - lex.turchin
+          - lex.turkinya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-04.04'
+        type: listen_tiles
+        bg: Аз съм от Турция.
+        meaning:
+          en: I am from Turkey.
+          tr: "Ben Türkiye'denim."
+        accepted:
+          - Аз съм от Турция.
+        distractors:
+          - България
+          - си
+        targets:
+          - lex.ot
+          - lex.turtsiya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-04.05'
+        type: tiles_translate
+        bg: Аз съм от България.
+        meaning:
+          en: I am from Bulgaria.
+          tr: "Ben Bulgaristan'danım."
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Аз съм от България.
+            - От България съм.
+        distractors:
+          bg:
+            - Турция
+            - си
+        targets:
+          - lex.ot
+          - lex.balgariya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-04.06'
+        type: type_translate
+        bg: Тя е българка.
+        meaning:
+          en: She is Bulgarian.
+          tr: O Bulgar.
+        direction: bg_to_src
+        accepted:
+          en:
+            - "{She is|She's} {Bulgarian|a Bulgarian}."
+          tr:
+            - 'O {Bulgar|Bulgardır|Bulgar bir kadın}.'
+        targets:
+          - lex.balgarka
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-04.07'
+        type: listen_type
+        bg: Той е турчин.
+        meaning:
+          en: He is Turkish.
+          tr: O Türk.
+        accepted:
+          - Той е турчин.
+        targets:
+          - lex.turchin
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-04.08'
+        type: fill_blank
+        bg: Тя е ___.
+        meaning:
+          en: She is Turkish.
+          tr: O (kadın) Türk.
+        options:
+          - турчин
+          - туркиня
+        answerIndex: 1
+        explanation:
+          en: 'туркиня = a Turkish woman, турчин = a Turkish man.'
+          tr: 'туркиня = Türk kadın, турчин = Türk erkek.'
+        targets:
+          - lex.turkinya
+          - lex.turchin
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-04.09'
+        type: type_translate
+        bg: Той е от Турция.
+        meaning:
+          en: He is from Turkey.
+          tr: "O Türkiye'den."
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Той е от Турция.
+            - От Турция е.
+        targets:
+          - lex.ot
+          - lex.turtsiya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-04.10'
+        type: select_meaning
+        bg: Аз съм българин.
+        options:
+          - en: I am Bulgarian.
+            tr: Ben Bulgarım.
+          - en: I am from Turkey.
+            tr: "Ben Türkiye'denim."
+          - en: She is Bulgarian.
+            tr: O Bulgar.
+        answerIndex: 0
+        targets:
+          - lex.balgarin
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-04.11'
+        type: tiles_translate
+        bg: Те са от България.
+        meaning:
+          en: They are from Bulgaria.
+          tr: "Onlar Bulgaristan'dan."
+        direction: bg_to_src
+        accepted:
+          en:
+            - "{They are|They're} from Bulgaria."
+          tr:
+            - "{Onlar |}Bulgaristan'dan{lar|}."
+        distractors:
+          en:
+            - Turkey
+            - we
+          tr:
+            - "Türkiye'den"
+            - Biz
+        targets:
+          - lex.ot
+          - lex.balgariya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-04.12'
+        type: match_pairs
+        pairs:
+          - bg: България
+            meaning:
+              en: Bulgaria
+              tr: Bulgaristan
+          - bg: Турция
+            meaning:
+              en: Turkey
+              tr: Türkiye
+          - bg: от
+            meaning:
+              en: from
+              tr: '-den, -dan'
+          - bg: тук
+            meaning:
+              en: here
+              tr: burada
+        targets:
+          - lex.balgariya
+          - lex.turtsiya
+          - lex.ot
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-04.13'
+        type: listen_tiles
+        bg: Той е българин.
+        meaning:
+          en: He is Bulgarian.
+          tr: O Bulgar.
+        accepted:
+          - Той е българин.
+        distractors:
+          - българка
+        targets:
+          - lex.balgarin
+        strictTokens:
+          - българин
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-04.14'
+        type: type_translate
+        bg: Аз съм българин.
+        meaning:
+          en: I am Bulgarian.
+          tr: Ben Bulgarım.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'Аз съм {българин|българка}.'
+            - '{Българин|Българка} съм.'
+        targets:
+          - lex.balgarin
+          - lex.balgarka
+        reviewStatus: ai_draft
+  - id: 'lesson.a1-02-05'
+    unitId: 'unit.a1-02'
+    order: 5
+    title:
+      en: Without the pronoun
+      tr: Zamirsiz
+    newLexemeIds:
+      - lex.sashto
+      - lex.no
+      - lex.v
+    grammarIds:
+      - 'gram.pro-drop'
+      - 'gram.clitic.sam-position'
+    exercises:
+      - id: 'ex.a1-02-05.01'
+        type: select_meaning
+        bg: също
+        options:
+          - en: 'also, too'
+            tr: 'de, da'
+          - en: but
+            tr: ama
+          - en: here
+            tr: burada
+        answerIndex: 0
+        targets:
+          - lex.sashto
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-05.02'
+        type: tiles_translate
+        bg: Студент съм.
+        meaning:
+          en: I am a student.
+          tr: Öğrenciyim.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - '{Студент|Студентка} съм.'
+            - 'Аз съм {студент|студентка}.'
+        distractors:
+          bg:
+            - си
+        targets:
+          - lex.sam
+          - lex.student
+        strictTokens:
+          - съм
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-05.03'
+        type: fill_blank
+        bg: От България ___.
+        meaning:
+          en: I am from Bulgaria.
+          tr: "Bulgaristan'danım."
+        options:
+          - съм
+          - си
+          - е
+        answerIndex: 0
+        explanation:
+          en: 'No pronoun, but съм still shows it''s "I".'
+          tr: 'Zamir yok ama съм "ben" olduğunu gösteriyor.'
+        targets:
+          - lex.sam
+          - lex.ot
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-05.04'
+        type: listen_tiles
+        bg: 'Туркиня съм, но съм в България.'
+        meaning:
+          en: "I'm Turkish, but I'm in Bulgaria."
+          tr: "Türküm ama Bulgaristan'dayım."
+        accepted:
+          - 'Туркиня съм, но съм в България.'
+        distractors:
+          - от
+        targets:
+          - lex.no
+          - lex.v
+          - lex.turkinya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-05.05'
+        type: type_translate
+        bg: Учител съм.
+        meaning:
+          en: I am a teacher.
+          tr: Öğretmenim.
+        direction: bg_to_src
+        accepted:
+          en:
+            - "{I am|I'm} a teacher."
+          tr:
+            - '{Ben |}öğretmenim.'
+        targets:
+          - lex.sam
+          - lex.uchitel
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-05.06'
+        type: match_pairs
+        pairs:
+          - bg: също
+            meaning:
+              en: also
+              tr: 'de, da'
+          - bg: но
+            meaning:
+              en: but
+              tr: ama
+          - bg: в
+            meaning:
+              en: in
+              tr: '-de, -da'
+          - bg: от
+            meaning:
+              en: from
+              tr: '-den, -dan'
+        targets:
+          - lex.sashto
+          - lex.no
+          - lex.v
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-05.07'
+        type: listen_type
+        bg: Аз също съм студент.
+        meaning:
+          en: I am a student too.
+          tr: Ben de öğrenciyim.
+        accepted:
+          - Аз също съм студент.
+        targets:
+          - lex.sashto
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-05.08'
+        type: tiles_translate
+        bg: Тя също е тук.
+        meaning:
+          en: She is here too.
+          tr: O da burada.
+        direction: bg_to_src
+        accepted:
+          en:
+            - "{She is|She's} {also here|here too|here as well}."
+          tr:
+            - O da burada.
+        distractors:
+          en:
+            - but
+            - they
+          tr:
+            - ama
+            - Onlar
+        targets:
+          - lex.sashto
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-05.09'
+        type: type_translate
+        bg: Ние сме в България.
+        meaning:
+          en: We are in Bulgaria.
+          tr: "Biz Bulgaristan'dayız."
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Ние сме в България.
+            - В България сме.
+        targets:
+          - lex.v
+          - lex.nie
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-05.10'
+        type: tiles_translate
+        bg: 'От Турция съм, но съм в България.'
+        meaning:
+          en: "I'm from Turkey, but I'm in Bulgaria."
+          tr: "Türkiye'denim ama Bulgaristan'dayım."
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'От Турция съм, но съм в България.'
+            - 'Аз съм от Турция, но съм в България.'
+        targets:
+          - lex.no
+          - lex.v
+        strictTokens:
+          - съм
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-05.11'
+        type: select_meaning
+        bg: Студент съм.
+        options:
+          - en: I am a student.
+            tr: Öğrenciyim.
+          - en: You are a student.
+            tr: Öğrencisin.
+          - en: He is a student.
+            tr: O öğrenci.
+        answerIndex: 0
+        targets:
+          - lex.sam
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-05.12'
+        type: listen_tiles
+        bg: Те също са тук.
+        meaning:
+          en: They are here too.
+          tr: Onlar da burada.
+        accepted:
+          - Те също са тук.
+        distractors:
+          - сме
+        targets:
+          - lex.sashto
+          - lex.te
+        reviewStatus: ai_draft
+      - id: 'ex.a1-02-05.13'
+        type: select_meaning
+        bg: но
+        options:
+          - en: but
+            tr: ama
+          - en: and
+            tr: ve
+          - en: in
+            tr: '-de, -da'
+        answerIndex: 0
+        targets:
+          - lex.no
+        reviewStatus: ai_draft

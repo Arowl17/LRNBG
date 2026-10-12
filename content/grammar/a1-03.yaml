@@ -1,0 +1,63 @@
+# A1 Unit 3 — Род и множествено число / Gender and plural. All ai_draft; doubts in content/REVIEW_QUEUE.md.
+# Plural forms whose stress I'm unsure of are left without a stress mark (see REVIEW_QUEUE.md).
+# град, телефон, чанта, море and кафе live in section-0-words.yaml (their plurals were added there).
+
+- id: 'gram.noun.gender-by-ending'
+  title:
+    en: Every noun has a gender
+    tr: Her ismin bir cinsiyeti var
+  cefr: A1
+  explanation:
+    en: "Look at the **ending**:\n\n- consonant → **masculine**: град, стол, хляб\n- **-а / -я** → **feminine**: жена, книга, стая\n- **-о / -е** → **neuter**: село, море, кафе\n\nIt's about the ending, not the person: **момиче** (girl) is neuter."
+    tr: "Türkçede cinsiyet yok, Bulgarcada her ismin bir cinsiyeti var. İsmin **sonuna** bak:\n\n- ünsüz → **eril**: град, стол, хляб\n- **-а / -я** → **dişil**: жена, книга, стая\n- **-о / -е** → **nötr**: село, море, кафе\n\nKişiye değil, kelimenin sonuna bakılır: **момиче** (kız) nötrdür."
+  examples:
+    - bg: Това е стол.
+      en: This is a chair.
+      tr: Bu bir sandalye.
+    - bg: Това е книга.
+      en: This is a book.
+      tr: Bu bir kitap.
+    - bg: Това е кафе.
+      en: This is coffee.
+      tr: Bu kahve.
+  prerequisites: []
+  reviewStatus: ai_draft
+- id: gram.number.one
+  title:
+    en: 'един, една, едно — one, a'
+    tr: 'един, една, едно — bir'
+  cefr: A1
+  explanation:
+    en: "\"One\" changes with the noun's gender:\n\n- **един** град (m)\n- **една** книга (f)\n- **едно** кафе (n)\n\n**Едно кафе, моля.** — One coffee, please."
+    tr: "\"Bir\" kelimesi ismin cinsiyetine göre değişir:\n\n- **един** град (eril)\n- **една** книга (dişil)\n- **едно** кафе (nötr)\n\n**Едно кафе, моля.** — Bir kahve, lütfen."
+  examples:
+    - bg: един мъж
+      en: one man
+      tr: bir adam
+    - bg: една жена
+      en: one woman
+      tr: bir kadın
+    - bg: едно момиче
+      en: one girl
+      tr: bir kız
+  prerequisites:
+    - 'gram.noun.gender-by-ending'
+  reviewStatus: ai_draft
+- id: gram.noun.plural
+  title:
+    en: 'More than one: plurals'
+    tr: 'Birden fazla: çoğul'
+  cefr: A1
+  explanation:
+    en: "- most nouns: **-и** — книга → книги, жена → жени, телефон → телефони\n- short masculine nouns: **-ове** — град → градове, стол → столове\n- neuter nouns: **-а / -та** — село → села, море → морета, кафе → кафета\n\nSome are irregular: **дете → деца** (child → children)."
+    tr: "Türkçedeki *-ler/-lar* gibi, ama Bulgarcada birkaç ek var:\n\n- çoğu isim: **-и** — книга → книги, жена → жени, телефон → телефони\n- kısa eril isimler: **-ове** — град → градове, стол → столове\n- nötr isimler: **-а / -та** — село → села, море → морета, кафе → кафета\n\nBazıları düzensizdir: **дете → деца** (çocuk → çocuklar)."
+  examples:
+    - bg: Това са книги.
+      en: These are books.
+      tr: Bunlar kitap.
+    - bg: Много деца.
+      en: Many children.
+      tr: Çok çocuk.
+  prerequisites:
+    - 'gram.noun.gender-by-ending'
+  reviewStatus: ai_draft

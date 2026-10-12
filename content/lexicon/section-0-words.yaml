@@ -88,6 +88,8 @@
   lemma: море́
   pos: noun
   gender: n
+  forms:
+    pl: морета́
   translations:
     en: ['sea']
     tr: ['deniz']
@@ -248,6 +250,8 @@
   lemma: град
   pos: noun
   gender: m
+  forms:
+    pl: градове́
   translations:
     en: ['city', 'town']
     tr: ['şehir']
@@ -272,6 +276,8 @@
   lemma: кафе́
   pos: noun
   gender: n
+  forms:
+    pl: кафета́
   translations:
     en: ['coffee', 'café']
     tr: ['kahve', 'kafe']
@@ -284,6 +290,8 @@
   lemma: телефо́н
   pos: noun
   gender: m
+  forms:
+    pl: телефо́ни
   translations:
     en: ['telephone', 'phone']
     tr: ['telefon']
@@ -372,6 +380,8 @@
   lemma: ча́нта
   pos: noun
   gender: f
+  forms:
+    pl: ча́нти
   translations:
     en: ['bag', 'handbag']
     tr: ['çanta']

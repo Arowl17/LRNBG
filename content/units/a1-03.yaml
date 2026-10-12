@@ -1,0 +1,1143 @@
+# A1 Unit 3 — Род и множествено число / Gender and plural. All ai_draft; doubts in content/REVIEW_QUEUE.md.
+# Plural forms whose stress I'm unsure of are left without a stress mark (see REVIEW_QUEUE.md).
+# град, телефон, чанта, море and кафе live in section-0-words.yaml (their plurals were added there).
+
+unit:
+  id: 'unit.a1-03'
+  order: 3
+  title:
+    en: Gender and plural
+    tr: Cinsiyet ve çoğul
+  cefr: A1
+  goals:
+    - en: "Tell a noun's gender from its ending"
+      tr: İsmin cinsiyetini sonundan anlamak
+    - en: 'Use един, една, едно and ask "Какво е това?"'
+      tr: 'един, една, едно kullanmak ve "Какво е това?" diye sormak'
+    - en: Make regular plurals
+      tr: Düzenli çoğul yapmak
+  grammarIds:
+    - 'gram.noun.gender-by-ending'
+    - gram.number.one
+    - gram.noun.plural
+  lessonIds:
+    - 'lesson.a1-03-01'
+    - 'lesson.a1-03-02'
+    - 'lesson.a1-03-03'
+    - 'lesson.a1-03-04'
+    - 'lesson.a1-03-05'
+lessons:
+  - id: 'lesson.a1-03-01'
+    unitId: 'unit.a1-03'
+    order: 1
+    title:
+      en: Masculine nouns
+      tr: Eril isimler
+    newLexemeIds:
+      - lex.tova
+      - lex.kakvo
+      - lex.grad
+      - lex.stol
+      - lex.hlyab
+      - lex.telefon
+    grammarIds:
+      - 'gram.noun.gender-by-ending'
+    exercises:
+      - id: 'ex.a1-03-01.01'
+        type: select_meaning
+        bg: стол
+        options:
+          - en: chair
+            tr: sandalye
+          - en: bread
+            tr: ekmek
+          - en: city
+            tr: şehir
+        answerIndex: 0
+        targets:
+          - lex.stol
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-01.02'
+        type: match_pairs
+        pairs:
+          - bg: град
+            meaning:
+              en: city
+              tr: şehir
+          - bg: стол
+            meaning:
+              en: chair
+              tr: sandalye
+          - bg: хляб
+            meaning:
+              en: bread
+              tr: ekmek
+          - bg: телефон
+            meaning:
+              en: telephone
+              tr: telefon
+        targets:
+          - lex.grad
+          - lex.stol
+          - lex.hlyab
+          - lex.telefon
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-01.03'
+        type: listen_tiles
+        bg: Това е стол.
+        meaning:
+          en: This is a chair.
+          tr: Bu bir sandalye.
+        accepted:
+          - Това е стол.
+        distractors:
+          - хляб
+        targets:
+          - lex.tova
+          - lex.stol
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-01.04'
+        type: select_meaning
+        bg: 'Какво е това?'
+        options:
+          - en: 'What is this?'
+            tr: 'Bu ne?'
+          - en: This is bread.
+            tr: Bu ekmek.
+          - en: 'How are you?'
+            tr: 'Nasılsın?'
+        answerIndex: 0
+        targets:
+          - lex.kakvo
+          - lex.tova
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-01.05'
+        type: tiles_translate
+        bg: Това е хляб.
+        meaning:
+          en: This is bread.
+          tr: Bu ekmek.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Това е хляб.
+        distractors:
+          bg:
+            - стол
+            - какво
+        targets:
+          - lex.tova
+          - lex.hlyab
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-01.06'
+        type: type_translate
+        bg: Това е телефон.
+        meaning:
+          en: This is a phone.
+          tr: Bu bir telefon.
+        direction: bg_to_src
+        accepted:
+          en:
+            - '{This|That|It} is a {telephone|phone}.'
+            - "{This's|That's|It's} a {telephone|phone}."
+          tr:
+            - '{Bu|Şu} {bir |}telefon.'
+        targets:
+          - lex.tova
+          - lex.telefon
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-01.07'
+        type: listen_type
+        bg: 'Какво е това?'
+        meaning:
+          en: 'What is this?'
+          tr: 'Bu ne?'
+        accepted:
+          - 'Какво е това?'
+        targets:
+          - lex.kakvo
+          - lex.tova
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-01.08'
+        type: type_translate
+        bg: Това е град.
+        meaning:
+          en: This is a city.
+          tr: Bu bir şehir.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Това е град.
+        targets:
+          - lex.tova
+          - lex.grad
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-01.09'
+        type: tiles_translate
+        bg: 'Какво е това? Това е хляб.'
+        meaning:
+          en: 'What is this? This is bread.'
+          tr: 'Bu ne? Bu ekmek.'
+        direction: bg_to_src
+        accepted:
+          en:
+            - 'What is this? {This|It} is bread.'
+            - "What's this? {This|It} is bread."
+            - "What is this? It's bread."
+          tr:
+            - 'Bu ne? Bu ekmek.'
+        distractors:
+          en:
+            - chair
+          tr:
+            - sandalye
+        targets:
+          - lex.kakvo
+          - lex.hlyab
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-01.10'
+        type: select_meaning
+        bg: хляб
+        options:
+          - en: bread
+            tr: ekmek
+          - en: phone
+            tr: telefon
+          - en: chair
+            tr: sandalye
+        answerIndex: 0
+        targets:
+          - lex.hlyab
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-01.11'
+        type: listen_tiles
+        bg: Това е град.
+        meaning:
+          en: This is a city.
+          tr: Bu bir şehir.
+        accepted:
+          - Това е град.
+        distractors:
+          - стол
+        targets:
+          - lex.grad
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-01.12'
+        type: type_translate
+        bg: 'Какво е това?'
+        meaning:
+          en: 'What is this?'
+          tr: 'Bu ne?'
+        direction: src_to_bg
+        accepted:
+          bg:
+            - 'Какво е това?'
+        targets:
+          - lex.kakvo
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-01.13'
+        type: listen_type
+        bg: Това е телефон.
+        meaning:
+          en: This is a phone.
+          tr: Bu bir telefon.
+        accepted:
+          - Това е телефон.
+        targets:
+          - lex.telefon
+        reviewStatus: ai_draft
+  - id: 'lesson.a1-03-02'
+    unitId: 'unit.a1-03'
+    order: 2
+    title:
+      en: Feminine nouns
+      tr: Dişil isimler
+    newLexemeIds:
+      - lex.zhena
+      - lex.kniga
+      - lex.staya
+      - lex.chanta
+    grammarIds: []
+    exercises:
+      - id: 'ex.a1-03-02.01'
+        type: select_meaning
+        bg: книга
+        options:
+          - en: book
+            tr: kitap
+          - en: room
+            tr: oda
+          - en: woman
+            tr: kadın
+        answerIndex: 0
+        targets:
+          - lex.kniga
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-02.02'
+        type: match_pairs
+        pairs:
+          - bg: жена
+            meaning:
+              en: woman
+              tr: kadın
+          - bg: книга
+            meaning:
+              en: book
+              tr: kitap
+          - bg: стая
+            meaning:
+              en: room
+              tr: oda
+          - bg: чанта
+            meaning:
+              en: bag
+              tr: çanta
+        targets:
+          - lex.zhena
+          - lex.kniga
+          - lex.staya
+          - lex.chanta
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-02.03'
+        type: listen_tiles
+        bg: Това е книга.
+        meaning:
+          en: This is a book.
+          tr: Bu bir kitap.
+        accepted:
+          - Това е книга.
+        distractors:
+          - чанта
+        targets:
+          - lex.kniga
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-02.04'
+        type: tiles_translate
+        bg: Това е стая.
+        meaning:
+          en: This is a room.
+          tr: Bu bir oda.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Това е стая.
+        distractors:
+          bg:
+            - книга
+            - е
+        targets:
+          - lex.staya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-02.05'
+        type: type_translate
+        bg: Това е чанта.
+        meaning:
+          en: This is a bag.
+          tr: Bu bir çanta.
+        direction: bg_to_src
+        accepted:
+          en:
+            - '{This|That|It} is a {bag|handbag}.'
+          tr:
+            - '{Bu|Şu} {bir |}çanta.'
+        targets:
+          - lex.chanta
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-02.06'
+        type: select_meaning
+        bg: жена
+        options:
+          - en: woman
+            tr: kadın
+          - en: chair
+            tr: sandalye
+          - en: girl
+            tr: kız
+        answerIndex: 0
+        targets:
+          - lex.zhena
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-02.07'
+        type: listen_type
+        bg: Това е стая.
+        meaning:
+          en: This is a room.
+          tr: Bu bir oda.
+        accepted:
+          - Това е стая.
+        targets:
+          - lex.staya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-02.08'
+        type: select_meaning
+        bg: 'Какво е това? Това е книга.'
+        options:
+          - en: 'What is this? This is a book.'
+            tr: 'Bu ne? Bu bir kitap.'
+          - en: 'What is this? This is a room.'
+            tr: 'Bu ne? Bu bir oda.'
+          - en: This is bread.
+            tr: Bu ekmek.
+        answerIndex: 0
+        targets:
+          - lex.kniga
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-02.09'
+        type: type_translate
+        bg: Това е чанта.
+        meaning:
+          en: This is a bag.
+          tr: Bu bir çanta.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Това е чанта.
+        targets:
+          - lex.chanta
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-02.10'
+        type: tiles_translate
+        bg: Това е жена.
+        meaning:
+          en: This is a woman.
+          tr: Bu bir kadın.
+        direction: bg_to_src
+        accepted:
+          en:
+            - '{This|That} is a woman.'
+          tr:
+            - '{Bu|Şu} bir kadın.'
+        distractors:
+          en:
+            - man
+            - book
+          tr:
+            - kitap
+            - oda
+        targets:
+          - lex.zhena
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-02.11'
+        type: listen_tiles
+        bg: Това е стая.
+        meaning:
+          en: This is a room.
+          tr: Bu bir oda.
+        accepted:
+          - Това е стая.
+        distractors:
+          - стол
+        targets:
+          - lex.staya
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-02.12'
+        type: match_pairs
+        pairs:
+          - bg: книга
+            meaning:
+              en: book
+              tr: kitap
+          - bg: стол
+            meaning:
+              en: chair
+              tr: sandalye
+          - bg: стая
+            meaning:
+              en: room
+              tr: oda
+          - bg: хляб
+            meaning:
+              en: bread
+              tr: ekmek
+        targets:
+          - lex.kniga
+          - lex.staya
+        reviewStatus: ai_draft
+  - id: 'lesson.a1-03-03'
+    unitId: 'unit.a1-03'
+    order: 3
+    title:
+      en: Neuter nouns
+      tr: Nötr isimler
+    newLexemeIds:
+      - lex.selo
+      - lex.more
+      - lex.kafe
+      - lex.dete
+    grammarIds: []
+    exercises:
+      - id: 'ex.a1-03-03.01'
+        type: select_meaning
+        bg: дете
+        options:
+          - en: child
+            tr: çocuk
+          - en: village
+            tr: köy
+          - en: coffee
+            tr: kahve
+        answerIndex: 0
+        targets:
+          - lex.dete
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-03.02'
+        type: match_pairs
+        pairs:
+          - bg: село
+            meaning:
+              en: village
+              tr: köy
+          - bg: море
+            meaning:
+              en: sea
+              tr: deniz
+          - bg: кафе
+            meaning:
+              en: coffee
+              tr: kahve
+          - bg: дете
+            meaning:
+              en: child
+              tr: çocuk
+        targets:
+          - lex.selo
+          - lex.more
+          - lex.kafe
+          - lex.dete
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-03.03'
+        type: listen_tiles
+        bg: Това е море.
+        meaning:
+          en: This is the sea.
+          tr: Bu deniz.
+        accepted:
+          - Това е море.
+        distractors:
+          - село
+        targets:
+          - lex.more
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-03.04'
+        type: tiles_translate
+        bg: Това е кафе.
+        meaning:
+          en: This is coffee.
+          tr: Bu kahve.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Това е кафе.
+        distractors:
+          bg:
+            - дете
+            - хляб
+        targets:
+          - lex.kafe
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-03.05'
+        type: type_translate
+        bg: Това е село.
+        meaning:
+          en: This is a village.
+          tr: Bu bir köy.
+        direction: bg_to_src
+        accepted:
+          en:
+            - '{This|That|It} is a village.'
+          tr:
+            - '{Bu|Şu} {bir |}köy.'
+        targets:
+          - lex.selo
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-03.06'
+        type: select_meaning
+        bg: море
+        options:
+          - en: sea
+            tr: deniz
+          - en: village
+            tr: köy
+          - en: child
+            tr: çocuk
+        answerIndex: 0
+        targets:
+          - lex.more
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-03.07'
+        type: listen_type
+        bg: Това е дете.
+        meaning:
+          en: This is a child.
+          tr: Bu bir çocuk.
+        accepted:
+          - Това е дете.
+        targets:
+          - lex.dete
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-03.08'
+        type: select_meaning
+        bg: кафе
+        options:
+          - en: coffee
+            tr: kahve
+          - en: tea
+            tr: çay
+          - en: bread
+            tr: ekmek
+        answerIndex: 0
+        targets:
+          - lex.kafe
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-03.09'
+        type: type_translate
+        bg: Това е дете.
+        meaning:
+          en: This is a child.
+          tr: Bu bir çocuk.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Това е дете.
+        targets:
+          - lex.dete
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-03.10'
+        type: listen_tiles
+        bg: Това е село.
+        meaning:
+          en: This is a village.
+          tr: Bu bir köy.
+        accepted:
+          - Това е село.
+        distractors:
+          - море
+        targets:
+          - lex.selo
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-03.11'
+        type: match_pairs
+        pairs:
+          - bg: град
+            meaning:
+              en: city
+              tr: şehir
+          - bg: жена
+            meaning:
+              en: woman
+              tr: kadın
+          - bg: село
+            meaning:
+              en: village
+              tr: köy
+          - bg: кафе
+            meaning:
+              en: coffee
+              tr: kahve
+        targets:
+          - lex.selo
+          - lex.kafe
+        reviewStatus: ai_draft
+  - id: 'lesson.a1-03-04'
+    unitId: 'unit.a1-03'
+    order: 4
+    title:
+      en: 'One: един, една, едно'
+      tr: 'Bir: един, една, едно'
+    newLexemeIds:
+      - lex.edin
+      - lex.mazh
+      - lex.momche
+      - lex.momiche
+    grammarIds:
+      - gram.number.one
+    exercises:
+      - id: 'ex.a1-03-04.01'
+        type: select_meaning
+        bg: момиче
+        options:
+          - en: girl
+            tr: kız
+          - en: boy
+            tr: erkek çocuk
+          - en: man
+            tr: adam
+        answerIndex: 0
+        targets:
+          - lex.momiche
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-04.02'
+        type: match_pairs
+        pairs:
+          - bg: мъж
+            meaning:
+              en: man
+              tr: adam
+          - bg: момче
+            meaning:
+              en: boy
+              tr: erkek çocuk
+          - bg: момиче
+            meaning:
+              en: girl
+              tr: kız
+          - bg: жена
+            meaning:
+              en: woman
+              tr: kadın
+        targets:
+          - lex.mazh
+          - lex.momche
+          - lex.momiche
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-04.03'
+        type: fill_blank
+        bg: ___ момиче
+        meaning:
+          en: a girl
+          tr: bir kız
+        options:
+          - един
+          - една
+          - едно
+        answerIndex: 2
+        explanation:
+          en: 'момиче ends in -е, so it is neuter: едно момиче.'
+          tr: 'момиче -е ile bitiyor, yani nötr: едно момиче.'
+        targets:
+          - lex.edin
+          - lex.momiche
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-04.04'
+        type: fill_blank
+        bg: ___ книга
+        meaning:
+          en: a book
+          tr: bir kitap
+        options:
+          - един
+          - една
+          - едно
+        answerIndex: 1
+        explanation:
+          en: 'книга ends in -а: feminine, една книга.'
+          tr: 'книга -а ile bitiyor: dişil, една книга.'
+        targets:
+          - lex.edin
+          - lex.kniga
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-04.05'
+        type: fill_blank
+        bg: ___ стол
+        meaning:
+          en: a chair
+          tr: bir sandalye
+        options:
+          - един
+          - една
+          - едно
+        answerIndex: 0
+        explanation:
+          en: 'стол ends in a consonant: masculine, един стол.'
+          tr: 'стол ünsüzle bitiyor: eril, един стол.'
+        targets:
+          - lex.edin
+          - lex.stol
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-04.06'
+        type: listen_tiles
+        bg: Една чанта и един телефон.
+        meaning:
+          en: A bag and a phone.
+          tr: Bir çanta ve bir telefon.
+        accepted:
+          - Една чанта и един телефон.
+        distractors:
+          - едно
+        targets:
+          - lex.edin
+        strictTokens:
+          - Една
+          - един
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-04.07'
+        type: tiles_translate
+        bg: една жена и един мъж
+        meaning:
+          en: a woman and a man
+          tr: bir kadın ve bir adam
+        direction: src_to_bg
+        accepted:
+          bg:
+            - една жена и един мъж
+        distractors:
+          bg:
+            - едно
+        targets:
+          - lex.edin
+          - lex.mazh
+        strictTokens:
+          - една
+          - един
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-04.08'
+        type: type_translate
+        bg: 'Едно кафе, моля.'
+        meaning:
+          en: 'One coffee, please.'
+          tr: 'Bir kahve, lütfen.'
+        direction: bg_to_src
+        accepted:
+          en:
+            - '{One|A} coffee, please.'
+            - '{One|A} coffee please.'
+          tr:
+            - 'Bir kahve, lütfen.'
+        targets:
+          - lex.edin
+          - lex.kafe
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-04.09'
+        type: listen_type
+        bg: 'Едно кафе, моля.'
+        meaning:
+          en: 'One coffee, please.'
+          tr: 'Bir kahve, lütfen.'
+        accepted:
+          - 'Едно кафе, моля.'
+        targets:
+          - lex.edin
+        strictTokens:
+          - Едно
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-04.10'
+        type: select_meaning
+        bg: мъж
+        options:
+          - en: man
+            tr: adam
+          - en: girl
+            tr: kız
+          - en: child
+            tr: çocuk
+        answerIndex: 0
+        targets:
+          - lex.mazh
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-04.11'
+        type: type_translate
+        bg: едно момче
+        meaning:
+          en: one boy
+          tr: bir erkek çocuk
+        direction: src_to_bg
+        accepted:
+          bg:
+            - едно момче
+        targets:
+          - lex.edin
+          - lex.momche
+        strictTokens:
+          - едно
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-04.12'
+        type: tiles_translate
+        bg: Един мъж и една жена.
+        meaning:
+          en: A man and a woman.
+          tr: Bir adam ve bir kadın.
+        direction: bg_to_src
+        accepted:
+          en:
+            - '{A|One} man and {a|one} woman.'
+          tr:
+            - 'Bir {adam|erkek} ve bir kadın.'
+        distractors:
+          en:
+            - girl
+          tr:
+            - kız
+        targets:
+          - lex.mazh
+          - lex.edin
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-04.13'
+        type: listen_tiles
+        bg: Едно момиче и едно момче.
+        meaning:
+          en: A girl and a boy.
+          tr: Bir kız ve bir erkek çocuk.
+        accepted:
+          - Едно момиче и едно момче.
+        distractors:
+          - една
+        targets:
+          - lex.momiche
+          - lex.momche
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-04.14'
+        type: select_meaning
+        bg: момче
+        options:
+          - en: boy
+            tr: erkek çocuk
+          - en: girl
+            tr: kız
+          - en: woman
+            tr: kadın
+        answerIndex: 0
+        targets:
+          - lex.momche
+        reviewStatus: ai_draft
+  - id: 'lesson.a1-03-05'
+    unitId: 'unit.a1-03'
+    order: 5
+    title:
+      en: Plurals
+      tr: Çoğullar
+    newLexemeIds:
+      - lex.mnogo
+      - lex.tam
+    grammarIds:
+      - gram.noun.plural
+    exercises:
+      - id: 'ex.a1-03-05.01'
+        type: select_meaning
+        bg: книги
+        options:
+          - en: books
+            tr: kitaplar
+          - en: a book
+            tr: bir kitap
+          - en: rooms
+            tr: odalar
+        answerIndex: 0
+        targets:
+          - lex.kniga
+          - gram.noun.plural
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.02'
+        type: fill_blank
+        bg: Това са ___.
+        meaning:
+          en: These are books.
+          tr: Bunlar kitap.
+        options:
+          - книга
+          - книги
+        answerIndex: 1
+        explanation:
+          en: 'книга → книги (-а becomes -и).'
+          tr: 'книга → книги (-а, -и olur).'
+        targets:
+          - lex.kniga
+          - gram.noun.plural
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.03'
+        type: fill_blank
+        bg: Това са ___.
+        meaning:
+          en: These are cities.
+          tr: Bunlar şehir.
+        options:
+          - град
+          - градове
+        answerIndex: 1
+        explanation:
+          en: 'Short masculine nouns take -ове: град → градове.'
+          tr: 'Kısa eril isimler -ове alır: град → градове.'
+        targets:
+          - lex.grad
+          - gram.noun.plural
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.04'
+        type: fill_blank
+        bg: Това са ___.
+        meaning:
+          en: These are children.
+          tr: Bunlar çocuk.
+        options:
+          - дете
+          - деца
+        answerIndex: 1
+        explanation:
+          en: дете → деца is irregular.
+          tr: дете → деца düzensizdir.
+        targets:
+          - lex.dete
+          - gram.noun.plural
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.05'
+        type: select_meaning
+        bg: много
+        options:
+          - en: 'many, a lot'
+            tr: çok
+          - en: there
+            tr: orada
+          - en: also
+            tr: 'de, da'
+        answerIndex: 0
+        targets:
+          - lex.mnogo
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.06'
+        type: tiles_translate
+        bg: много книги
+        meaning:
+          en: many books
+          tr: çok kitap
+        direction: src_to_bg
+        accepted:
+          bg:
+            - много книги
+        distractors:
+          bg:
+            - книга
+        targets:
+          - lex.mnogo
+          - lex.kniga
+        strictTokens:
+          - книги
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.07'
+        type: listen_tiles
+        bg: Много жени и много мъже.
+        meaning:
+          en: Many women and many men.
+          tr: Çok kadın ve çok erkek.
+        accepted:
+          - Много жени и много мъже.
+        distractors:
+          - жена
+        targets:
+          - lex.mnogo
+          - lex.zhena
+          - lex.mazh
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.08'
+        type: type_translate
+        bg: Това са столове.
+        meaning:
+          en: These are chairs.
+          tr: Bunlar sandalye.
+        direction: bg_to_src
+        accepted:
+          en:
+            - '{These|Those|They} are chairs.'
+            - "They're chairs."
+          tr:
+            - 'Bunlar sandalye{ler|}.'
+        targets:
+          - lex.stol
+          - gram.noun.plural
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.09'
+        type: listen_type
+        bg: Много деца.
+        meaning:
+          en: Many children.
+          tr: Çok çocuk.
+        accepted:
+          - Много деца.
+        targets:
+          - lex.mnogo
+          - lex.dete
+        strictTokens:
+          - деца
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.10'
+        type: select_meaning
+        bg: там
+        options:
+          - en: there
+            tr: orada
+          - en: here
+            tr: burada
+          - en: many
+            tr: çok
+        answerIndex: 0
+        targets:
+          - lex.tam
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.11'
+        type: type_translate
+        bg: Много села.
+        meaning:
+          en: Many villages.
+          tr: Çok köy.
+        direction: src_to_bg
+        accepted:
+          bg:
+            - Много села.
+        targets:
+          - lex.mnogo
+          - lex.selo
+        strictTokens:
+          - села
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.12'
+        type: match_pairs
+        pairs:
+          - bg: книги
+            meaning:
+              en: books
+              tr: kitaplar
+          - bg: жени
+            meaning:
+              en: women
+              tr: kadınlar
+          - bg: деца
+            meaning:
+              en: children
+              tr: çocuklar
+          - bg: градове
+            meaning:
+              en: cities
+              tr: şehirler
+        targets:
+          - gram.noun.plural
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.13'
+        type: listen_tiles
+        bg: Това са момичета и момчета.
+        meaning:
+          en: These are girls and boys.
+          tr: Bunlar kızlar ve erkek çocuklar.
+        accepted:
+          - Това са момичета и момчета.
+        distractors:
+          - момиче
+        targets:
+          - lex.momiche
+          - lex.momche
+          - gram.noun.plural
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.14'
+        type: type_translate
+        bg: Той е там.
+        meaning:
+          en: He is there.
+          tr: O orada.
+        direction: bg_to_src
+        accepted:
+          en:
+            - "{He is|He's} there."
+          tr:
+            - O orada.
+        targets:
+          - lex.tam
+        reviewStatus: ai_draft
+      - id: 'ex.a1-03-05.15'
+        type: listen_tiles
+        bg: Те са там.
+        meaning:
+          en: They are there.
+          tr: Onlar orada.
+        accepted:
+          - Те са там.
+        distractors:
+          - тук
+        targets:
+          - lex.tam
+        reviewStatus: ai_draft
