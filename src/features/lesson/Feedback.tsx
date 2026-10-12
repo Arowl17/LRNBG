@@ -8,6 +8,7 @@ const NOTE_KEYS: Record<Note['code'], MessageKey> = {
   transliteration_accepted: 'note.transliteration_accepted',
   typo: 'note.typo',
   grammar_token: 'note.grammar_token',
+  turkish_letters: 'note.turkish_letters',
 };
 
 export function NoteText({ note }: { note: Note }) {

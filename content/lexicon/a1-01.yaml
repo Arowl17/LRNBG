@@ -82,7 +82,7 @@
   sources:
     - own
 - id: 'lex.dobar-den'
-  lemma: до́бър де́н
+  lemma: до́бър ден
   pos: phrase
   translations:
     en:
@@ -115,7 +115,7 @@
   sources:
     - own
 - id: 'lex.leka-nosht'
-  lemma: ле́ка но́щ
+  lemma: ле́ка нощ
   pos: phrase
   translations:
     en:

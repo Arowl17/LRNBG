@@ -1,10 +1,11 @@
 import { readFile } from 'node:fs/promises';
 import { expect, test } from '@playwright/test';
 
-test('the empty course path renders and navigation works', async ({ page }) => {
+test('the course path renders units and navigation works', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { level: 1, name: 'Your course' })).toBeVisible();
-  await expect(page.getByText(/Course units start in the next phase/)).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Greetings' })).toBeVisible();
+  await expect(page.getByRole('link', { name: /Section 0/ })).toBeVisible();
 
   const nav = page.getByRole('navigation', { name: 'Main navigation' });
   await nav.getByRole('link', { name: 'Profile' }).click();

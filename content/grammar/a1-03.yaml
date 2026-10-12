@@ -8,8 +8,8 @@
     tr: Her ismin bir cinsiyeti var
   cefr: A1
   explanation:
-    en: "Look at the **ending**:\n\n- consonant → **masculine**: град, стол, хляб\n- **-а / -я** → **feminine**: жена, книга, стая\n- **-о / -е** → **neuter**: село, море, кафе\n\nIt's about the ending, not the person: **момиче** (girl) is neuter."
-    tr: "Türkçede cinsiyet yok, Bulgarcada her ismin bir cinsiyeti var. İsmin **sonuna** bak:\n\n- ünsüz → **eril**: град, стол, хляб\n- **-а / -я** → **dişil**: жена, книга, стая\n- **-о / -е** → **nötr**: село, море, кафе\n\nKişiye değil, kelimenin sonuna bakılır: **момиче** (kız) nötrdür."
+    en: "Look at the **ending**:\n\n- consonant → **masculine**: град, стол, хляб\n- **-а / -я** → **feminine**: жена, книга, стая\n- **-о / -е** → **neuter**: село, море, кафе\n\nIt's about the ending, not the person: **момиче** (girl) is neuter.\n\nThis works for most nouns, but not all: a few nouns ending in a consonant are feminine — you already know **нощ** (night) and **вечер** (evening)."
+    tr: "Türkçede cinsiyet yok, Bulgarcada her ismin bir cinsiyeti var. İsmin **sonuna** bak:\n\n- ünsüz → **eril**: град, стол, хляб\n- **-а / -я** → **dişil**: жена, книга, стая\n- **-о / -е** → **nötr**: село, море, кафе\n\nKişiye değil, kelimenin sonuna bakılır: **момиче** (kız) nötrdür.\n\nBu kural çoğu isim için geçerlidir ama hepsi için değil: ünsüzle biten birkaç isim dişildir — **нощ** (gece) ve **вечер** (akşam) gibi."
   examples:
     - bg: Това е стол.
       en: This is a chair.
@@ -49,8 +49,8 @@
     tr: 'Birden fazla: çoğul'
   cefr: A1
   explanation:
-    en: "- most nouns: **-и** — книга → книги, жена → жени, телефон → телефони\n- short masculine nouns: **-ове** — град → градове, стол → столове\n- neuter nouns: **-а / -та** — село → села, море → морета, кафе → кафета\n\nSome are irregular: **дете → деца** (child → children)."
-    tr: "Türkçedeki *-ler/-lar* gibi, ama Bulgarcada birkaç ek var:\n\n- çoğu isim: **-и** — книга → книги, жена → жени, телефон → телефони\n- kısa eril isimler: **-ове** — град → градове, стол → столове\n- nötr isimler: **-а / -та** — село → села, море → морета, кафе → кафета\n\nBazıları düzensizdir: **дете → деца** (çocuk → çocuklar)."
+    en: "- most nouns: **-и** — книга → книги, жена → жени, телефон → телефони\n- short masculine nouns: **-ове** — град → градове, стол → столове\n- neuter nouns: **-а / -та** — село → села, море → морета, кафе → кафета\n\nSome are different: **мъж → мъже** (man → men), **дете → деца** (child → children).\n\nAfter **много** (many), use the plural: **много книги** (many books)."
+    tr: "Türkçedeki *-ler/-lar* gibi, ama Bulgarcada birkaç ek var:\n\n- çoğu isim: **-и** — книга → книги, жена → жени, телефон → телефони\n- kısa eril isimler: **-ове** — град → градове, стол → столове\n- nötr isimler: **-а / -та** — село → села, море → морета, кафе → кафета\n\nBazıları farklıdır: **мъж → мъже** (adam → adamlar), **дете → деца** (çocuk → çocuklar).\n\nDikkat: Türkçede *çok kitap* deriz, ama Bulgarcada **много** (çok) kelimesinden sonra çoğul gelir: **много книги**."
   examples:
     - bg: Това са книги.
       en: These are books.

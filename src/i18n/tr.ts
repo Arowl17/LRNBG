@@ -177,4 +177,5 @@ export const tr: Record<MessageKey, string> = {
   'report.details': 'Ayrıntılar (isteğe bağlı)',
   'report.send': 'Bildir',
   'report.thanks': 'Teşekkürler! Bildirimin bu cihaza kaydedildi.',
+  'note.turkish_letters': 'Kabul edildi. Türkçe harflerle şöyle yazılır: {expected}',
 };

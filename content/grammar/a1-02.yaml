@@ -41,7 +41,7 @@
 - id: 'gram.pronouns.he-she-it'
   title:
     en: 'he, she, it'
-    tr: 'o, o, o'
+    tr: "той, тя, то — üç ayrı 'o'"
   cefr: A1
   explanation:
     en: "English has *he*, *she* and *it*; Bulgarian has **той**, **тя** and **то** — the choice follows the noun's gender (more in unit 3)."

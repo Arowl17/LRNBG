@@ -13,7 +13,7 @@ unit:
     - en: Use every form of съм (to be)
       tr: съм (olmak) fiilinin bütün biçimlerini kullanmak
     - en: Drop the pronoun like a Bulgarian
-      tr: Zamiri bir Bulgar gibi düşürmek
+      tr: Bir Bulgar gibi zamiri söylemeden konuşmak
   grammarIds:
     - gram.pronouns.personal
     - gram.sam.present
@@ -181,6 +181,7 @@ lessons:
         accepted:
           en:
             - "{You are|You're} a student."
+            - "{You are|You're} a female student."
           tr:
             - '{Sen |}öğrencisin.'
         targets:
@@ -598,7 +599,7 @@ lessons:
         bg: Той и тя са тук.
         meaning:
           en: He and she are here.
-          tr: O ve o burada.
+          tr: O (erkek) ve o (kadın) burada.
         accepted:
           - Той и тя са тук.
         distractors:
@@ -855,8 +856,10 @@ lessons:
         accepted:
           en:
             - "{She is|She's} {Bulgarian|a Bulgarian}."
+            - "{She is|She's} a Bulgarian woman."
           tr:
             - 'O {Bulgar|Bulgardır|Bulgar bir kadın}.'
+            - 'O bir Bulgar{| kadın}.'
         targets:
           - lex.balgarka
         reviewStatus: ai_draft

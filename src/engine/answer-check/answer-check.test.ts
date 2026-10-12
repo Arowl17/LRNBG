@@ -6,6 +6,7 @@ import {
   damerauLevenshtein,
   expandAll,
   expandAlternatives,
+  foldTurkish,
   fixHomoglyphs,
   normalizeWord,
   scriptOf,
@@ -129,6 +130,12 @@ describe('toLatin (Streamlined System)', () => {
     ['2 €', '2 €'],
   ])('%s → %s', (bg, latin) => {
     expect(toLatin(bg)).toBe(latin);
+  });
+});
+
+describe('foldTurkish', () => {
+  it('maps ç ğ ı ö ş ü to plain letters', () => {
+    expect(foldTurkish('çğıöşü kahve')).toBe('cgiosu kahve');
   });
 });
 
@@ -413,6 +420,20 @@ const CASES: Case[] = [
     name: 'Turkish ı is not i',
     input: 'kahveyi sevıyorum',
     options: { accepted: ['Kahveyi seviyorum.'], language: 'tr', strictTokens: ['seviyorum'] },
+    verdict: 'incorrect',
+  },
+  {
+    name: 'Turkish typed without Turkish letters is accepted with a note',
+    input: 'ogrenciyim',
+    options: { accepted: ['{Ben |}öğrenciyim.'], language: 'tr' },
+    verdict: 'correct_with_note',
+    notes: ['turkish_letters'],
+    closest: 'öğrenciyim.',
+  },
+  {
+    name: 'Turkish folding still needs the right words',
+    input: 'ogretmenim',
+    options: { accepted: ['Ben öğrenciyim.'], language: 'tr' },
     verdict: 'incorrect',
   },
 ];

@@ -139,7 +139,7 @@ lessons:
         accepted:
           en:
             - '{This|That|It} is a {telephone|phone}.'
-            - "{This's|That's|It's} a {telephone|phone}."
+            - "{That's|It's} a {telephone|phone}."
           tr:
             - '{Bu|Şu} {bir |}telefon.'
         targets:
@@ -232,6 +232,7 @@ lessons:
         accepted:
           bg:
             - 'Какво е това?'
+            - 'Това какво е?'
         targets:
           - lex.kakvo
         reviewStatus: ai_draft
@@ -324,7 +325,7 @@ lessons:
         distractors:
           bg:
             - книга
-            - е
+            - са
         targets:
           - lex.staya
         reviewStatus: ai_draft
@@ -338,6 +339,7 @@ lessons:
         accepted:
           en:
             - '{This|That|It} is a {bag|handbag}.'
+            - "{That's|It's} a {bag|handbag}."
           tr:
             - '{Bu|Şu} {bir |}çanta.'
         targets:
@@ -545,6 +547,7 @@ lessons:
         accepted:
           en:
             - '{This|That|It} is a village.'
+            - "{That's|It's} a village."
           tr:
             - '{Bu|Şu} {bir |}köy.'
         targets:
@@ -764,7 +767,7 @@ lessons:
         type: tiles_translate
         bg: една жена и един мъж
         meaning:
-          en: a woman and a man
+          en: one woman and one man
           tr: bir kadın ve bir adam
         direction: src_to_bg
         accepted:
@@ -1028,6 +1031,7 @@ lessons:
             - "They're chairs."
           tr:
             - 'Bunlar sandalye{ler|}.'
+            - 'Şunlar sandalye{ler|}.'
         targets:
           - lex.stol
           - gram.noun.plural
@@ -1103,7 +1107,7 @@ lessons:
         bg: Това са момичета и момчета.
         meaning:
           en: These are girls and boys.
-          tr: Bunlar kızlar ve erkek çocuklar.
+          tr: Bunlar kızlar ve oğlanlar.
         accepted:
           - Това са момичета и момчета.
         distractors:

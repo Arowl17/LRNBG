@@ -175,6 +175,7 @@ export const en = {
   'report.details': 'Details (optional)',
   'report.send': 'Send report',
   'report.thanks': 'Thank you! Your report is saved on this device.',
+  'note.turkish_letters': "Accepted. With Turkish letters it's written: {expected}",
 } as const;
 
 export type MessageKey = keyof typeof en;

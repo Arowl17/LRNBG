@@ -5,6 +5,13 @@ import { fixHomoglyphs, scriptOf } from './script';
 import { toLatin } from './transliterate';
 import type { AnswerLanguage, CheckOptions, CheckResult, DiffToken, Note, Verdict } from './types';
 
+const TURKISH_FOLD: Record<string, string> = { ç: 'c', ğ: 'g', ı: 'i', ö: 'o', ş: 's', ü: 'u' };
+
+/** Map Turkish-specific letters to their plain Latin look-alikes ("öğrenciyim" → "ogrenciyim"). */
+export function foldTurkish(word: string): string {
+  return word.replace(/[çğıöşü]/g, (ch) => TURKISH_FOLD[ch]!);
+}
+
 /** Words of at least this many letters may contain one forgiven typo (SPEC §9.6). */
 export const TYPO_MIN_LENGTH = 5;
 
@@ -191,6 +198,28 @@ export function checkAnswer(input: string, options: CheckOptions): CheckResult {
 
   actual = tokenize(text, language);
   const result = best(candidates, actual, strict);
+
+  // Turkish typed on a keyboard without ç ğ ı ö ş ü: accept, and show the proper spelling.
+  // Only when the answer has none of those letters — otherwise a mix-up (ı for i) is a real error.
+  if (language === 'tr' && result.alignment.verdict === 'incorrect' && !/[çğıöşüİ]/.test(text)) {
+    const fold = (tokens: Token[]) => tokens.map((t) => ({ ...t, norm: foldTurkish(t.norm) }));
+    const folded = best(
+      candidates.map((c) => ({ ...c, tokens: fold(c.tokens) })),
+      fold(actual),
+      new Set(),
+    );
+    if (folded.alignment.verdict !== 'incorrect') {
+      return {
+        verdict: 'correct_with_note',
+        graded: true,
+        canonical,
+        closest: folded.candidate.display,
+        diff: folded.alignment.diff,
+        notes: [{ code: 'turkish_letters', expected: folded.candidate.display }],
+      };
+    }
+  }
+
   return {
     verdict: result.alignment.verdict,
     graded: true,

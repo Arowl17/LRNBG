@@ -1,4 +1,4 @@
-export { checkAnswer, compareWord, TYPO_MIN_LENGTH } from './check';
+export { checkAnswer, compareWord, foldTurkish, TYPO_MIN_LENGTH } from './check';
 export { damerauLevenshtein } from './distance';
 export {
   AlternationSyntaxError,

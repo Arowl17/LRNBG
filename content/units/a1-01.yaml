@@ -92,8 +92,8 @@ lessons:
               tr: merhaba (resmi)
           - bg: чао
             meaning:
-              en: bye
-              tr: görüşürüz
+              en: bye (informal)
+              tr: görüşürüz (samimi)
           - bg: довиждане
             meaning:
               en: goodbye
@@ -174,7 +174,6 @@ lessons:
             - 'Здравей!'
             - 'Здравейте!'
             - 'Здрасти!'
-            - 'Чао!'
         targets:
           - lex.zdravey
         reviewStatus: ai_draft
@@ -195,8 +194,8 @@ lessons:
         type: select_meaning
         bg: 'Здравейте!'
         options:
-          - en: 'Hi!'
-            tr: 'Selam!'
+          - en: 'Good night!'
+            tr: 'İyi geceler!'
           - en: 'Bye!'
             tr: 'Görüşürüz!'
           - en: 'Hello! (formal)'
@@ -210,7 +209,7 @@ lessons:
     order: 2
     title:
       en: Times of day
-      tr: Günün saatleri
+      tr: Günün vakitleri
     newLexemeIds:
       - 'lex.dobro-utro'
       - 'lex.dobar-den'
@@ -315,8 +314,8 @@ lessons:
           - Добър
         answerIndex: 0
         explanation:
-          en: 'Утро (morning) goes with добро: добро утро. Добър ден and добър вечер are fixed greetings.'
-          tr: 'Утро (sabah) kelimesiyle добро kullanılır: добро утро. Добър ден ve добър вечер kalıplaşmış selamlardır.'
+          en: 'утро (morning) is neuter — it ends in -о — so: добро утро. Добър ден and добър вечер are fixed greetings.'
+          tr: 'утро (sabah) nötr bir isimdir — -о ile biter — bu yüzden: добро утро. Добър ден ve добър вечер kalıplaşmış selamlardır.'
         targets:
           - 'lex.dobro-utro'
         reviewStatus: ai_draft
@@ -456,8 +455,8 @@ lessons:
               tr: teşekkür ederim
           - bg: мерси
             meaning:
-              en: thanks
-              tr: sağ ol
+              en: thanks (informal)
+              tr: sağ ol (samimi)
           - bg: моля
             meaning:
               en: please
@@ -559,6 +558,7 @@ lessons:
         accepted:
           en:
             - '{Excuse me|Sorry|Pardon|Pardon me}!'
+            - "{I'm|I am} sorry!"
           tr:
             - '{Affedersiniz|Özür dilerim|Pardon|Kusura bakmayın}!'
         targets:
@@ -729,7 +729,7 @@ lessons:
         type: tiles_translate
         bg: 'Добре, благодаря. А ти?'
         meaning:
-          en: 'Fine, thank you. And you?'
+          en: 'Fine, thank you. And you? (to a friend)'
           tr: 'İyiyim, teşekkür ederim. Ya sen?'
         direction: src_to_bg
         accepted:
@@ -746,17 +746,17 @@ lessons:
         reviewStatus: ai_draft
       - id: 'ex.a1-01-04.07'
         type: fill_blank
-        bg: 'Как ___? — Добре, благодаря. А вие?'
+        bg: 'Здравейте! Как ___? — Добре, благодаря. А вие?'
         meaning:
-          en: 'How are you? — Fine, thank you. And you?'
-          tr: 'Nasılsınız? — İyiyim, teşekkür ederim. Ya siz?'
+          en: 'Hello! How are you? (formal) — Fine, thank you. And you?'
+          tr: 'Merhaba! Nasılsınız? — İyiyim, teşekkür ederim. Ya siz?'
         options:
           - си
           - сте
         answerIndex: 1
         explanation:
-          en: 'The answer uses вие (formal), so the question is formal too: Как сте?'
-          tr: 'Cevapta вие (resmi) var, demek ki soru da resmi: Как сте?'
+          en: 'Здравейте and вие show this is a formal conversation, so: Как сте?'
+          tr: 'Здравейте ve вие konuşmanın resmi olduğunu gösteriyor, yani: Как сте?'
         targets:
           - 'lex.kak-ste'
           - 'lex.a-vie'
@@ -771,8 +771,10 @@ lessons:
         accepted:
           en:
             - '{Fine|Good|Well|OK|Okay}, thank{ you|s}.'
+            - "{I'm|I am} {fine|good|well|OK|okay}, thank{ you|s}."
           tr:
             - '{İyiyim|İyi}, {teşekkür ederim|teşekkürler|sağ ol}.'
+            - '{İyiyim|İyi}, sağ olun.'
         targets:
           - lex.dobre
         reviewStatus: ai_draft

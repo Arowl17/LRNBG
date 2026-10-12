@@ -11,6 +11,7 @@ export type Verdict = 'correct' | 'correct_with_typo' | 'correct_with_note' | 'i
  * - transliteration_accepted: Latin answer matched via the Streamlined System (beginner setting)
  * - typo: a small typo was forgiven
  * - grammar_token: the error is in a word that carries the exercise's grammar target
+ * - turkish_letters: Turkish typed without ç ğ ı ö ş ü (e.g. "ogrenciyim") — accepted, with a note
  */
 export type NoteCode =
   | 'accent_grave_i'
@@ -18,7 +19,8 @@ export type NoteCode =
   | 'latin_input'
   | 'transliteration_accepted'
   | 'typo'
-  | 'grammar_token';
+  | 'grammar_token'
+  | 'turkish_letters';
 
 export interface Note {
   code: NoteCode;

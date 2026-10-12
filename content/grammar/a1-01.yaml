@@ -29,8 +29,8 @@
     tr: 'Evet, hayır — ve başın'
   cefr: A1
   explanation:
-    en: "Careful: many Bulgarians move their head the \"other way\". A side-to-side shake often means **да** (yes), and a nod often means **не** (no).\n\nWhen in doubt, listen to the words, not the head."
-    tr: "Dikkat: birçok Bulgar başını \"ters\" sallar. Başı sağa sola sallamak çoğu zaman **да** (evet), başı aşağı yukarı sallamak çoğu zaman **не** (hayır) demektir.\n\nEmin değilsen başa değil, kelimelere bak."
+    en: "Careful: many Bulgarians move their head the \"other way\". A side-to-side wobble of the head often means **да** (yes), and an upward toss of the head often means **не** (no).\n\nWhen in doubt, listen to the words, not the head."
+    tr: "Dikkat: başı sağa sola sallamak Bulgaristan'da çoğu zaman **да** (evet) demektir. Başı yukarı kaldırmak ise — Türkçedeki *cık* gibi — **не** (hayır) demektir.\n\nEmin değilsen başa değil, kelimelere bak."
   examples:
     - bg: Да.
       en: Yes.
